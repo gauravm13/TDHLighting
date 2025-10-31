@@ -1,0 +1,518 @@
+<!doctype html>
+<html  lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 0.5rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+      padding-right: 2.5rem;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .map-container {
+      width: 100%;
+      height: 100%;
+      min-height: 450px; /* Minimum height to match original iframe */
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block; /* Removes any default spacing */
+    }
+    .illustration-style {
+      stroke: #fdc400;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+</head>
+<body >
+  <!--NAV SECTION START HERE..-->
+  <div id="navbar-header"></div>
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+ 
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+ <div id="success-message" class="fixed top-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hidden transition-opacity duration-300 z-50"> Message sent successfully — TDH Lighting will contact you shortly! </div> <!-- Main Container --> <div class="px-4 sm:px-8 py-12 md:py-20"> <!-- Contact Form Section --> <section class="mb-16 md:mb-24"> <div class="text-center text-sm text-gray-500 mb-2"> <span>TDH Lighting</span> <span class="mx-1">&gt;</span> <span>Contact</span> </div> <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-bold mb-4">Contact TDH Lighting</h1> <p class="text-lg sm:text-xl text-center text-gray-600 mb-8"> Have a question about our stage fixtures, LED solutions, control systems or custom lighting projects? Reach out for product information, technical support, spare parts or a quote — our lighting specialists are here to help. </p> <div class="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8"> <!-- Left Illustration --> <div class="w-full sm:w-1/2 md:w-1/4 max-w-xs min-h-[100px]"> <svg viewBox="0 0 150 100" class="w-full h-auto"> <path class="illustration-style" d="M20,70 A20,20 0 0,1 40,90 A20,20 0 0,1 60,70 L60,50 A10,10 0 0,0 50,40 L30,40 A10,10 0 0,0 20,50 Z" /> <path class="illustration-style" d="M50,40 L70,40 L85,55 L10,55 L25,40" /> <path class="illustration-style" d="M40,70 L40,95 L30,95" /> <path class="illustration-style" d="M60,70 L60,95 L70,95" /> <path class="illustration-style" d="M55,55 L55,65" /> <circle class="illustration-style" cx="40" cy="50" r="5" /> </svg> </div>
+        <!-- Contact Form -->
+        <form id="contact-form" method="POST" action="https://api.web3forms.com/submit" class="w-full max-w-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4">
+            <input type="hidden" name="access_key" value="50a7a54d-99e9-46c2-bfdc-b4cf751d2403">
+            <input type="text" name="name" placeholder="Your name *" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fdc400] text-sm sm:text-base">
+            <input type="email" name="email" placeholder="Email address *" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fdc400] text-sm sm:text-base">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4">
+            <div class="flex flex-col sm:flex-row">
+              <select name="countryCode" class="w-full p-3 border border-r-0 sm:border-r border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#fdc400] bg-gray-50 text-gray-600 text-sm sm:text-base">
+                <option value="+93">Afghanistan (+93)</option>
+                <option value="+355">Albania (+355)</option>
+                <option value="+213">Algeria (+213)</option>
+                <option value="+1-684">American Samoa (+1-684)</option>
+                <option value="+376">Andorra (+376)</option>
+                <option value="+244">Angola (+244)</option>
+                <option value="+1-264">Anguilla (+1-264)</option>
+                <option value="+672">Antarctica (+672)</option>
+                <option value="+1-268">Antigua and Barbuda (+1-268)</option>
+                <option value="+54">Argentina (+54)</option>
+                <option value="+374">Armenia (+374)</option>
+                <option value="+297">Aruba (+297)</option>
+                <option value="+61">Australia (+61)</option>
+                <option value="+43">Austria (+43)</option>
+                <option value="+994">Azerbaijan (+994)</option>
+                <option value="+1-242">Bahamas (+1-242)</option>
+                <option value="+973">Bahrain (+973)</option>
+                <option value="+880">Bangladesh (+880)</option>
+                <option value="+1-246">Barbados (+1-246)</option>
+                <option value="+375">Belarus (+375)</option>
+                <option value="+32">Belgium (+32)</option>
+                <option value="+501">Belize (+501)</option>
+                <option value="+229">Benin (+229)</option>
+                <option value="+1-441">Bermuda (+1-441)</option>
+                <option value="+975">Bhutan (+975)</option>
+                <option value="+591">Bolivia (+591)</option>
+                <option value="+387">Bosnia and Herzegovina (+387)</option>
+                <option value="+267">Botswana (+267)</option>
+                <option value="+55">Brazil (+55)</option>
+                <option value="+246">British Indian Ocean Territory (+246)</option>
+                <option value="+1-284">British Virgin Islands (+1-284)</option>
+                <option value="+673">Brunei (+673)</option>
+                <option value="+359">Bulgaria (+359)</option>
+                <option value="+226">Burkina Faso (+226)</option>
+                <option value="+257">Burundi (+257)</option>
+                <option value="+855">Cambodia (+855)</option>
+                <option value="+237">Cameroon (+237)</option>
+                <option value="+1">Canada (+1)</option>
+                <option value="+238">Cape Verde (+238)</option>
+                <option value="+1-345">Cayman Islands (+1-345)</option>
+                <option value="+236">Central African Republic (+236)</option>
+                <option value="+235">Chad (+235)</option>
+                <option value="+56">Chile (+56)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+61">Christmas Island (+61)</option>
+                <option value="+61">Cocos Islands (+61)</option>
+                <option value="+57">Colombia (+57)</option>
+                <option value="+269">Comoros (+269)</option>
+                <option value="+682">Cook Islands (+682)</option>
+                <option value="+506">Costa Rica (+506)</option>
+                <option value="+385">Croatia (+385)</option>
+                <option value="+53">Cuba (+53)</option>
+                <option value="+599">Curacao (+599)</option>
+                <option value="+357">Cyprus (+357)</option>
+                <option value="+420">Czech Republic (+420)</option>
+                <option value="+243">Democratic Republic of the Congo (+243)</option>
+                <option value="+45">Denmark (+45)</option>
+                <option value="+253">Djibouti (+253)</option>
+                <option value="+1-767">Dominica (+1-767)</option>
+                <option value="+1-809">Dominican Republic (+1-809, +1-829, +1-849)</option>
+                <option value="+670">East Timor (+670)</option>
+                <option value="+593">Ecuador (+593)</option>
+                <option value="+20">Egypt (+20)</option>
+                <option value="+503">El Salvador (+503)</option>
+                <option value="+240">Equatorial Guinea (+240)</option>
+                <option value="+291">Eritrea (+291)</option>
+                <option value="+372">Estonia (+372)</option>
+                <option value="+251">Ethiopia (+251)</option>
+                <option value="+500">Falkland Islands (+500)</option>
+                <option value="+298">Faroe Islands (+298)</option>
+                <option value="+679">Fiji (+679)</option>
+                <option value="+358">Finland (+358)</option>
+                <option value="+33">France (+33)</option>
+                <option value="+689">French Polynesia (+689)</option>
+                <option value="+241">Gabon (+241)</option>
+                <option value="+220">Gambia (+220)</option>
+                <option value="+995">Georgia (+995)</option>
+                <option value="+49">Germany (+49)</option>
+                <option value="+233">Ghana (+233)</option>
+                <option value="+350">Gibraltar (+350)</option>
+                <option value="+30">Greece (+30)</option>
+                <option value="+299">Greenland (+299)</option>
+                <option value="+1-473">Grenada (+1-473)</option>
+                <option value="+1-671">Guam (+1-671)</option>
+                <option value="+502">Guatemala (+502)</option>
+                <option value="+44-1481">Guernsey (+44-1481)</option>
+                <option value="+224">Guinea (+224)</option>
+                <option value="+245">Guinea-Bissau (+245)</option>
+                <option value="+592">Guyana (+592)</option>
+                <option value="+509">Haiti (+509)</option>
+                <option value="+504">Honduras (+504)</option>
+                <option value="+852">Hong Kong (+852)</option>
+                <option value="+36">Hungary (+36)</option>
+                <option value="+354">Iceland (+354)</option>
+                <option value="+91" selected>India (+91)</option>
+                <option value="+62">Indonesia (+62)</option>
+                <option value="+98">Iran (+98)</option>
+                <option value="+964">Iraq (+964)</option>
+                <option value="+353">Ireland (+353)</option>
+                <option value="+44-1624">Isle of Man (+44-1624)</option>
+                <option value="+972">Israel (+972)</option>
+                <option value="+39">Italy (+39)</option>
+                <option value="+225">Ivory Coast (+225)</option>
+                <option value="+1-876">Jamaica (+1-876)</option>
+                <option value="+81">Japan (+81)</option>
+                <option value="+44-1534">Jersey (+44-1534)</option>
+                <option value="+962">Jordan (+962)</option>
+                <option value="+7">Kazakhstan (+7)</option>
+                <option value="+254">Kenya (+254)</option>
+                <option value="+686">Kiribati (+686)</option>
+                <option value="+383">Kosovo (+383)</option>
+                <option value="+965">Kuwait (+965)</option>
+                <option value="+996">Kyrgyzstan (+996)</option>
+                <option value="+856">Laos (+856)</option>
+                <option value="+371">Latvia (+371)</option>
+                <option value="+961">Lebanon (+961)</option>
+                <option value="+266">Lesotho (+266)</option>
+                <option value="+231">Liberia (+231)</option>
+                <option value="+218">Libya (+218)</option>
+                <option value="+423">Liechtenstein (+423)</option>
+                <option value="+370">Lithuania (+370)</option>
+                <option value="+352">Luxembourg (+352)</option>
+                <option value="+853">Macau (+853)</option>
+                <option value="+389">Macedonia (+389)</option>
+                <option value="+261">Madagascar (+261)</option>
+                <option value="+265">Malawi (+265)</option>
+                <option value="+60">Malaysia (+60)</option>
+                <option value="+960">Maldives (+960)</option>
+                <option value="+223">Mali (+223)</option>
+                <option value="+356">Malta (+356)</option>
+                <option value="+692">Marshall Islands (+692)</option>
+                <option value="+222">Mauritania (+222)</option>
+                <option value="+230">Mauritius (+230)</option>
+                <option value="+262">Mayotte (+262)</option>
+                <option value="+52">Mexico (+52)</option>
+                <option value="+691">Micronesia (+691)</option>
+                <option value="+373">Moldova (+373)</option>
+                <option value="+377">Monaco (+377)</option>
+                <option value="+976">Mongolia (+976)</option>
+                <option value="+382">Montenegro (+382)</option>
+                <option value="+1-664">Montserrat (+1-664)</option>
+                <option value="+212">Morocco (+212)</option>
+                <option value="+258">Mozambique (+258)</option>
+                <option value="+95">Myanmar (+95)</option>
+                <option value="+264">Namibia (+264)</option>
+                <option value="+674">Nauru (+674)</option>
+                <option value="+977">Nepal (+977)</option>
+                <option value="+31">Netherlands (+31)</option>
+                <option value="+599">Netherlands Antilles (+599)</option>
+                <option value="+687">New Caledonia (+687)</option>
+                <option value="+64">New Zealand (+64)</option>
+                <option value="+505">Nicaragua (+505)</option>
+                <option value="+227">Niger (+227)</option>
+                <option value="+234">Nigeria (+234)</option>
+                <option value="+683">Niue (+683)</option>
+                <option value="+850">North Korea (+850)</option>
+                <option value="+1-670">Northern Mariana Islands (+1-670)</option>
+                <option value="+47">Norway (+47)</option>
+                <option value="+968">Oman (+968)</option>
+                <option value="+92">Pakistan (+92)</option>
+                <option value="+680">Palau (+680)</option>
+                <option value="+970">Palestine (+970)</option>
+                <option value="+507">Panama (+507)</option>
+                <option value="+675">Papua New Guinea (+675)</option>
+                <option value="+595">Paraguay (+595)</option>
+                <option value="+51">Peru (+51)</option>
+                <option value="+63">Philippines (+63)</option>
+                <option value="+64">Pitcairn (+64)</option>
+                <option value="+48">Poland (+48)</option>
+                <option value="+351">Portugal (+351)</option>
+                <option value="+1-787">Puerto Rico (+1-787, +1-939)</option>
+                <option value="+974">Qatar (+974)</option>
+                <option value="+242">Republic of the Congo (+242)</option>
+                <option value="+262">Reunion (+262)</option>
+                <option value="+40">Romania (+40)</option>
+                <option value="+7">Russia (+7)</option>
+                <option value="+250">Rwanda (+250)</option>
+                <option value="+590">Saint Barthelemy (+590)</option>
+                <option value="+290">Saint Helena (+290)</option>
+                <option value="+1-869">Saint Kitts and Nevis (+1-869)</option>
+                <option value="+1-758">Saint Lucia (+1-758)</option>
+                <option value="+590">Saint Martin (+590)</option>
+                <option value="+508">Saint Pierre and Miquelon (+508)</option>
+                <option value="+1-784">Saint Vincent and the Grenadines (+1-784)</option>
+                <option value="+685">Samoa (+685)</option>
+                <option value="+378">San Marino (+378)</option>
+                <option value="+239">Sao Tome and Principe (+239)</option>
+                <option value="+966">Saudi Arabia (+966)</option>
+                <option value="+221">Senegal (+221)</option>
+                <option value="+381">Serbia (+381)</option>
+                <option value="+248">Seychelles (+248)</option>
+                <option value="+232">Sierra Leone (+232)</option>
+                <option value="+65">Singapore (+65)</option>
+                <option value="+1-721">Sint Maarten (+1-721)</option>
+                <option value="+421">Slovakia (+421)</option>
+                <option value="+386">Slovenia (+386)</option>
+                <option value="+677">Solomon Islands (+677)</option>
+                <option value="+252">Somalia (+252)</option>
+                <option value="+27">South Africa (+27)</option>
+                <option value="+82">South Korea (+82)</option>
+                <option value="+211">South Sudan (+211)</option>
+                <option value="+34">Spain (+34)</option>
+                <option value="+94">Sri Lanka (+94)</option>
+                <option value="+249">Sudan (+249)</option>
+                <option value="+597">Suriname (+597)</option>
+                <option value="+47">Svalbard and Jan Mayen (+47)</option>
+                <option value="+268">Swaziland (+268)</option>
+                <option value="+46">Sweden (+46)</option>
+                <option value="+41">Switzerland (+41)</option>
+                <option value="+963">Syria (+963)</option>
+                <option value="+886">Taiwan (+886)</option>
+                <option value="+992">Tajikistan (+992)</option>
+                <option value="+255">Tanzania (+255)</option>
+                <option value="+66">Thailand (+66)</option>
+                <option value="+228">Togo (+228)</option>
+                <option value="+690">Tokelau (+690)</option>
+                <option value="+676">Tonga (+676)</option>
+                <option value="+1-868">Trinidad and Tobago (+1-868)</option>
+                <option value="+216">Tunisia (+216)</option>
+                <option value="+90">Turkey (+90)</option>
+                <option value="+993">Turkmenistan (+993)</option>
+                <option value="+1-649">Turks and Caicos Islands (+1-649)</option>
+                <option value="+688">Tuvalu (+688)</option>
+                <option value="+1-340">U.S. Virgin Islands (+1-340)</option>
+                <option value="+256">Uganda (+256)</option>
+                <option value="+380">Ukraine (+380)</option>
+                <option value="+971">United Arab Emirates (+971)</option>
+                <option value="+44">United Kingdom (+44)</option>
+                <option value="+1">United States (+1)</option>
+                <option value="+598">Uruguay (+598)</option>
+                <option value="+998">Uzbekistan (+998)</option>
+                <option value="+678">Vanuatu (+678)</option>
+                <option value="+379">Vatican (+379)</option>
+                <option value="+58">Venezuela (+58)</option>
+                <option value="+84">Vietnam (+84)</option>
+                <option value="+681">Wallis and Futuna (+681)</option>
+                <option value="+212">Western Sahara (+212)</option>
+                <option value="+967">Yemen (+967)</option>
+                <option value="+260">Zambia (+260)</option>
+                <option value="+263">Zimbabwe (+263)</option>
+              </select>
+              <input type="tel" name="phone" placeholder="99999 99999" class="w-full p-3 border border-gray-300 rounded-r-lg sm:rounded-l-none focus:outline-none focus:ring-2 focus:ring-[#fdc400] text-sm sm:text-base">
+            </div>
+            <select name="interested_in" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fdc400] text-gray-500 text-sm sm:text-base">
+             <option>Interested in</option>
+<option>Stage Lighting Solutions</option>
+<option>Architectural Lighting</option>
+<option>Control Systems & Dimmers</option>
+<option>Custom Lighting Design</option>
+<option>After-Sales Support</option>
+<option>Project assistance</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <textarea name="message" placeholder="How can we help?" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#fdc400] text-sm sm:text-base"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-yellow-400 text-white font-bold py-4 px-6 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 text-base sm:text-lg">
+            Send your message
+          </button>
+          <p class="text-sm text-gray-500 mt-4">
+            By clicking, you agree to our <a href="#" class="underline">Terms & Conditions</a>, <a href="#" class="underline">Privacy and Data Protection Policy</a>.
+          </p>
+        </form>
+        <!-- Right Illustration -->
+        <div class="w-full sm:w-1/2 md:w-1/4 max-w-xs min-h-[100px]">
+          <svg viewBox="0 0 150 100" class="w-full h-auto">
+            <path class="illustration-style" d="M110,70 A20,20 0 0,0 90,90 A20,20 0 0,0 70,70 L70,50 A10,10 0 0,1 80,40 L100,40 A10,10 0 0,1 110,50 Z" />
+            <path class="illustration-style" d="M75,90 L70,95" />
+            <path class="illustration-style" d="M105,90 L110,95" />
+            <path class="illustration-style" d="M120,60 L140,40 M125,55 L140,40" />
+            <path class="illustration-style" d="M120,70 L130,60" />
+            <path class="illustration-style" d="M120,80 L130,70" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- Get In Touch Section -->
+    <section class="text-center">
+      <div class="text-base text-gray-500 mb-2 uppercase tracking-widest">Noida, India</div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-10">Get in touch with TDH Light</h2>
+      <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+        <!-- Map -->
+        <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg border">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.57191532867!2d77.37520277528827!3d28.61261657567568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce58f30f44d75%3A0xb4db6072ecae15b0!2sTDH%20Light%3A%20Stage%20Light%2C%20Curtain%20Installation%20%26%20Sound%20Systems!5e0!3m2!1sen!2sin!4v1761583313384!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <!-- Contact Details -->
+        <div class="w-full lg:w-1/2 bg-[#FDFBF6] p-10 md:p-12 rounded-2xl text-left flex flex-col">
+          <div class="flex-grow">
+            <div class="mb-6">
+              <h3 class="text-lg text-gray-500 font-semibold mb-1">Address</h3>
+              <p class="text-xl">B 41, Block B, Sector 64, Noida, Uttar Pradesh 201309</p>
+            </div>
+            <div class="mb-6">
+              <h3 class="text-lg text-gray-500 font-semibold mb-1">Email</h3>
+              <p class="text-xl text-yellow-500 hover:underline cursor-pointer">dinesh.ce08@gmail.com</p>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-lg text-gray-500 font-semibold mb-1">Phone</h3>
+              <p class="text-xl">+91 98113 35569</p>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+            <div class="grid grid-cols-3 text-3xl gap-3">
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg></a>
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg></a>
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.854-0.908-1.532-1.762-1.762C18.254,4,12,4,12,4S5.746,4,4.18,4.424 c-0.854,0.23-1.532,0.908-1.762,1.762C2,7.754,2,12,2,12s0,4.246,0.418,5.814c0.23,0.854,0.908,1.532,1.762,1.762 C5.746,20,12,20,12,20s6.254,0,7.82-0.424c0.854-0.23,1.532-0.908,1.762-1.762C22,16.246,22,12,22,12S22,7.754,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"></path></svg></a>
+              <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 transition duration-300 transform hover:scale-110 shadow-sm"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02 2.59.02 4.08 1.53 4.08 4.02 0 1.08-.01 2.15-.02 3.23 .02 1.39-.02 2.77-.02 4.16 0 2.52-1.5 4.03-4 4.03-1.39 0-2.78 0-4.16 0-1.12 0-2.25.01-3.37.01-2.52 0-4.03-1.5-4.03-4.02 0-1.11.01-2.22.01-3.33 0-1.42-.01-2.83.01-4.25 0-2.51 1.5-4.02 4.02-4.02 1.32-.01 2.63-.02 3.94-.02.33 0 .66 0 1 .02zM15.42 5.92c-1.11 0-2.21-.01-3.32-.01-1.07 0-1.92.85-1.92 1.93s.85 1.93 1.92 1.93c1.11 0 2.22.01 3.33.01 1.05 0 1.9-.86 1.9-1.93s-.85-1.93-1.9-1.93zM15.13 12.9c-1.12 0-2.24 0-3.36 0-1.07 0-1.92.86-1.92 1.93s.85 1.93 1.92 1.93c1.12 0 2.24 0 3.36 0 1.07 0 1.92-.86 1.92-1.93s-.85-1.93-1.92-1.93z"></path></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+  
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+    contactForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData
+        });
+        if (response.ok) {
+          successMessage.textContent = 'Message sent successfully!';
+          successMessage.classList.remove('hidden');
+          successMessage.classList.add('opacity-100');
+          contactForm.reset();
+        } else {
+          successMessage.textContent = 'Error sending message. Please try again.';
+          successMessage.classList.remove('bg-green-500');
+          successMessage.classList.add('bg-red-500');
+          successMessage.classList.remove('hidden');
+          successMessage.classList.add('opacity-100');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        successMessage.textContent = 'Error sending message. Please try again.';
+        successMessage.classList.remove('bg-green-500');
+        successMessage.classList.add('bg-red-500');
+        successMessage.classList.remove('hidden');
+        successMessage.classList.add('opacity-100');
+      }
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+        successMessage.classList.remove('opacity-100');
+        successMessage.classList.remove('bg-red-500');
+        successMessage.classList.add('bg-green-500');
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

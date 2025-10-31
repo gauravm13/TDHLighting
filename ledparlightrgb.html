@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+    /* Ensure image stays within container on zoom */
+    #image-gallery {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV SECTION -->
+  <div id="navbar-header"></div>
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- Product Section -->
+  <section class="py-12 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Left Column: Image Gallery with Simple Hover Zoom -->
+        <div class="w-full max-w-lg mx-auto lg:max-w-none">
+          <div class="p-2 border border-gray-200 rounded-lg aspect-square bg-white shadow-sm cursor-pointer" id="image-gallery">
+            <img src="product/stagelighitng/ledparlightrgb.jpg" class="w-full h-full object-cover rounded-md hover:scale-110 transition-transform duration-300" alt="LED PAR LIGHT RGB">
+          </div>
+        </div>
+
+        <!-- Right Column: Product Details -->
+        <div class="flex flex-col">
+          <!-- Title and SKU -->
+          <div>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-1">LED PAR LIGHT RGB</h1>
+            <p class="text-lg text-gray-500 font-medium">TDHLP001</p>
+          </div>
+
+          <!-- Description -->
+          <div class="mt-6 text-base text-gray-600 space-y-4">
+            <p><strong>LED PAR LIGHT RGB</strong> High Quality Bright LED Par Light with RGB Colors source, Highthrow, Event Performance effect lighting, precision color outputLED Par light made with die casted aluminum housing, dual yokearrangement suitable to use for Stage Lighting, Decorative Lighting,Dance, DJ & Pub lighting and indoor beautifications, multipurposerequirements. </p>
+          </div>
+
+          <!-- Key Points -->
+          <div class="mt-8">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-yellow-400/20 text-yellow-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.106a.75.75 0 0 1 0 1.06l-1.591 1.592a.75.75 0 0 1-1.06-1.061l1.591-1.591a.75.75 0 0 1 1.06 0ZM21.75 12a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75ZM17.894 17.894a.75.75 0 0 1 1.06 0l1.591 1.591a.75.75 0 0 1-1.06 1.061l-1.591-1.59a.75.75 0 0 1 0-1.061ZM12 18a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.606 17.894a.75.75 0 0 1-1.06 0l-1.591-1.591a.75.75 0 0 1 1.06-1.061l1.591 1.59a.75.75 0 0 1 0 1.061ZM4.5 12a.75.75 0 0 1-.75.75H1.5a.75.75 0 0 1 0-1.5h2.25a.75.75 0 0 1 .75.75ZM6.106 6.106a.75.75 0 0 1 1.06 0l1.591 1.592a.75.75 0 0 1-1.06 1.06L6.106 7.168a.75.75 0 0 1 0-1.06Z" /></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Light Source</h3>
+                  <p class="text-sm text-gray-600">LED COB based source</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-yellow-400/20 text-yellow-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.25 3.75a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5a.75.75 0 0 1 .75-.75ZM15.75 18.75a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5a.75.75 0 0 1 .75-.75ZM5.25 12a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5H3a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 5.25 12ZM15 3.75A8.25 8.25 0 0 0 6.75 12a8.25 8.25 0 0 0 8.25 8.25A8.25 8.25 0 0 0 15 3.75Z" /></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Light Output</h3>
+                  <p class="text-sm text-gray-600">RGB 54 x 3W</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-yellow-400/20 text-yellow-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" /></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Optical Arrangement</h3>
+                  <p class="text-sm text-gray-600"> Optional Beam Angle – 15° & 45°</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-yellow-400/20 text-yellow-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Control System</h3>
+                  <p class="text-sm text-gray-600">It supports DMX 512 control through 3-pin or 5-pin XLR connections and offers 7-channel DMX operation, along with manual mode, sound-active mode, and master-slave mode for versatile control and synchronization options.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Download Buttons -->
+          <div class="mt-8 flex gap-4">
+            <a href="/downloads/led-par-light-rgb-manual.pdf" class="bg-yellow-400 text-white px-6 py-2 rounded-md hover:bg-yellow-500 transition">Download Manual</a>
+            <a href="/downloads/led-par-light-rgb-datasheet.pdf" class="bg-gray-200 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 transition">Download Datasheet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Modal -->
+  <div id="image-modal" class="modal fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+    <div class="relative w-full max-w-4xl max-h-full">
+      <button id="close-modal" aria-label="Close image modal" class="absolute -top-10 right-0 lg:top-0 lg:-right-12 text-white hover:text-yellow-400 transition-colors z-10">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <img src="product/stagelighitng/ledparlightrgb.jpg" class="w-full h-auto max-h-[90vh] object-contain rounded-lg" alt="LED PAR LIGHT RGB - Full size">
+    </div>
+  </div>
+
+  <!-- Specifications Section -->
+  <div class="container mx-auto p-4 sm:p-6 md:p-8">
+    <!-- Main Title -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Technical Specifications</h1>
+      <p class="text-lg text-gray-600 mt-2">Detailed breakdown of our high-performance lighting fixtures.</p>
+    </header>
+    
+    <!-- Divider for the first product -->
+    <div class="relative my-12">
+      <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t border-gray-300"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <span class="bg-white px-4 text-xl font-semibold text-gray-800">LED SMD Light</span>
+      </div>
+    </div>
+
+    <!-- Specifications Grid for the first product -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <!-- Card: Electrical & Power -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Electrical & Power</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Power Consumption 162W</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Input Voltage AC 110V ~ 240V, 50/60Hz</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> 0 to 100 % smooth dimming</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Strobe effect upto 20 Frames per Second (FPS)</li>
+        </ul>
+      </div>
+
+      <!-- Card: Optical Arrangement -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Optical Arrangement</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Beam Angle - 25°</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Optional Beam Angle – 15° & 45°</li>
+        </ul>
+      </div>
+
+      <!-- Card: Lamp Source -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Lamp Source</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> LED SMD Based Source</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> RGBW 54 x 3W</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> 50,000 Hours Burning life</li>
+        </ul>
+      </div>
+
+      <!-- Card: Control -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Control</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> DmX 512 Through 3/5 Pin XLR</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> 7 Channel DmX Control</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Manual Mode Operation</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Sound Active Mode Control</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Master Slave Mode</li>
+        </ul>
+      </div>
+
+      <!-- Card: Physical & Construction -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Physical & Construction</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Dimension 250x 265x 235mm</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Weight 4.04 Kgs</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> DmX 3 Pin In and Out</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Power Loop In and Out</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Ingress Protection IP20 Rated</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Aluminum Body</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Single or Dual Yoke Mount</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Black Powder coated finish</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> LED Easy View Display</li>
+        </ul>
+      </div>
+      
+      <!-- Card: Others -->
+      <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">Others</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Working Temperature +45° ~ -30°</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> Unlimited Colour Mixing Options</li>
+          <li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">&#9679;</span> 65dB ~ 130dB Sound sensing capacity</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <!-- JavaScript for Image Modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageGallery = document.getElementById('image-gallery');
+      const imageModal = document.getElementById('image-modal');
+      const closeModalBtn = document.getElementById('close-modal');
+
+      // Function to open the modal
+      const openModal = () => {
+        imageModal.classList.remove('opacity-0', 'pointer-events-none');
+        imageModal.classList.add('opacity-100', 'pointer-events-auto');
+      };
+
+      // Function to close the modal
+      const closeModal = () => {
+        imageModal.classList.add('opacity-0', 'pointer-events-none');
+        imageModal.classList.remove('opacity-100', 'pointer-events-auto');
+      };
+
+      // Event listeners
+      if (imageGallery && imageModal && closeModalBtn) {
+        imageGallery.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        imageModal.addEventListener('click', (e) => {
+          if (e.target === imageModal) {
+            closeModal();
+          }
+        });
+      }
+
+      // Close modal on 'Escape' key press
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

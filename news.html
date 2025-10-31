@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+ <style>
+    body {
+      overflow-x: hidden;
+      
+    }
+  </style>
+  
+
+<body>
+  <!--NAV SECTION START HERE..-->
+<div id="navbar-header"></div>
+
+<script>
+  fetch('headersec.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-header').innerHTML = data;
+
+      // Initialize mobile menu after content is loaded
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = mobileMenu.classList.contains('open');
+          if (isOpen) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+        window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+        // Close menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnMenuBtn = menuBtn.contains(event.target);
+          if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<!-- Content Section -->
+<section class="content-section bg-white py-[3.2rem] lg:py-[6.4rem] animate-animated animate-fadeInUp">
+    <div class="w-full px-[2.4rem] lg:px-[4.8rem] max-w-full">
+        <!-- Breadcrumbs -->
+        <div class="mb-4 text-sm font-light text-gray-500">
+            <a href="index.html" class="hover:text-yellow-400">Home</a>
+            <span class="mx-2">&gt;</span>
+            <span class="text-gray-900 text-sm font-medium">News</span>
+        </div>
+     
+   
+    </div>
+</section>
+
+
+<section class="px-4 sm:px-6 lg:px-8 py-12 mx-9">
+    <h2 class="text-4xl font-bold mb-10 text-center"> News</h2>
+
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- Card 1 -->
+      <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 17, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">Claypaky Fixtures Take The Flying Bus Stage For A Ride At Glastonbury</h3>
+          <p class="text-sm text-gray-600">Claypaky BY F.I.R.E. takes Aquila Flying Bus for the 2025 Glastonbury Festival of Contemporary Performing Arts...</p>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 11, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">Claypaky Fixtures Light Up “Bob Marley Hope Road” At Theatres</h3>
+          <p class="text-sm text-gray-600">An array of Claypaky Arolla Profile MP and Mini-B fixtures illuminates “Bob Marley Hope Road,” a groundbreaking musical...</p>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 06, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">Claypaky @ PLASA 2025: Lighting Up The Future</h3>
+          <p class="text-sm text-gray-600">Claypaky unveiled its new lighting innovations at the PLASA SHOW, inspiring lighting professionals worldwide...</p>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+
+       <a href="#" class="card bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop" alt="News Image" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Sep 03, 2025</p>
+          <h3 class="text-lg font-semibold mb-2 hover:text-yellow-400 transition">A Legend Arrives: Claypaky Ultimay Sharpy Now Available</h3>
+          <p class="text-sm text-gray-600">Claypaky introduces the latest evolution of its iconic Sharpy line — the Ultimay Sharpy, combining compact size and power...</p>
+        </div>
+      </a>
+
+      <!-- You can duplicate the above pattern for all other cards -->
+    </div>
+  </section>
+
+
+    <div id="footer-bottom"></div>
+  <script>
+    
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      
+      .catch(error => console.error('Error loading slider:', error));
+
+  </script>
+
+
+    
+</body>
+</html>

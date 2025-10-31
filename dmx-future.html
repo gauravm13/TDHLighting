@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>The Future of DMX Control Systems in Stage Lighting | TDH Lighting</title>
+</head>
+
+<body class="overflow-x-hidden bg-gray-50">
+  <!-- NAV SECTION -->
+  <div id="navbar-header"></div>
+
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          document.addEventListener('click', function (event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          window.addEventListener('scroll', function () {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+              if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+              } else {
+                nav.classList.remove('scrolled');
+              }
+            }
+          });
+
+          window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <article class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg transition-all duration-500 animate-fade-in">
+      <!-- Back to Blog Button -->
+      <a href="blog.html" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-brand-yellow transition-colors duration-300 mb-6">
+        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+      </a>
+
+      <!-- Author Section -->
+      <div class="flex items-center gap-4 mb-8 group cursor-pointer hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-black/40">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A1.5 1.5 0 0 1 18 21.75H6a1.5 1.5 0 0 1-1.499-1.632Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-base text-gray-900 group-hover:text-brand-yellow transition-colors duration-300">Neha Gupta</p>
+          <p class="text-sm text-gray-500">Product Engineer, TDH Lighting</p>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight relative group">
+          The Future of DMX Control Systems in Stage Lighting
+          <span class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all duration-500 group-hover:w-full"></span>
+        </h2>
+        <p class="text-base text-gray-500 mb-8 sm:mb-10 border-l-4 border-brand-yellow pl-4">
+          July 8, 2024
+        </p>
+      </header>
+
+      <!-- Image -->
+      <figure class="mb-8 sm:mb-10">
+        <img class="w-full h-auto rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300"
+          src="images/blogs/blogbn1.jpg"
+          alt="DMX control systems in stage lighting setup">
+      </figure>
+
+      <!-- Blog Content -->
+      <section class="space-y-6 text-base sm:text-lg text-gray-700 text-justify">
+        <p><strong>DMX control systems</strong> have been the backbone of modern stage lighting for decades. As technology advances, the industry is moving toward smarter, more integrated systems that provide unprecedented control, flexibility, and reliability for lighting designers and technicians alike.</p>
+
+        <p>At <strong>TDH Lighting</strong>, we’re leading this evolution by integrating next-generation DMX controllers with intelligent software interfaces. Our latest systems offer real-time wireless synchronization, smoother transitions, and adaptive lighting cues that respond instantly to performance changes—bridging the gap between art and automation.</p>
+
+        <p>Unlike traditional setups, our advanced controllers can seamlessly integrate with other stage components—sound, video, and motion—creating a unified digital ecosystem. This not only enhances creative expression but also reduces setup time, cable clutter, and synchronization issues during live performances.</p>
+
+        <blockquote class="border-l-4 border-brand-yellow bg-yellow-50/50 p-6 sm:p-8 my-8 sm:my-10 rounded-lg">
+          <p class="text-xl sm:text-2xl italic font-medium text-gray-800">
+            “The future of stage lighting control lies in intelligent, wireless, and collaborative systems. TDH’s next-gen DMX technology is redefining how light interacts with performance.”
+          </p>
+          <footer class="mt-4 text-sm sm:text-base not-italic text-gray-600">
+            — Neha Gupta, Product Engineer, TDH Lighting
+          </footer>
+        </blockquote>
+
+        <p>By combining wireless DMX protocols with machine learning algorithms, we’re paving the way for truly responsive lighting environments. Imagine a system that can sense emotion, tempo, or ambient cues and adapt the light dynamically—this is the future TDH is building.</p>
+
+        <p>Stay tuned as we continue to innovate and bring the next wave of DMX technology to the world of stage lighting—making shows more immersive, synchronized, and electrifying than ever before.</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <!-- Animation CSS -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.5s ease-out forwards;
+    }
+  </style>
+</body>
+</html>

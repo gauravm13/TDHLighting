@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/images/extra-img/polypack-logo.png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+ <style>
+    body {
+      overflow-x: hidden;
+      
+    }
+
+
+  </style>
+  
+
+<body>
+  <!--NAV SECTION START HERE..-->
+<div id="navbar-header"></div>
+
+<script>
+  fetch('headersec.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-header').innerHTML = data;
+
+      // Initialize mobile menu after content is loaded
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = mobileMenu.classList.contains('open');
+          if (isOpen) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+
+          window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        // Close menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnMenuBtn = menuBtn.contains(event.target);
+          if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+
+
+
+  <!-- Header Section -->
+
+
+  <!-- Header Section -->
+  <section class="relative w-full py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('assets/images/light-pattern.svg')] opacity-5 bg-cover bg-center"></div>
+
+  <div class="relative px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="mb-6 text-sm text-gray-500 flex items-center flex-wrap">
+      <a href="index.html" class="hover:underline hover:text-yellow-500 transition">Home</a>
+      <span class="mx-2 text-gray-400">&gt;</span>
+      <span class="font-medium text-gray-700">About TDHLight</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+      About <span class="text-yellow-500">TDHLight</span>
+    </h1>
+
+    <!-- Divider -->
+    <div class="h-1 w-24 bg-yellow-500 rounded-full mb-8"></div>
+
+    <!-- Description -->
+    <p class="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-3xl">
+      Established in <span class="font-semibold text-gray-900">2009</span>, 
+      <span class="font-semibold text-gray-900">Theatre Dimmer Hardware (TDH)</span> 
+      is a pioneer in professional lighting solutions. We are a leading 
+      <span class="text-yellow-600 font-medium">manufacturer, wholesaler, and trader</span> 
+      of DMX Splitters, Electronic Dimmers, Dimmer Racks, Sharpy Lights, LED Spotlights, 
+      Stage Lights, and Theater Profile Lights.  
+      <br><br>
+      Our products are built with precision and innovation, supported by vendors employing 
+      the latest machinery and technology to deliver unmatched quality and reliability.
+    </p>
+
+    <!-- Highlight Box -->
+    <div class="mt-12 bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Promise</h2>
+      <p class="text-gray-600 leading-relaxed">
+        At TDHLight, we don’t just build lighting equipment — we create experiences.  
+        Every product reflects our commitment to performance, sustainability, and innovation 
+        in the entertainment industry.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Main Layout with Sidebar -->
+  <div class="mx-4 lg:mx-9 px-4 py-6" x-data="sidebarNavData()">
+    <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
+
+      <!-- Sidebar Navigation -->
+      <div class="lg:col-span-3">
+        <div class="lg:sticky top-10">
+          <nav class="relative border-b lg:border-none">
+            <div class="lg:hidden flex items-center justify-between py-3">
+              <span class="font-bold text-lg" x-text="activeSectLabel"></span>
+              <button @click="isOpen = !isOpen" class="transition-transform duration-300" :class="isOpen ? '-rotate-90' : 'rotate-90'">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 13.11 23.4">
+                  <path d="M.71,22.69L11.71,11.69,1.15,.69"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="space-y-1 text-lg lg:space-y-2 transition-all duration-500 overflow-hidden lg:overflow-visible"
+                :class="isOpen ? 'max-h-screen py-3' : 'max-h-0 lg:max-h-full py-0'">
+              <li><a href="#mission" @click="setActiveSect('mission', 'Mission and Vision')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'mission' }">Mission and Vision</a></li>
+              <li><a href="#expertise" @click="setActiveSect('expertise', 'Expertise')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'expertise' }">Expertise</a></li>
+              <li><a href="#choose" @click="setActiveSect('choose', 'Why Choose Us')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'choose' }">Why Choose Us</a></li>
+              <li><a href="#Offer" @click="setActiveSect('Offer', 'What We Offer')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'Offer' }">What We Offer</a></li>
+              <li><a href="#certifications" @click="setActiveSect('certifications', 'Certifications')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'certifications' }">Certifications</a></li>
+              <li><a href="#sustainability" @click="setActiveSect('sustainability', 'Sustainability')"
+                     class="block py-2 px-3 rounded-md transition-colors"
+                     :class="{ 'bg-yellow-100 text-yellow-800 font-semibold': activeSect === 'sustainability' }">Sustainability</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="lg:col-span-9 space-y-10 mt-6 lg:mt-0">
+
+        <!-- Mission & Vision -->
+        <section>
+          <span class="block -mt-20 pt-20" id="mission" x-intersect.threshold.50="activeSect = 'mission'; activeSectLabel = 'Mission and Vision'"></span>
+          <h2 class="text-3xl font-bold mb-3">Mission & Vision</h2>
+          <p class="text-lg leading-relaxed mb-6">
+            To be the partner of choice for the professional entertainment industry. To create best in class lighting equipment and services driven by customer satisfaction and passion for innovation. We believe sustainability is fundamental to our products and operations. We value diversity and the empowerment of people’s talents.
+          </p>
+
+          <div class="mt-6">
+            <h5 class="font-bold mb-3">Explore the TDH Lighting</h5>
+            <div class="mt-6 flex justify-center">
+              <div class="w-full max-w-4xl">
+                <iframe
+                  src="https://www.youtube.com/embed/9ugjXuU48vY?si=d4gao4COZqm-57PB"
+                  class="w-full h-64 sm:h-80 lg:h-96 rounded-xl shadow-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 bg-gray-100 rounded-lg">
+            <h5 class="text-xl font-bold mb-4">Our Values</h5>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex items-center gap-3">
+                <img src="assets/connection (1).png" alt="Integrity" class="w-12 h-12">
+                <p class="text-lg font-semibold">Integrity</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="assets/innovation.png" alt="Innovation" class="w-12 h-12">
+                <p class="text-lg font-semibold">Innovation</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="assets/team.png" alt="Collaboration" class="w-12 h-12">
+                <p class="text-lg font-semibold">Collaboration</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="assets/badge.png" alt="Excellence" class="w-12 h-12">
+                <p class="text-lg font-semibold">Excellence</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Expertise -->
+        <section id="expertise" class="py-10 bg-white">
+          <div class="px-4 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold relative">
+                Our Expertise
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-[-8px] w-16 h-1 bg-yellow-400 rounded-full"></span>
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Card 1 -->
+              <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center justify-center h-14 w-14 bg-yellow-400 text-white rounded-full mx-auto mb-4">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v4m0 0a4 4 0 014 4h4a8 8 0 00-8-8zM12 7a4 4 0 00-4 4H4a8 8 0 018-8zM4 15a8 8 0 008 8v-4a4 4 0 01-4-4H4zm16 0a8 8 0 01-8 8v-4a4 4 0 004-4h4z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Lighting Design & Engineering</h3>
+                <p class="text-sm text-gray-600">Professional lighting solutions combining creativity and technical precision.</p>
+              </div>
+              <!-- Card 2 -->
+              <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center justify-center h-14 w-14 bg-yellow-400 text-white rounded-full mx-auto mb-4">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-6 4h6m-6 4h6" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Manufacturing Excellence</h3>
+                <p class="text-sm text-gray-600">High-quality, durable fixtures built with precision and tested rigorously.</p>
+              </div>
+              <!-- Card 3 -->
+              <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center justify-center h-14 w-14 bg-yellow-400 text-white rounded-full mx-auto mb-4">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 00-7.07 17.07A10 10 0 0012 22a10 10 0 007.07-2.93A10 10 0 0012 2zM12 8v4l3 3" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Lighting Innovation & Technology</h3>
+                <p class="text-sm text-gray-600">LED advancements and smart control systems for efficiency and performance.</p>
+              </div>
+              <!-- Card 4 -->
+              <div class="border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center justify-center h-14 w-14 bg-yellow-400 text-white rounded-full mx-auto mb-4">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Technical Support & Services</h3>
+                <p class="text-sm text-gray-600">Installation guidance, maintenance, and long-term support.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- What We Offer -->
+        <section id="Offer" class="py-10">
+          <div class="px-4 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+              <h2 class="text-5xl font-bold relative">
+                What We Offer
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-[-8px] w-16 h-1 bg-yellow-400 rounded-full"></span>
+              </h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+              <ul class="space-y-3 text-lg text-gray-600">
+                <li><strong class="text-black">Stage Lighting Fixtures:</strong> Moving heads, profiles, washes, and beams for dynamic performances.</li>
+                <li><strong class="text-black">Architectural & Outdoor Lighting:</strong> Weatherproof façade and landscape fixtures.</li>
+                <li><strong class="text-black">Theatrical & Studio Lighting:</strong> Fresnels, spotlights, soft panels with precision control.</li>
+                <li><strong class="text-black">LED & Intelligent Solutions:</strong> DMX, RDM, wireless energy-efficient systems.</li>
+                <li><strong class="text-black">Control Systems:</strong> Consoles, dimmers, network controllers.</li>
+                <li><strong class="text-black">Rigging Accessories:</strong> Trussing, clamps, safe mounting solutions.</li>
+                <li><strong class="text-black">Custom Solutions:</strong> Bespoke designs for unique projects.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="choose" class="bg-gray-800 text-white py-10">
+          <div class="px-4 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold relative">
+                Why Choose TDH Lighting?
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-[-8px] w-16 h-1 bg-yellow-400 rounded-full"></span>
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-bold mb-3">Commitment to Quality & Innovation</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                  We combine craftsmanship with cutting-edge technology to deliver durable, precise, and consistent lighting solutions.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Our Advantages</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                  <li><strong class="text-white">Expertise:</strong> Over a decade in professional lighting.</li>
+                  <li><strong class="text-white">Reliability:</strong> Long lifespan in demanding environments.</li>
+                  <li><strong class="text-white">Innovation:</strong> Smarter, efficient technologies.</li>
+                  <li><strong class="text-white">Customization:</strong> Tailored to your vision.</li>
+                  <li><strong class="text-white">Support:</strong> Full installation and maintenance.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+          <span class="block -mt-20 pt-20" id="certifications" x-intersect.threshold.50="activeSect = 'certifications'; activeSectLabel = 'Certifications'"></span>
+          <h2 class="text-3xl font-bold mb-3 text-center lg:text-left">Certifications</h2>
+          <p class="text-base text-gray-700 mb-6 text-center lg:text-left">
+            Our management system is fully certified across quality, safety, environment, and energy efficiency.
+          </p>
+
+          <div class="splide" id="certificates-carousel">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide flex justify-center p-3">
+                  <div class="w-full max-w-[280px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+                    <img src="assets/css/cert.png" alt="Certificate 1" class="w-full h-auto max-h-[360px] object-contain mb-3 rounded-md">
+                    <a href="assets/css/cert1.pdf" download class="bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-600 transition">
+                      Download
+                    </a>
+                  </div>
+                </li>
+                <li class="splide__slide flex justify-center p-3">
+                  <div class="w-full max-w-[280px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+                    <img src="assets/css/cert2.png" alt="Certificate 2" class="w-full h-auto max-h-[360px] object-contain mb-3 rounded-md">
+                    <a href="assets/css/cert2.pdf" download class="bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-600 transition">
+                      Download
+                    </a>
+                  </div>
+                </li>
+                <li class="splide__slide flex justify-center p-3">
+                  <div class="w-full max-w-[280px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+                    <img src="assets/css/cert3.png" alt="Certificate 3" class="w-full h-auto max-h-[360px] object-contain mb-3 rounded-md">
+                    <a href="assets/css/cert3.pdf" download class="bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-600 transition">
+                      Download
+                    </a>
+                  </div>
+                </li>
+                <li class="splide__slide flex justify-center p-3">
+                  <div class="w-full max-w-[280px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+                    <img src="assets/css/cert4.png" alt="Certificate 4" class="w-full h-auto max-h-[360px] object-contain mb-3 rounded-md">
+                    <a href="assets/css/cert4.pdf" download class="bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-600 transition">
+                      Download
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sustainability -->
+        <section class="container mx-auto px-4 py-8">
+          <span class="block -mt-20 pt-20" id="sustainability" x-intersect.threshold.50="activeSect = 'sustainability'; activeSectLabel = 'Sustainability'"></span>
+          <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+            <div class="mb-6">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                Sustainability
+                <span class="block w-20 h-1 bg-yellow-400 rounded-full mt-2"></span>
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <p class="text-base text-gray-600 mb-4">
+                  Environmental responsibility is embedded in our culture. We reduce ecological footprint through innovation and responsible practices.
+                </p>
+                <div class="bg-yellow-400 p-4 rounded-lg">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-1">Our Commitment</h3>
+                  <p class="text-sm text-gray-700">Minimize impact with efficient, durable, and eco-conscious solutions.</p>
+                </div>
+              </div>
+              <div>
+                <img src="images/Sustainable Sources for a Greener Future.jpeg" 
+                     alt="Eco Facility" class="w-full h-81 object-cover rounded-xl shadow-sm">
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Initiatives</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                    <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </div>
+                  <h4 class="font-semibold text-gray-800">Energy Efficiency</h4>
+                  <p class="text-sm text-gray-600">Advanced tech to reduce consumption.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                    <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h4 class="font-semibold text-gray-800">Long-Lasting</h4>
+                  <p class="text-sm text-gray-600">Durable fixtures reduce waste.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                    <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v9.28a4.5 4.5 0 11-3.46 1.69" />
+                    </svg>
+                  </div>
+                  <h4 class="font-semibold text-gray-800">Precision</h4>
+                  <p class="text-sm text-gray-600">Optimal light with minimal energy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+ <div id="footer-bottom"></div>
+  <script>
+    
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      
+      .catch(error => console.error('Error loading slider:', error));
+
+  </script>
+
+
+<script>
+    // Improved Hamburger Menu Functionality
+ 
+
+  function sidebarNavData() {
+        return {
+            isOpen: false,
+            activeSect: 'mission', // Default active section
+            activeSectLabel: 'Mission and Vision',
+            setActiveSect(id, label) {
+                this.activeSect = id;
+                this.activeSectLabel = label;
+                this.isOpen = false; // Close mobile menu after selection
+            }
+        }
+    }
+
+    // Initialize the Splide carousel
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.getElementById('certificates-carousel')) {
+        new Splide('#certificates-carousel', {
+          type: 'loop',
+          perPage: 4,
+          gap: '1rem',
+          autoplay: true,
+          interval: 3000,
+          arrows: false,
+          pagination: true,
+          breakpoints: {
+            1280: { perPage: 3 },
+            1024: { perPage: 2 },
+            768: { perPage: 2 },
+            640: { perPage: 1 },
+          },
+        }).mount();
+      }
+    });
+  
+</script>
+    
+</body>
+</html>

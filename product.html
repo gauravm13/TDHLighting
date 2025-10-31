@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+ <style>
+    body {
+      overflow-x: hidden;
+      
+    }
+  </style>
+  
+
+<body>
+  <!--NAV SECTION START HERE..-->
+<div id="navbar-header"></div>
+
+<script>
+  fetch('headersec.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-header').innerHTML = data;
+
+      // Initialize mobile menu after content is loaded
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = mobileMenu.classList.contains('open');
+          if (isOpen) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+        // Close menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        });
+
+         window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnMenuBtn = menuBtn.contains(event.target);
+          if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+
+  <!-- Products Section -->
+  <header class="py-8 px-4 sm:px-6 lg:px-8">
+       <div class="w-full">
+      <nav class="text-sm sm:text-base text-gray-500 mb-2">
+        <a href="index.html" class="hover:text-gray-700 transition">Home</a>
+        <span class="mx-2"></span>
+        <span class="text-gray-900">Products</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+        Products
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-full">
+        Browse our fixtures by category or product family, or refine your search using the available filters.
+      </p>
+    </div>
+  </header>
+
+  <!-- Product Cards -->
+  <section class="py-12 bg-white">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <h2 class="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-900">Categories</h2>
+        <p class="text-gray-600 mt-2 text-sm sm:text-base md:text-lg">Browse by category to find what suits your needs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1 -->
+        <div class="relative h-[40vh] rounded-xl overflow-hidden flex items-end p-3 bg-cover bg-center transition-transform tranhttpssform hover:scale-105"
+             style="background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('product/stagelighitng/3d-music-related-scene.jpg');">
+          <div class="text-white">
+            <a href="stagelighting.html"><h3 class="text-base hover:text-yellow-400 sm:text-lg md:text-xl font-semibold mb-1">Stage Lighting</h3></a>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="relative h-[40vh] rounded-xl overflow-hidden flex items-end p-3 bg-cover bg-center transition-transform transform hover:scale-105"
+             style="background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('product/accessories/accessories.jpg');">
+          <div class="text-white">
+            <a href="accessories.html"><h3 class="text-base hover:text-yellow-400 sm:text-lg md:text-xl font-semibold mb-1">Stage Furnishing</h3></a>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- Families Section -->
+    <section class="py-12 bg-white overflow-hidden">
+  <div class="max-w-[95%] mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold">Product Highlights</h2>
+      <a href="product.html" class="text-yellow-400 hover:text-blue-600 uppercase font-semibold flex items-center gap-2">
+        View all
+        <svg class="w-5 h-auto fill-current" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3389 16L11.9085 14.6029L17.4969 9.01455H0V7.01871H17.4969L11.8753 1.39709L13.3056 0L21.3222 8.01663L13.3389 16Z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Carousel -->
+    <div id="product-carousel" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          <!-- Product 1 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLCP004" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledcobparlight.png" alt="LED COP PAR LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED COP PAR LIGHT</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED COP PAR LIGHT</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLCP004</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Product 2 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLPF011" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledprofilespotlg.png" alt="LED PROFILE SPOT LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED PROFILE SPOT LIGHT</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED PROFILE SPOT LIGHT</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLPF011</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Product 3 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLSR017_15R" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/sharpylight15r.png" alt="SHARPY LIGHT 15R" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">SHARPY LIGHT 15R</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">SHARPY LIGHT 15R</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLSR017_15R</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Product 4 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHMW018" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledmovingwashlight.png" alt="Volero Cube" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED MOVING WASH LIGHT RGB</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED MOVING WASH LIGHT RGB</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHMW018</p>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <!-- Heading -->
+    <div class="max-w-7xl mx-auto mb-12 sm:mb-16">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+        Find  <span class="text-yellow-400">all the products</span> for your next show
+      </h1>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl">
+        Meet the extensive range of innovative Claypaky fixtures and lighting solutions. 
+        Filter by category, type, light source, family or application.
+      </p>
+    </div>
+
+<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <!-- Product 1 -->
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLP001">
+            <img src="product/stagelighitng/ledparlightrgb.jpg" alt="LED PAR LIGHT RGB" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED PAR LIGHT RGB</h3>
+        <p class="text-sm text-gray-600">LED PAR RGB</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLP001</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLP002">
+            <img src="product/stagelighitng/ledparrgbw.png" alt="LED PAR LIGHT RGBW" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED PAR LIGHT RGBW</h3>
+        <p class="text-sm text-gray-600">LED PAR RGBW</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLP002</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLWW003">
+            <img src="product/stagelighitng/ledwarmwhitelight.jpg" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED WARM WHITE LIGHT</h3>
+        <p class="text-sm text-gray-600">LED PAR RGBW</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLWW003</p>
+      </div>
+
+       <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLCP004">
+            <img src="product/stagelighitng/ledcobparlight.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED COP PAR LIGHT</h3>
+        <p class="text-sm text-gray-600">LED COP PAR LIGHT</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLCP004</p>
+      </div>
+
+       <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHL4E005">
+            <img src="product/stagelighitng/LED4EYEPARLIGHT.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED 4 EYE PAR LIGHT</h3>
+        <p class="text-sm text-gray-600">LED 4 EYE PAR LIGHT</p>
+        <p class="text-xs text-gray-500 mt-1">TDHL4E005</p>
+      </div>
+
+       <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHPC006">
+            <img src="product/stagelighitng/LEDPLANOCONVEX.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">PLANO CONVEX LIGHT 1000W</h3>
+        <p class="text-sm text-gray-600">PLANO CONVEX LIGHT 1000W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHPC006</p>
+      </div>
+
+       <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLPC007">
+            <img src="product/stagelighitng/planoconvexlg.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED PLANO CONVEX LIGHT </h3>
+        <p class="text-sm text-gray-600">PLANO CONVEX LIGHT 200W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLPC007</p>
+      </div>
+
+       <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLFS008">
+            <img src="product/stagelighitng/FRESNELSPOTLIGHT200.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED FRESNEL SPOT LIGHT 200W</h3>
+        <p class="text-sm text-gray-600">LED FRESNEL SPOT LIGHT 200W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLFS008</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHFS009">
+            <img src="product/stagelighitng/halogenfresnelspotlg.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">HALOGEN FRESNEL SPOT LIGHT 1000WProduct</h3>
+        <p class="text-sm text-gray-600"> FRESNEL SPOT LIGHT 1000W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHFS009</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHPL010">
+            <img src="product/stagelighitng/par64light1000.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">PAR 64 LIGHT 1000W</h3>
+        <p class="text-sm text-gray-600">PAR 64 LIGHT 1000W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHPL010</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLPF011">
+            <img src="product/stagelighitng/ledprofilespotlg.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED PROFILE SPOT LIGHT</h3>
+        <p class="text-sm text-gray-600">LED PROFILE SPOT LIGHT</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLPF011</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLB012">
+            <img src="product/stagelighitng/ledblinderlight400.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED BLINDER LIGHT 400W</h3>
+        <p class="text-sm text-gray-600">LLED BLINDER LIGHT 400W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLB012</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLB012">
+            <img src="product/stagelighitng/blinderlight200.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED BLINDER LIGHT 200W</h3>
+        <p class="text-sm text-gray-600">LED BLINDER LIGHT 200W</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLB012</p>
+      </div>
+
+
+        <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLCW013">
+            <img src="product/stagelighitng/LEDWASHLIGHTCYCLORAMA.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED WASH LIGHT CYCLORAMA</h3>
+        <p class="text-sm text-gray-600">LED WASH LIGHT CYCLORAMA</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLCW013</p>
+      </div>
+
+        <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLWW014">
+            <img src="product/stagelighitng/LEDWALLWASHERLIGHT.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED WALL WASHER LIGHT</h3>
+        <p class="text-sm text-gray-600">LED WALL WASHER LIGHT</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLWW013</p>
+      </div>
+
+        <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLLB015">
+            <img src="product/stagelighitng/LEDLASERBARRGBLIGHT.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED LASER BAR RGB LIGHT</h3>
+        <p class="text-sm text-gray-600">LED LASER BAR RGB LIGHT</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLLB015</p>
+      </div>
+
+        <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLSR016">
+            <img src="product/stagelighitng/SHARPYLIGHT7R.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">SHARPY LIGHT 7R</h3>
+        <p class="text-sm text-gray-600">SHARPY LIGHT 7R</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLSR016</p>
+      </div>
+
+        <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+        <div class="relative">
+          <a href="detailproduct.html?id=TDHLSR017">
+            <img src="product/stagelighitng/SHARPYLIGHT10R.png" alt="LED WARM WHITE LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+          </a>
+          <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+          <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+        </div>
+        <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">SHARPY LIGHT 10R</h3>
+        <p class="text-sm text-gray-600">SHARPY LIGHT 10R</p>
+        <p class="text-xs text-gray-500 mt-1">TDHLSR017</p>
+      </div>
+
+      <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHLSR017_15R">
+      <img src="product/stagelighitng/sharpylight15r.png" alt="SHARPY LIGHT 15R" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">SHARPY LIGHT 15R</h3>
+  <p class="text-sm text-gray-600">SHARPY LIGHT 15R</p>
+  <p class="text-xs text-gray-500 mt-1">TDHLSR017_15R</p>
+</div>
+
+<!-- Product Card: LED MOVING WASH LIGHT RGB (18) -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHMW018">
+      <img src="product/stagelighitng/ledmovingwashlight.png" alt="LED MOVING WASH LIGHT RGB" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED MOVING WASH LIGHT RGB</h3>
+  <p class="text-sm text-gray-600">LED MOVING WASH LIGHT RGB</p>
+  <p class="text-xs text-gray-500 mt-1">TDHMW018</p>
+</div>
+
+<!-- Product Card: LED MOVING WASH LIGHT RGB (19) -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHMW019">
+      <img src="product/stagelighitng/ledmovingwashlight407.png" alt="LED MOVING WASH LIGHT RGB" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">LED MOVING WASH LIGHT RGB</h3>
+  <p class="text-sm text-gray-600">LED MOVING WASH LIGHT RGB</p>
+  <p class="text-xs text-gray-500 mt-1">TDHMW019</p>
+</div>
+
+<!-- Product Card: HALOGEN LIGHT LIGHT -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHHL20">
+      <img src="product/stagelighitng/halogenlight500.png" alt="HALOGEN LIGHT LIGHT" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">HALOGEN LIGHT LIGHT</h3>
+  <p class="text-sm text-gray-600">HALOGEN LIGHT LIGHT</p>
+  <p class="text-xs text-gray-500 mt-1">TDHHL20</p>
+</div>
+
+<!-- Product Card: PROFILE SPOT LIGHT 1000W -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHPF021">
+      <img src="product/stagelighitng/profilespotlight1000.png" alt="PROFILE SPOT LIGHT 1000W" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">PROFILE SPOT LIGHT 1000W</h3>
+  <p class="text-sm text-gray-600">PROFILE SPOT LIGHT 1000W</p>
+  <p class="text-xs text-gray-500 mt-1">TDHPF021</p>
+</div>
+
+<!-- Product Card: CYCLORAMA LIGHTS 1000W -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHCYL22">
+      <img src="product/stagelighitng/cycloramalight.png" alt="CYCLORAMA LIGHTS 1000W" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">CYCLORAMA LIGHTS 1000W</h3>
+  <p class="text-sm text-gray-600">CYCLORAMA LIGHTS 1000W</p>
+  <p class="text-xs text-gray-500 mt-1">TDHCYL22</p>
+</div>
+
+<!-- Product Card: DMX SPLITTER -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHDMX020">
+      <img src="product/stagelighitng/dmxsplitter.png" alt="DMX SPLITTER" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">DMX SPLITTER</h3>
+  <p class="text-sm text-gray-600">DMX SPLITTER</p>
+  <p class="text-xs text-gray-500 mt-1">TDHDMX020</p>
+</div>
+
+<!-- Product Card: ELECTRONIC 6 CHANNEL DIMMER -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHDMX021">
+      <img src="product/stagelighitng/electronic6channeldimmer.png" alt="ELECTRONIC 6 CHANNEL DIMMER" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">ELECTRONIC 6 CHANNEL DIMMER</h3>
+  <p class="text-sm text-gray-600">ELECTRONIC 6 CHANNEL DIMMER</p>
+  <p class="text-xs text-gray-500 mt-1">TDHDMX021</p>
+</div>
+
+<!-- Product Card: 12 CHANNEL DIMMER -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHDMX022">
+      <img src="product/stagelighitng/12channeldimmer.png" alt="12 CHANNEL DIMMER" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">12 CHANNEL DIMMER</h3>
+  <p class="text-sm text-gray-600">12 CHANNEL DIMMER</p>
+  <p class="text-xs text-gray-500 mt-1">TDHDMX022</p>
+</div>
+
+<!-- Product Card: 12 CHANNEL WALL MOUNT DIMMER -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHWDM023">
+      <img src="product/stagelighitng/12chnlwallmountdimmer.png" alt="12 CHANNEL WALL MOUNT DIMMER" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">12 CHANNEL WALL MOUNT DIMMER</h3>
+  <p class="text-sm text-gray-600">12 CHANNEL WALL MOUNT DIMMER</p>
+  <p class="text-xs text-gray-500 mt-1">TDHWDM023</p>
+</div>
+
+<!-- Product Card: 1024 MINIPEARL PANEL -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHMP023">
+      <img src="product/stagelighitng/12minipearlpanel.png" alt="1024 MINIPEARL PANEL" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">1024 MINIPEARL PANEL</h3>
+  <p class="text-sm text-gray-600">1024 MINIPEARL PANEL</p>
+  <p class="text-xs text-gray-500 mt-1">TDHMP023</p>
+</div>
+
+<!-- Product Card: PILOT 2000 PANEL -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHPL024">
+      <img src="product/stagelighitng/pilot2000panel.png" alt="PILOT 2000 PANEL" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">PILOT 2000 PANEL</h3>
+  <p class="text-sm text-gray-600">PILOT 2000 PANEL</p>
+  <p class="text-xs text-gray-500 mt-1">TDHPL024</p>
+</div>
+
+<!-- Product Card: DMX CONTROLLER 384 -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHPL025">
+      <img src="product/stagelighitng/dmxcontroller384.png" alt="DMX CONTROLLER 384" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">DMX CONTROLLER 384</h3>
+  <p class="text-sm text-gray-600">DMX CONTROLLER 384</p>
+  <p class="text-xs text-gray-500 mt-1">TDHPL025</p>
+</div>
+
+<!-- Product Card: DMX CONTROLLER 512 -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHPL026">
+      <img src="product/stagelighitng/dmxcontroller512.png" alt="DMX CONTROLLER 512" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">DMX CONTROLLER 512</h3>
+  <p class="text-sm text-gray-600">DMX CONTROLLER 512</p>
+  <p class="text-xs text-gray-500 mt-1">TDHPL026</p>
+</div>
+
+<!-- Product Card: 3 PHASE BOARD -->
+<div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300">
+  <div class="relative">
+    <a href="detailproduct.html?id=TDHPB027">
+      <img src="product/stagelighitng/3phaseboard.png" alt="3 PHASE BOARD" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+    </a>
+    <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+    <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-semibold px-2 py-1 rounded">NEW</span>
+  </div>
+  <h3 class="text-base sm:text-lg font-semibold mt-3 text-gray-900">3 PHASE BOARD</h3>
+  <p class="text-sm text-gray-600">3 PHASE BOARD</p>
+  <p class="text-xs text-gray-500 mt-1">TDHPB027</p>
+</div>
+
+
+    </div>
+</section>
+
+
+ <div id="footer-bottom"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-bottom').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#product-carousel', {
+      type       : 'loop',
+      perPage    : 4,
+      perMove    : 1,
+      gap        : '1rem',
+      autoplay   : true,
+      interval   : 5000,
+      arrows     : true,
+      pagination : false,
+      breakpoints: {
+        1280: { perPage: 3 },
+        992: { perPage: 2 },
+        768: { perPage: 1 },
+      },
+    }).mount();
+  });
+</script>
+  <!-- Modern Footer Design end -->
+ 
+       
+        
+      
+  <!-- Scripts -->
+ 
+</body>
+</html>

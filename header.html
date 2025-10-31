@@ -1,0 +1,333 @@
+<style>
+.gradient-bg {
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.sticky-nav {
+  position: fixed;
+  background-color: transparent; /* Fully transparent by default */
+  backdrop-filter: none; /* Remove blur when not scrolled */
+  -webkit-backdrop-filter: none;
+  box-shadow: none; /* Remove shadow when not scrolled */
+  z-index: 50;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.sticky-nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.85); /* Background when scrolled */
+  backdrop-filter: blur(10px); /* Add blur when scrolled */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow when scrolled */
+}
+
+.text-primary {
+  color: #FDC400 !important;
+}
+
+@media (max-width: 1048px) {
+  .desktop-menu { display: none; }
+  .hamburger { display: flex; }
+}
+
+@media (min-width: 1049px) {
+  .hamburger { display: none; }
+  .desktop-menu { display: flex; }
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  background-color: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0.55rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  display: none;
+  z-index: 50;
+}
+
+.nav-item:hover .mega-menu {
+  display: block;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .mega-menu {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    padding: 1.5rem;
+  }
+}
+
+
+/* Reduce Swiper Button Size */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;  /* Reduced from default ~50px */
+  height: 40px !important;
+  margin-top: -20px !important; /* Center vertically */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 16px !important;  /* Smaller arrow icon */
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(253, 196, 0, 0.2) !important;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* Make buttons even smaller on mobile */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 32px !important;
+    height: 32px !important;
+    margin-top: -16px !important;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 12px !important;
+  }
+}
+</style>
+
+<div id="header-container">
+  <nav id="main-nav" class="absolute w-full sticky-nav top-0 left-0 p-4 text-white flex items-center justify-between z-50">
+    <a href="index.html" class="flex items-center">
+      <img src="/assets/css/LIGHTING.png" class="h-14" alt="Logo">
+    </a>
+    
+    <div class="desktop-menu ml-8 gap-8 text-md mr-4 flex">
+       <div class="relative nav-item">
+        <button class="menuBtn hover:text-yellow-400 transition duration-300">Company</button>
+        <div class="megaMenu absolute top-full left-0 w-64 bg-white overflow-hidden text-black shadow-lg border rounded-xl border-gray-200 hidden opacity-0 translate-y-[-10px] transition-all duration-300 ease-out z-50">
+          <a href="aboutus.html" class="block px-4 py-2 hover:bg-yellow-400 transition">About US</a>
+          <a href="ourteam.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Our team</a>
+          <a href="FAQ.html" class="block px-4 py-2 hover:bg-yellow-400 transition">FAQ</a>
+        </div>
+      </div>
+      <div class="relative nav-item">
+        <button class="menuBtn hover:text-yellow-400 transition duration-300">Products</button>
+        <div class="megaMenu absolute top-full left-0 w-64 bg-white text-black overflow-hidden shadow-lg border rounded-xl border-gray-200 hidden opacity-0 translate-y-[-10px] transition-all duration-300 ease-out z-50">
+          <a href="stagelighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Stage Lighting</a>
+          <a href="accessories.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Stage Furnishing</a>
+          <a href="3phaseboards.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Phase Boards</a>
+        </div>
+      </div>
+      <div class="relative nav-item">
+        <button class="menuBtn hover:text-yellow-400 transition duration-300">Applications</button>
+        <div class="megaMenu absolute top-full left-0 w-64 bg-white text-black shadow-lg rounded-xl border border-gray-200 hidden opacity-0 translate-y-[-10px] transition-all duration-300 ease-out z-50 overflow-hidden">
+          <a href="auditoriumlighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Stage Lighting</a>
+          <a href="studiolighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Studio Lighting</a>
+          <a href="eventandconcertlighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Event and Concert Lighting</a>
+          <a href="architecturallighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Architectural Lighting</a>
+          <a href="hallslighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Auditorium and Halls Lighting</a>
+          <a href="entertainmentvenues.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Entertainment Venues & Theme Parks</a>
+        </div>
+      </div>
+      <a href="innovation.html" class="hover:text-yellow-400 transition duration-300">Innovation</a>
+      <a href="support.html" class="hover:text-yellow-400 transition duration-300">Support</a>
+     
+      <a href="internationalprojects.html" class="hover:text-yellow-400 transition duration-300">Projects</a>
+      <a href="blog.html" class="hover:text-yellow-400 transition duration-300">Blogs</a>
+      <a href="contactus.html" class="hover:text-yellow-400 transition duration-300">Contact Us</a>
+
+    </div>
+    <button id="hamburger" class="hamburger flex-col gap-1.5 cursor-pointer">
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+         <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+  </nav>
+
+
+<div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center space-y-6 text-2xl font-semibold hidden z-40 px-8">
+
+  <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('company')">
+        Company
+        <svg id="arrow-company" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-company" class="mt-3 space-y-2 text-lg hidden">
+        <a href="aboutus.html" class="block text-white hover:text-yellow-400 transition">About Us</a>
+        <a href="ourteam.html" class="block text-white hover:text-yellow-400 transition">Our Team</a>
+        <a href="FAQ.html" class="block text-white hover:text-yellow-400 transition">FAQ</a>
+      </div>
+    </div>
+
+ <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('prod')">
+        Products
+        <svg id="arrow-prod" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-prod" class="mt-3 space-y-2 text-lg hidden">
+        <a href="stagelighting.html" class="block text-white hover:text-yellow-400 transition">Stage Lighting</a>
+        <a href="accessories.html" class="block text-white hover:text-yellow-400 transition">Stage Furnishing</a>
+        <a href="3phaseboards.html" class="block text-white hover:text-yellow-400 transition">Phase Boards</a>
+      
+      </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('apps')">
+        Applications
+        <svg id="arrow-apps" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-apps" class="mt-3 space-y-2 text-lg hidden">
+        <a href="auditoriumlighting.html" class="block text-white hover:text-yellow-400 transition">Stage Lighting</a>
+        <a href="studiolighting.html" class="block text-white hover:text-yellow-400 transition">Studio Lighting</a>
+        <a href="eventandconcertlighting.html" class="block text-white hover:text-yellow-400 transition">Event & Concert</a>
+        <a href="architecturallighting.html" class="block text-white hover:text-yellow-400 transition">Architectural</a>
+        <a href="hallslighting.html" class="block text-white hover:text-yellow-400 transition">Auditorium & Halls</a>
+        <a href="entertainmentvenues.html" class="block text-white hover:text-yellow-400 transition">Theme Parks</a>
+      </div>
+    </div>
+
+    <a href="innovation.html" class="text-white hover:text-yellow-400 transition">Innovation</a>
+    <a href="support.html" class="text-white hover:text-yellow-400 transition">Support</a>
+
+    <!-- Company -->
+  
+    <a href="internationalprojects.html" class="text-white hover:text-yellow-400 transition">Projects</a>
+    <a href="blog.html" class="text-white hover:text-yellow-400 transition">Blogs</a>
+            <a href="contactus.html" class="text-white hover:text-yellow-400 transition">Contact Us</a>
+
+  </div>
+
+
+
+ <!-- Swiper Section -->
+<div class="swiper w-full">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide relative">
+      <img src="assets/css/tdhlightingbn.jpg"
+           alt="50 Years"
+           class="w-full h-[60vh] sm:h-[70vh] lg:h-[96vh] object-cover" />
+
+      <!-- Gradient overlay -->
+      <div class="gradient-bg"></div>
+
+      <!-- Text content -->
+      <div class="absolute inset-0 flex items-end justify-start z-20">
+        <div class="w-full max-w-7xl mx-auto px-6 sm:px-10 pb-12 sm:pb-20 text-white space-y-3 sm:space-y-4">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">TDH Lighting</h2>
+          <h5 class="text-lg sm:text-xl md:text-2xl font-light">
+            Wish granted: extreme power, total versatility
+          </h5>
+          <a href="aboutus.html"
+             class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold
+                    px-6 sm:px-8 py-2 sm:py-3 rounded-md transition text-base sm:text-lg">
+             DISCOVER MORE
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide relative">
+      <img src="assets/css/tdhlightingbn2.jpg"
+           alt="Arolla Aqua HP"
+           class="w-full h-[60vh] sm:h-[70vh] lg:h-[96vh] object-cover" />
+
+      <div class="gradient-bg"></div>
+
+      <div class="absolute inset-0 flex items-end justify-start z-20">
+        <div class="w-full max-w-7xl mx-auto px-6 sm:px-10 pb-12 sm:pb-20 text-white space-y-3 sm:space-y-4">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">SHARPY LIGHT 15R</h2>
+          <h5 class="text-lg sm:text-xl md:text-2xl font-light">
+            The ultimate beam moving head for spectacular effects
+          </h5>
+          <a href="detailproduct.html?id=TDHLSR017_15R"
+             class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold
+                    px-6 sm:px-8 py-2 sm:py-3 rounded-md transition text-base sm:text-lg">
+             DISCOVER MORE
+          </a>
+        </div>
+      </div>
+    </div>
+
+       <div class="swiper-slide relative">
+      <img src="assets/css/tdhlightingbn5.jpg"
+           alt="COP PAR LIGHT"
+           class="w-full h-[60vh] sm:h-[70vh] lg:h-[96vh] object-cover" />
+
+      <div class="gradient-bg"></div>
+
+      <div class="absolute inset-0 flex items-end justify-start z-20">
+        <div class="w-full max-w-7xl mx-auto px-6 sm:px-10 pb-12 sm:pb-20 text-white space-y-3 sm:space-y-4">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">LED COP PAR LIGHT</h2>
+          <h5 class="text-lg sm:text-xl md:text-2xl font-light">
+            
+          </h5>
+          <a href="detailproduct.html?id=TDHLCP004"
+             class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold
+                    px-6 sm:px-8 py-2 sm:py-3 rounded-md transition text-base sm:text-lg">
+             DISCOVER MORE
+          </a>
+        </div>
+      </div>
+    </div>
+  
+
+       <div class="swiper-slide relative">
+      <img src="assets/css/tdhlightingbn3.jpg"
+           alt="Arolla Aqua HP"
+           class="w-full h-[60vh] sm:h-[70vh] lg:h-[96vh] object-cover" />
+
+      <div class="gradient-bg"></div>
+
+      <div class="absolute inset-0 flex items-end justify-start z-20">
+        <div class="w-full max-w-7xl mx-auto px-6 sm:px-10 pb-12 sm:pb-20 text-white space-y-3 sm:space-y-4">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">LED BLINDER LIGHT</h2>
+          <h5 class="text-lg sm:text-xl md:text-2xl font-light">
+            High-power LED blinder for stunning stage effects
+          </h5>
+          <a href="detailproduct.html?id=TDHLB012"
+             class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold
+                    px-6 sm:px-8 py-2 sm:py-3 rounded-md transition text-base sm:text-lg">
+             DISCOVER MORE
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Navigation -->
+  <div class="swiper-button-next text-white"></div>
+  <div class="swiper-button-prev text-white"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+</div>

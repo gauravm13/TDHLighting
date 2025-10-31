@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+  <!--NAV SECTION START HERE..-->
+  <div id="navbar-header"></div>
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+
+  <!-- ==================== HERO INTRO ==================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 md:mb-14">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Stage <span class="text-yellow-400">Furnishing</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="w-full">
+          <img src="product/accessories/accessories.jpg"
+               alt="Professional stage lighting accessories"
+               class="w-full h-auto object-cover rounded-lg shadow-md">
+        </div>
+        <div>
+          <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+            Complement your TDH lighting rigs with our premium products – from robust mounting hardware and reliable cabling to advanced control interfaces. Every piece is engineered for durability, safety, and seamless integration with our luminaires.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-5 h-5 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Heavy-duty curtains, clamps & brackets for safe, flexible rigging.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-5 h-5 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>High-grade frills, ladders & cables for reliable signal distribution.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-5 h-5 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Professional cycloramas, wings, and curtain systems.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HIGHLIGHT CAROUSEL ==================== -->
+  <section class="py-12 bg-white overflow-hidden">
+    <div class="max-w-[95%] mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold">Products Highlights</h2>
+        <!-- Link to the first accessory as a "view all" example -->
+        
+      </div>
+
+      <div id="accessory-carousel" class="splide">
+        <div class="splide__track">
+          <!-- Splide list will be dynamically populated by JS -->
+          <ul class="splide__list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FULL GRID ==================== -->
+  <section id="all-accessories" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-7xl mx-auto mb-12 sm:mb-16">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+        Explore All <span class="text-yellow-400">Stage Furnishing</span>
+      </h1>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl">
+        From curtains and clamps to splitters and cables – everything you need to build a complete, professional stage.
+      </p>
+    </div>
+
+    <!-- Main grid will be dynamically populated by JS -->
+    <div id="accessory-grid-container" class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <!-- Loading placeholder -->
+      <p class="col-span-full text-center text-gray-500">Loading products...</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+       fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-bottom').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <!-- DYNAMIC DATA LOADING SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Function to initialize Splide
+      function initSplide() {
+        const carouselElement = document.getElementById('accessory-carousel');
+        if (carouselElement && typeof Splide !== 'undefined') {
+          new Splide('#accessory-carousel', {
+            type      : 'loop',
+            perPage   : 4,
+            perMove   : 1,
+            gap       : '1rem',
+            autoplay  : true,
+            interval  : 5000,
+            arrows    : true,
+            pagination: false,
+            breakpoints: {
+              1280: { perPage: 3 },
+              992 : { perPage: 2 },
+              768 : { perPage: 1 },
+            },
+          }).mount();
+        } else if (typeof Splide === 'undefined') {
+          console.error('Splide script not loaded');
+        }
+      }
+
+      // 2. Get containers
+      const carouselList = document.querySelector('#accessory-carousel .splide__list');
+      const gridContainer = document.getElementById('accessory-grid-container');
+
+      if (!carouselList || !gridContainer) {
+        console.error('Carousel or Grid container not found. Cannot load accessories.');
+        return;
+      }
+
+      // 3. Fetch data
+      fetch('accessories.json')
+        .then(response => {
+          if (!response.ok) throw new Error(`Network response was not ok (status: ${response.status})`);
+          return response.json();
+        })
+        .then(data => {
+          const accessories = data.accessories;
+          
+          if (!accessories || accessories.length === 0) {
+            carouselList.innerHTML = '<li><p class="p-4 text-center">No accessories found.</p></li>';
+            gridContainer.innerHTML = '<p class="col-span-full text-center">No accessories found.</p>';
+            return;
+          }
+
+          // 4. Generate Carousel HTML (first 4 items, or all if fewer)
+          const carouselItems = accessories.slice(0, 4).map(accessory => `
+            <li class="splide__slide">
+              <a href="detailaccessories.html?id=${accessory.id}" class="group block h-full bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col">
+                <div class="relative aspect-square">
+                  <img src="${accessory.imageUrl}" alt="${accessory.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">PRO</span>
+                </div>
+                <div class="p-4 flex flex-col flex-grow">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">${accessory.name}</h3>
+                  <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300 truncate flex-grow">${accessory.features[0]?.text || 'View Details'}</p>
+                  <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300 mt-2">${accessory.id}</p>
+                </div>
+              </a>
+            </li>
+          `).join('');
+          
+          // 5. Generate Grid HTML (all items)
+          const gridItems = accessories.map(accessory => `
+            <div class="product-card border rounded-xl p-4 sm:p-5 bg-white hover:shadow-lg transition duration-300 flex flex-col">
+              <div class="relative">
+                <a href="detailaccessories.html?id=${accessory.id}">
+                  <img src="${accessory.imageUrl}" alt="${accessory.name}" class="w-full h-auto aspect-square object-cover rounded-md hover:scale-105 transition-transform duration-300">
+                </a>
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">PRO</span>
+              </div>
+              <div class="flex flex-col flex-grow mt-3">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900">${accessory.name}</h3>
+                <p class="text-sm text-gray-600 truncate flex-grow">${accessory.features[0]?.text || 'View Details'}</p>
+                <p class="text-xs text-gray-500 mt-1">${accessory.id}</p>
+              </div>
+            </div>
+          `).join('');
+
+          // 6. Inject HTML
+          carouselList.innerHTML = carouselItems;
+          gridContainer.innerHTML = gridItems;
+
+          // 7. Initialize Splide *after* items are in the DOM
+          initSplide();
+        })
+        .catch(error => {
+          console.error('Error fetching accessories:', error);
+          carouselList.innerHTML = '<li><p class="p-4 text-center text-red-500">Error loading accessories.</p></li>';
+          gridContainer.innerHTML = '<p class="col-span-full text-center text-red-500">Error loading accessories. Please check accessories.json and network connection.</p>';
+        });
+    });
+  </script>
+
+</body>
+</html>

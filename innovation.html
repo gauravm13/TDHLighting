@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+ <style>
+    body {
+      overflow-x: hidden;
+      
+    }
+  </style>
+  
+
+<body>
+  <!--NAV SECTION START HERE..-->
+<div id="navbar-header"></div>
+
+<script>
+  fetch('headersec.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-header').innerHTML = data;
+
+      // Initialize mobile menu after content is loaded
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = mobileMenu.classList.contains('open');
+          if (isOpen) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+
+          window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        
+        // Close menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideMenu = mobileMenu.contains(event.target);
+          const isClickOnMenuBtn = menuBtn.contains(event.target);
+          if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.getElementById('main-nav');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Existing mobile menu logic remains unchanged
+    // ...
+});
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<!-- Content Section -->
+  <section class="py-12 sm:py-16 px-6 sm:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-sm font-light text-gray-500 mb-4">
+        <a href="index.html" class="hover:text-yellow-500">Home</a>
+        <span class="mx-2">&gt;</span>
+        <span class="font-medium text-gray-900">Innovation</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        Innovation at TDH Lighting
+      </h1>
+
+      <p class="text-gray-700 text-lg sm:text-xl leading-relaxed text-justify">
+        At TDH Lighting, innovation shines through every beam. Our mission blends creative design and
+        technological precision to deliver lighting solutions that redefine performance, efficiency, and control.
+        From stage performances to architectural marvels, our lighting empowers designers to shape mood and atmosphere.
+        <br><br>
+        With continuous R&D, advanced optics, and intelligent control systems, TDH Lighting delivers professional
+        solutions built for reliability, flexibility, and artistic excellence. Explore how our innovations illuminate
+        the world with brilliance and purpose.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hero Image Section -->
+  <section class="relative w-full">
+    <img src="images/innovation/innovationbn.jpg"
+      alt="TDH Lighting Innovation Banner"
+      class="w-full h-[70vh] sm:h-[60vh] object-cover object-center" loading="lazy">
+    <div class="absolute inset-0 bg-black/40"></div>
+  </section>
+
+  <!-- Product Innovation Grid -->
+  <section class="py-16 px-6 sm:px-10 lg:px-20">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Lighting Innovations</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/ledparrrrrlllliigggggtttthhhh.jpg" alt="LED PAR Light"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">LED PAR Light Series</h3>
+            <p class="text-gray-600">From RGB to RGBW — perfect for stages and architectural illumination.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">LED PAR Light Series</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Featuring high-output RGBW LEDs, smooth dimming, and flicker-free
+            performance — TDH PAR Lights ensure rich color rendering and seamless DMX control.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/ledfresnel&planoconvex.jpg" alt="LED Fresnel"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">LED Fresnel & Plano-Convex</h3>
+            <p class="text-gray-600">Powerful, efficient, and precise — designed for stage and studio lighting.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">LED Fresnel & Plano-Convex</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Equipped with high CRI 200W LED engines and zoom control (15°–45°),
+            these fixtures provide smooth focus and silent cooling — ideal for professional studios.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/profilespotlight500.jpg" alt="LED Profile Spot Light"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">LED Profile Spot Light</h3>
+            <p class="text-gray-600">Professional ellipsoidal with precise optics and beam control.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">LED Profile Spot Light</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Delivering sharp projections, gobo patterns, and beam shaping — perfect
+            for theatre, architecture, and studio highlights.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/ledmovingwashlightssss.jpg" alt="LED Moving Wash"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">LED Moving Wash Lights</h3>
+            <p class="text-gray-600">Dynamic RGB color mixing with intelligent zoom and pixel control.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">LED Moving Wash Lights</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">With motorized zoom and smooth color transitions, these lights add life
+            to every concert, theatre, and event setup.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/blinderseries.jpg" alt="LED Blinder"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">LED Blinder Series</h3>
+            <p class="text-gray-600">COB LED blinders that deliver punch and reliability for stage shows.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">LED Blinder Series</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Featuring high-efficiency COB LEDs and instant strobe capability —
+            perfect for concerts and outdoor events.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg relative hover:shadow-2xl transition duration-300"
+        x-data="{show:false}" @mouseenter="show=true" @mouseleave="show=false">
+        <div x-show="!show" x-transition.opacity>
+          <img src="images/innovation/sharpybeamlights.jpg" alt="Sharpy Beam"
+            class="w-full h-56 sm:h-60 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Sharpy Beam Lights</h3>
+            <p class="text-gray-600">High-output moving heads designed for dynamic beam effects.</p>
+          </div>
+        </div>
+        <div x-show="show" x-transition.opacity.duration.300ms
+          class="absolute inset-0 bg-white p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2">Sharpy Beam Lights</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Powerful 7R/10R/15R lamps with rapid pan/tilt motion and multi-prism
+            effects for stunning aerial visuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA SECTION -->
+  <section class="bg-black text-white py-16 text-center">
+    <h3 class="text-3xl font-bold mb-4">Explore More with TDH Lighting</h3>
+    <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+      Dive into our complete lighting catalogue featuring professional solutions for studios, architecture, and live
+      events.
+    </p>
+    <a href="assets/TDH LIGHTING CATALOGUE.pdf" download
+      class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full transition">
+      Download Catalogue
+    </a>
+  </section>
+
+
+
+  <div id="footer-bottom"></div>
+  <script>
+    
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      
+      .catch(error => console.error('Error loading slider:', error));
+    
+
+
+
+  </script>
+</body>
+</html>

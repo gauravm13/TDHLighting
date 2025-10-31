@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>The Future of DMX Control Systems in Stage Lighting | TDH Lighting</title>
+</head>
+
+<body class="overflow-x-hidden bg-gray-50">
+  <!-- NAV SECTION -->
+  <div id="navbar-header"></div>
+
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+          window.toggleSubmenu = function(id) {
+            const submenu = document.getElementById(`submenu-${id}`);
+            const arrow   = document.getElementById(`arrow-${id}`);
+            submenu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-90');
+          };
+
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          document.addEventListener('click', function (event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          window.addEventListener('scroll', function () {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+              if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+              } else {
+                nav.classList.remove('scrolled');
+              }
+            }
+          });
+
+          window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- Back to Accessories Link -->
+  <div class="container mx-auto px-4 py-6">
+    <a href="3phaseboards.html" class="inline-flex items-center text-yellow-400 hover:text-yellow-600 font-medium text-xl md:text-base transition-colors">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back to Phase Boards
+    </a>
+  </div>
+
+  <main id="boards-container" class="container mx-auto px-4 py-12 lg:py-24">
+  </main>
+
+  <div id="query-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg mx-4 p-8 relative">
+      <button id="close-query-form" class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl">
+        ×
+      </button>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Request Query</h2>
+      <form id="query-form" class="space-y-5">
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">Model Number</label>
+          <input id="model-number" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none" readonly>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">Email</label>
+          <input type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">Phone</label>
+          <input type="tel" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">Your Requirement</label>
+          <textarea rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400 outline-none"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-bottom"></div>
+
+  <!-- Image Modal (Hidden by default) -->
+  <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="relative max-w-4xl w-full mx-4">
+      <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl font-bold">×</button>
+      <img id="modal-image" src="" alt="" class="w-full h-auto max-h-screen object-contain rounded-lg">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const boardsContainer = document.getElementById('boards-container');
+      const footerContainer = document.getElementById('footer-bottom');
+
+      // Inject footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          footerContainer.innerHTML = data;
+          const potentialNewsletter = document.querySelector('[class*="bg-[#fdc400]"], .bg\\[#fdc400\\]');
+          if (potentialNewsletter) potentialNewsletter.style.backgroundColor = '#fdc400';
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+      // Get board ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const boardId = urlParams.get('id');
+
+      if (!boardId) {
+        boardsContainer.innerHTML = `<div class="text-center py-20"><h1 class="text-4xl font-bold text-red-600">Board Not Found</h1><p class="text-gray-600 mt-4">No board ID was provided. Please go back to the accessories page and select an item.</p><a href="accessories.html" class="mt-8 inline-block bg-yellow-400 text-black px-6 py-3 rounded-md hover:bg-yellow-500 font-semibold transition">View Accessories</a></div>`;
+        return;
+      }
+
+      // Fetch board data
+      fetch('data.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          /*  <--  CORRECTED LINE  --> */
+          const board = data.boards.find(p => p.id === boardId);
+          /*  <--  END CORRECTION  --> */
+
+          if (!board) {
+            boardsContainer.innerHTML = `<div class="text-center py-20"><h1 class="text-4xl font-bold text-red-600">Board Not Found</h1><p class="text-gray-600 mt-4">The board with ID '${boardId}' could not be found.</p><a href="accessories.html" class="mt-8 inline-block bg-yellow-400 text-black px-6 py-3 rounded-md hover:bg-yellow-500 font-semibold transition">View Accessories</a></div>`;
+            return;
+          }
+
+          document.title = `${board.name} - Board Details`;
+
+          // Build board details HTML (no download buttons)
+          const boardDetailsHTML = `
+            <section class="mb-16">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start product-details-grid">
+                <div class="w-full max-w-lg mx-auto lg:max-w-none">
+                  <div class="p-2 border border-gray-200 rounded-lg bg-white shadow-sm cursor-pointer" id="image-gallery">
+                    <img id="main-product-image" src="${board.imageUrl}" class="w-full h-auto object-cover rounded-md hover:scale-105 transition-transform duration-300 product-image" alt="${board.name}">
+                  </div>
+                </div>
+
+                <div class="flex flex-col">
+                  <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">${board.name}</h1>
+                    <p class="text-lg text-gray-500 font-medium">${board.id}</p>
+                  </div>
+
+                  <div class="mt-6 text-base text-gray-600 space-y-4">
+                    <p>${board.description}</p>
+                  </div>
+
+                  <div class="mt-8">
+                    <ul class="space-y-4">
+                      ${board.features.map(feature => `
+                        <li class="flex items-start gap-4">
+                          <div class="flex-shrink-0 w-8 h-8 bg-yellow-400/20 text-yellow-600 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg>
+                          </div>
+                          <div>
+                            <h3 class="font-semibold text-gray-900">${feature.title}</h3>
+                            <p class="text-sm text-gray-600">${feature.text}</p>
+                          </div>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+
+                  <div class="mt-8">
+                    <button id="open-query-form" class="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">
+                      Request a Query
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          `;
+
+          const specificationsHTML = `
+            <section class="mt-12">
+              <header class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Technical Specifications</h2>
+                <p class="text-lg text-gray-600 mt-2">Detailed breakdown for the ${board.name}.</p>
+              </header>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 spec-grid">
+                ${Object.entries(board.specifications).map(([key, values]) => `
+                  <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 border-b-2 border-gray-200 pb-2">${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
+                    <ul class="space-y-2 text-gray-700">
+                      ${values.map(value => `<li class="flex items-start"><span class="text-yellow-500 mr-2 mt-1">•</span>${value}</li>`).join('')}
+                    </ul>
+                  </div>
+                `).join('')}
+              </div>
+            </section>
+          `;
+
+          boardsContainer.innerHTML = `<div class="space-y-12 lg:space-y-16">${boardDetailsHTML}${specificationsHTML}</div>`;
+
+          // Initialise modals after DOM injection
+          initImageModal();
+          initQueryModal(board);
+        })
+        .catch(error => {
+          console.error('Error fetching board data:', error);
+          boardsContainer.innerHTML = `<div class="text-center py-20"><h1 class="text-4xl font-bold text-red-600">Error Loading Board</h1><p class="text-gray-600 mt-4">There was a problem retrieving the board data. Please try again later.</p></div>`;
+        });
+
+      // ---------- IMAGE MODAL ----------
+      function initImageModal() {
+        const imageGallery = document.getElementById('image-gallery');
+        const imageModal = document.getElementById('image-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalImage = document.getElementById('modal-image');
+
+        if (!imageGallery || !imageModal || !closeModalBtn || !modalImage) return;
+
+        imageGallery.addEventListener('click', () => {
+          const img = imageGallery.querySelector('img');
+          if (img) {
+            modalImage.src = img.src;
+            modalImage.alt = img.alt || 'Board Image';
+          }
+          imageModal.classList.remove('opacity-0', 'pointer-events-none');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+          imageModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        imageModal.addEventListener('click', (e) => {
+          if (e.target === imageModal) imageModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') imageModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+      }
+
+      // ---------- QUERY MODAL ----------
+      function initQueryModal(board) {
+        const openBtn = document.getElementById('open-query-form');
+        const modal = document.getElementById('query-modal');
+        const closeBtn = document.getElementById('close-query-form');
+        const modelInput = document.getElementById('model-number');
+        const queryForm = document.getElementById('query-form');
+
+        if (!openBtn || !modal || !closeBtn || !modelInput || !queryForm) return;
+
+        modelInput.value = board?.id || '';
+
+        openBtn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          setTimeout(() => {
+            const firstInput = modal.querySelector('input[type="email"], input[type="tel"], textarea');
+            if (firstInput) firstInput.focus();
+          }, 120);
+        });
+
+        const closeQueryModal = () => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeQueryModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeQueryModal();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeQueryModal();
+        });
+
+        queryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = queryForm.querySelector('input[type="email"]').value.trim();
+          const phone = queryForm.querySelector('input[type="tel"]').value.trim();
+          const requirement = queryForm.querySelector('textarea').value.trim();
+          const model = modelInput.value;
+
+          if (!email || !phone || !requirement) {
+            alert('Please fill all required fields.');
+            return;
+          }
+
+          console.log('Query submitted:', { model, email, phone, requirement });
+          alert('Your query has been submitted successfully!');
+          queryForm.reset();
+          modelInput.value = model;
+          closeQueryModal();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

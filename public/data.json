@@ -1,0 +1,1745 @@
+{
+  "products": [
+    {
+      "id": "TDHLP001",
+      "name": "LED PAR LIGHT RGB",
+      "imageUrl": "product/stagelighitng/ledparlightrgb.jpg",
+      "description": "High Quality Bright LED Par Light with RGB Colors source, Highthrow, Event Performance effect lighting, precision color outputLED Par light made with die casted aluminum housing, dual yokearrangement suitable to use for Stage Lighting, Decorative Lighting,Dance, DJ & Pub lighting and indoor beautifications, multipurposerequirements.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED COB based source"
+        },
+        {
+          "title": "Light Output",
+          "text": "RGB 54 x 3W"
+        },
+        {
+          "title": "Optical Arrangement",
+          "text": "Optional Beam Angle – 15° & 45°"
+        },
+        {
+          "title": "Control System",
+          "text": "It supports DMX 512 control through 3-pin or 5-pin XLR connections and offers 7-channel DMX operation, along with manual mode, sound-active mode, and master-slave mode for versatile control and synchronization options."
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-par-light-rgb-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-par-light-rgb-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": [
+          "Power Consumption 162W",
+          "Input Voltage AC 110V ~ 240V, 50/60Hz",
+          "0 to 100 % smooth dimming",
+          "Strobe effect upto 20 Frames per Second (FPS)"
+        ],
+        "optical_arrangement": [
+          "Beam Angle - 25°",
+          "Optional Beam Angle – 15° & 45°"
+        ],
+        "lamp_source": [
+          "LED SMD Based Source",
+          "RGBW 54 x 3W",
+          "50,000 Hours Burning life"
+        ],
+        "control": [
+          "DmX 512 Through 3/5 Pin XLR",
+          "7 Channel DmX Control",
+          "Manual Mode Operation",
+          "Sound Active Mode Control",
+          "Master Slave Mode"
+        ],
+        "physical_construction": [
+          "Dimension 250x 265x 235mm",
+          "Weight 4.04 Kgs",
+          "DmX 3 Pin In and Out",
+          "Power Loop In and Out",
+          "Ingress Protection IP20 Rated",
+          "Aluminum Body",
+          "Single or Dual Yoke Mount",
+          "Black Powder coated finish",
+          "LED Easy View Display"
+        ],
+        "others": [
+          "Working Temperature +45° ~ -30°",
+          "Unlimited Colour Mixing Options",
+          "65dB ~ 130dB Sound sensing capacity"
+        ]
+      }
+    },
+    {
+      "id": "TDHLP002",
+      "name": "LED PAR LIGHT RGBW",
+      "imageUrl": "product/stagelighitng/ledparrgbw.png",
+      "description": "High Quality Bright LED Par Light with RGBW Colors source, High throw, Event Performance effect lighting, precision color output. LED Par light made with die casted aluminum housing, dual yoke arrangement suitable to use for Stage Lighting, Decorative Lighting, Dance, DJ & Pub lighting and indoor beautifications, multipurpose requirements.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED SMD Based Source, RGBW 54 x 3W, 50,000 Hours Burning life"
+        },
+        {
+          "title": "Optical Arrangement",
+          "text": "Beam Angle - 25°, Optional Beam Angle – 15° & 45°"
+        },
+        {
+          "title": "Accessories",
+          "text": "Includes Safety Chain and C Clamp."
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-par-light-rgbw-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-par-light-rgbw-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": [
+          "Power Consumption 162W",
+          "Input Voltage AC 110V ~ 240V, 50/60Hz",
+          "0 to 100 % smooth dimming",
+          "Strobe effect upto 20 Frames per Second (FPS)"
+        ],
+        "optical_arrangement": [
+          "Beam Angle - 25°",
+          "Optional Beam Angle – 15° & 45°"
+        ],
+        "lamp_source": [
+          "LED SMD Based Source",
+          "RGBW 54 x 3W",
+          "50,000 Hours Burning life"
+        ],
+        "control": [
+          "DmX 512 Through 3/5 Pin XLR",
+          "7 Channel DmX Control",
+          "Manual Mode Operation",
+          "Sound Active Mode Control",
+          "Master Slave Mode"
+        ],
+        "physical_construction": [
+          "Dimension 250x 265x 235mm",
+          "Weight 4.04 Kgs",
+          "DmX 3 Pin In and Out",
+          "Power Loop In and Out",
+          "Ingress Protection IP20 Rated",
+          "Aluminum Body",
+          "Single or Dual Yoke Mount",
+          "Black Powder coated finish",
+          "LED Easy View Display"
+        ],
+        "others": [
+          "Working Temperature +45° ~ -30°",
+          "Unlimited Colour Mixing Options",
+          "65dB ~ 130dB Sound sensing capacity"
+        ]
+      }
+    },
+    {
+      "id": "TDHLWW003",
+      "name": "LED WARM WHITE LIGHT",
+      "imageUrl": "product/stagelighitng/ledwarmwhitelight.jpg",
+      "description": "High Bright LED Par Light with 3200K Color source, High throw, LED Par light made with die casted aluminum housing, dual yoke arrangement suitable to use for DJ's, Decorations. Light beam angle can be controlled with lens customized for specific use.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED SMD Based Source, WW 54 x 3W, 50,000 Hours Burning life"
+        },
+        {
+          "title": "Optical Arrangement",
+          "text": "Beam Angle - 25°, Optional Beam Angle – 15° & 45°"
+        },
+        {
+          "title": "Control",
+          "text": "DmX 512 Through 3/5 Pin XLR, 2 Channel DmX Control, Manual Mode Operation, Master Slave Mode"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-warm-white-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-warm-white-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 162W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 25°", "Optional Beam Angle – 15° & 45°"],
+        "lamp_source": ["LED SMD Based Source", "WW 54 x 3W", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "2 Channel DmX Control", "Manual Mode Operation", "Master Slave Mode"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 4.04 Kgs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°"],
+        "accessories": ["Safety Chain, C Clamp"]
+      }
+    },
+    {
+      "id": "TDHLCP004",
+      "name": "LED COB PAR LIGHT",
+      "imageUrl": "product/stagelighitng/ledcobparlight.png",
+      "description": "High Quality Bright LED COB Par Light with 3200K/5600K/BiColor source, High throw, precision color output LED Par light made with die casted aluminum housing, dual yoke arrangement suitable to use for Stage Lighting, Tv Studio lighting and indoor architectural illumination giving high CRI, TLCI & R9 values. Light beam angle can be controlled with lens customized for specific use.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED COB Based Source, 3200K - 100W x 1, 50,000 Hours Burning life"
+        },
+        {
+          "title": "High Quality Output",
+          "text": "Colour Rendering Index 97+, Tel. Lighting Consistency Index 96+"
+        },
+        {
+          "title": "Control",
+          "text": "DmX 512 Through 3/5 Pin XLR, 1/3 Channel DmX Control, Manual Mode Operation, Noiseless Operation"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-cob-par-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-cob-par-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 100W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 25°", "Multi faceted reflected"],
+        "lamp_source": ["LED COB Based Source", "3200K - 100W x 1", "Colour Rendering Index 97+", "Tel. Lighting Consistency Index 96+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1/3 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 5.55 Kgs/ 7.8lbs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°", "Flicker Free for High FPS", "Efficient Heat Sink Design", "No Multiple Shadows – Single Source illumination"],
+        "accessories": ["Safety Chain, C Clamp"]
+      }
+    },
+    {
+      "id": "TDHL4E005",
+      "name": "LED 4 EYE PAR LIGHT",
+      "imageUrl": "product/stagelighitng/LED4EYEPARLIGHT.png",
+      "description": "High Quality Bright LED 4 EYE Par Light with 3200K/5600K/BiColor source, High throw, precision color output LED Par light made with die casted aluminum housing, dual yoke arrangement suitable to use for Stage Lighting, Tv Studio lighting and indoor architectural illumination giving high CRI, TLCI & R9 values. Light beam angle can be controlled with lens customized for specific use.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED 4 EYE Based Source, 3200K - 40W x 4, 50,000 Hours Burning life"
+        },
+        {
+          "title": "High Quality Output",
+          "text": "Colour Rendering Index 97+, Tel. Lighting Consistency Index 96+"
+        },
+        {
+          "title": "Optical Arrangement",
+          "text": "Beam Angle - 25°, Optional Beam Angle – 15°24°36°"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-4-eye-par-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-4-eye-par-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 160W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 25°", "Optional Beam Angle – 15°24°36°"],
+        "lamp_source": ["LED 4 EYE Based Source", "3200K - 40W x 4", "Colour Rendering Index 97+", "Tel. Lighting Consistency Index 96+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1/3 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 5.55 Kgs/ 7.8lbs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°", "Flicker Free for High FPS", "Efficient Heat Sink Design", "No Multiple Shadows – Single Source illumination"],
+        "accessories": ["Safety Chain, C Clamp"]
+      }
+    },
+    {
+      "id": "TDHPC006",
+      "name": "PLANO CONVEX LIGHT 1000W",
+      "imageUrl": "product/stagelighitng/LEDPLANOCONVEX.PNG",
+      "description": "The high power spot light is available with planoconvex lens. Made with adequate ventilation to suit Indian climate, the angle of spot with Planoconvex lens can be varied from hard to soft by manipulating the movements of the lamp carriage with variable spread. It can be used from a distance of 10-12 mtrs. Suitable for F.O.H. positions, particularly where long throw is necessary.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "Halogen Based Source, CCT: 3200K, Lamp Base: G 9.5, G 22, G38"
+        },
+        {
+          "title": "Optical Arrangement",
+          "text": "Beam Angle - 7°-56°, PC Lens"
+        },
+        {
+          "title": "Control",
+          "text": "DmX 512 Through 3/5 Pin XLR, 1 Channel DmX Control"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/plano-convex-light-1000w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/plano-convex-light-1000w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 1000W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 7°-56°", "PC Lens"],
+        "lamp_source": ["Halogen Based Source", "CCT: 3200K", "Lamp Base: G 9.5, G 22, G38"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1 Channel DmX Control"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 5.55 Kgs", "DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°", "Cooling : Air ventilates"],
+        "accessories": ["Safety Chain, C Clamp"]
+      }
+    },
+     {
+      "id": "TDHLPC007",
+      "name": "LED PLANO CONVEX LIGHT",
+      "imageUrl": "product/stagelighitng/planoconvexlg.png",
+      "description": "The high power spot light is available with planoconvex lens. Made with adequate ventilation to suit Indian climate, the angle of spot with Planoconvex lens can be varied from hard to soft by manipulating the movements of the lamp carriage with variable spread. It can be used from a distance of 10-12 mtrs. Suitable for F.O.H. positions, particularly where long throw is necessary.",
+      "features": [
+        {
+          "title": "Light Source",
+          "text": "LED Based Source"
+        },
+        {
+          "title": "Control",
+          "text": "DmX 512 Through 3/5 Pin XLR"
+        },
+        {
+          "title": "Accessories",
+          "text": "Barndoor, Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-plano-convex-light-200w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-plano-convex-light-200w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 200W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 7°-56°", "PC Lens"],
+        "lamp_source": ["LED Based Source", "CCT: 3200K"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1 Channel DmX Control"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 5.55 Kgs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°", "Cooling : Air ventilates"]
+      }
+    },
+    {
+      "id": "TDHLFS008",
+      "name": "LED FRESNEL SPOT LIGHT 200W",
+      "imageUrl": "product/stagelighitng/FRESNELSPOTLIGHT200.png",
+      "description": "High Quality Bright LED Fresnel Spot Light with 3200K Color source, High throw, precision color output LED Par light made with die casted aluminum housing, dual yoke arrangement suitable to use for Stage Lighting, Tv Studio lighting and indoor architectural illumination giving high CRI, TLCI & R9 values. Light beam angle can be controlled with lens customized for specific use. Reflector Spherical, Anodized finish, Color Black, Focusing Front/Back/Rotary Knob.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Barndoor, Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-fresnel-spot-light-200w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-fresnel-spot-light-200w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 200W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°", "Multi faceted reflected", "Zooming scale - 15-45°"],
+        "lamp_source": ["LED COB Based Source", "3200K - 200W x 1", "Colour Rendering Index 98+", "Tel. Lighting Consistency Index 97+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1 Channel DmX Control", "Manual Mode Operation"],
+        "physical_construction": ["Dimension 250x 265x 235mm", "Weight 3.55 Kgs/ 7.8lbs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single or Dual Yoke Mount", "Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +45° ~ -30°", "200mm Lens", "Efficient Heat Sink Design", "No Multiple Shadows – Single Source illumination"]
+      }
+    },{
+      "id": "TDHFS009",
+      "name": "HALOGEN FRESNEL SPOT LIGHT 1000W",
+      "imageUrl": "product/stagelighitng/halogenfresnelspotlg.png",
+      "description": "High Quality and high bright Halogen Fresnel Spot light 1000W Lamp source having excellent purity parameters like CRI & TLCI Values makes it ideal to use it for Tv Studio Lighting, Auditorium Stage Lighting, Church Lighting, Film Lighting and other multipurpose applications. Light is made with Threaded German Fresnel lens with accurate zoom in beam angle.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Barndoor, Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/halogen-fresnel-1000w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/halogen-fresnel-1000w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 1000W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 10°- 50°"],
+        "lamp_source": ["Halogen Based Source", "CTC - 3200K"],
+        "control": ["DmX 512 Through Dimmer"],
+        "others": ["Working Temperature +45° ~ -30°"]
+      }
+    },
+    {
+      "id": "TDHPL010",
+      "name": "PAR 64 LIGHT 1000W",
+      "imageUrl": "product/stagelighitng/par64light1000.png",
+      "description": "Stage Lights India are manufacture and supply a wide range of Led Par Lights. These are ergonomically engineered from top quality components which are procured from trustworthy vendors of the market. Our lights are admired for their perfect illumination, sturdiness and energy efficient nature. Besides, we ensure timely delivery of our products at our clients' end.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/par64-1000w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/par64-1000w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 1000W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 8°,12°,18°"],
+        "lamp_source": ["Halogen Based Source", "Color Temp 3200K", "Lamp Type: Narrow, Medium, Wide"],
+        "control": ["DmX 512 Through dimmer", "Dimmer based"],
+        "others": ["Working Temperature +45° ~ -30°"]
+      }
+    },
+    {
+      "id": "TDHLPF011",
+      "name": "LED PROFILE SPOT LIGHT",
+      "imageUrl": "product/stagelighitng/ledprofilespotlg.png",
+      "description": "High Quality Superior Output Long through professional ellipsoidal 150/200W LED profile spot light 05°, 14°, 19°, 26°, 36°, 50° beam angle with sharp edge high quality optical lens system suitable for special illumination effects for Auditorium stages, TV production studios Event Stages and multipurpose venues.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-profile-spot-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-profile-spot-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 150/200W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle 05°, 14°, 19°, 26°, 36°, 50°"],
+        "lamp_source": ["LED COB Based Source 3200K", "Colour Rendering Index 97+", "Tel. Lighting Consistency Index 97+", "R9 Value 90+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1/3 Channel DmX Control", "DMX/RDM/Auto Run/Master Slave & Manual", "0% to 100% Dimming", "Manual focus with 4 beam shaping cutters"],
+        "physical_construction": ["Dimension 300x 700x 310mm", "Weight 6 Kgs/ 13.2 lbs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Plastic Moulded Body", "Efficient and well designed reflector", "Single or Dual Yoke Mount", "Black/White Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25 times/Sec", "4 Kinds of Dimming Curves"]
+      }
+    },
+    {
+      "id": "TDHLB012",
+      "name": "LED BLINDER LIGHT 400W",
+      "imageUrl": "product/stagelighitng/ledblinderlight400.png",
+      "description": "High bright uniform distributed 100W Each LED Source for illuminating the multipurpose venues, large audience, Auditorium Stages, DJ & Event Stages, Large photographic venues, Production Studios, Discotheques, Film & Band performances for providing flood lighting effect.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-blinder-light-400w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-blinder-light-400w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 400W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°"],
+        "lamp_source": ["LED COB Based Source 3200K", "3200K/5600K, 4 x 100W Chip on Board", "Colour Rendering Index 95+", "Tel. Lighting Consistency Index 97+", "R9 Value 90+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3 Pin XLR", "2/5 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 490x 422x 168mm", "Weight 5 Kgs/ 11.0lbs", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Single or Dual Yoke Mount", "MS Body with Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25 times/Sec Variable", "11.7KHz Refresh Rate"]
+      }
+    },
+    {
+      "id": "TDHLB013",
+      "name": "LED BLINDER LIGHT 200W",
+      "imageUrl": "product/stagelighitng/ledblinderlight200w.jpg",
+      "description": "High bright uniform distributed 100W Each LED Source for illuminating the multipurpose venues, large audience, Auditorium Stages, DJ & Event Stages, Large photographic venues, Production Studios, Discotheques, Film & Band performances for providing flood lighting effect.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-blinder-light-200w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-blinder-light-200w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 200W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°"],
+        "lamp_source": ["LED COB Based Source 3200K", "2 x 100W 3200K", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3 Pin XLR", "2/5 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 370x 240x 150mm", "Weight 3.20 Kgs/ 11.0lbs", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Single or Dual Yoke Mount", "MS Body with Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25"]
+      }
+    },{
+      "id": "TDHLB012",
+      "name": "LED BLINDER LIGHT 400W",
+      "imageUrl": "product/stagelighitng/blinderlight200.png",
+      "description": "High bright uniform distributed 100W Each LED Source for illuminating the multipurpose venues, large audience, Auditorium Stages, DJ & Event Stages, Large photographic venues, Production Studios, Discotheques, Film & Band performances for providing flood lighting effect.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-blinder-light-400w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-blinder-light-400w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 400W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°"],
+        "lamp_source": ["LED COB Based Source 3200K", "3200K/5600K, 4 x 100W Chip on Board", "Colour Rendering Index 95+", "Tel. Lighting Consistency Index 97+", "R9 Value 90+", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3 Pin XLR", "2/5 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 490x 422x 168mm", "Weight 5 Kgs/ 11.0lbs", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Single or Dual Yoke Mount", "MS Body with Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25 times/Sec Variable", "11.7KHz Refresh Rate"]
+      }
+    },
+     {
+      "id": "TDHLB013",
+      "name": "LED BLINDER LIGHT 200W",
+      "imageUrl": "product/stagelighitng/ledblinderlight200w.jpg",
+      "description": "High bright uniform distributed 100W Each LED Source for illuminating the multipurpose venues, large audience, Auditorium Stages, DJ & Event Stages, Large photographic venues, Production Studios, Discotheques, Film & Band performances for providing flood lighting effect.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-blinder-light-200w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-blinder-light-200w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 200W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°"],
+        "lamp_source": ["LED COB Based Source 3200K", "2 x 100W 3200K", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3 Pin XLR", "2/5 Channel DmX Control", "Manual Mode Operation", "Noiseless Operation"],
+        "physical_construction": ["Dimension 370x 240x 150mm", "Weight 3.20 Kgs/ 11.0lbs", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Single or Dual Yoke Mount", "MS Body with Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25"]
+      }
+    },
+    {
+      "id": "TDHLCW013",
+      "name": "LED WASH LIGHT CYCLORAMA",
+      "imageUrl": "product/stagelighitng/LEDWASHLIGHTCYCLORAMA.png",
+      "description": "High Quality Bright LED Wash Light with Bi Color or RGB Colors source having uniform color throw throughout beam designed and developed to suit special illumination effects like Cyclorama Wash for Auditorium backgrounds, color effects for Stage, Event Performance effect lighting, Studio Lighting and for multipurpose venues, Aesthetic beautifications etc..",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Barndoor, Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-wash-light-cyclorama-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-wash-light-cyclorama-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 300W", "Input Voltage AC 110V ~ 240V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle - 30°", "Reflector on each LED's"],
+        "lamp_source": ["LED SMD Based Source", "RGB 100 x 3W", "50,000 Hours Burning life"],
+        "control": ["DmX 512 Through 3/5 Pin XLR", "1/3/6 Channel DmX Control", "Manual Mode Operation", "Sound Active Mode Control", "Master Slave Mode"],
+        "physical_construction": ["Dimension 600x 400x 260mm", "Weight 5 Kgs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "Single Yoke Mount", "MS Body with Black Powder coated finish", "LED Easy View Display"],
+        "others": ["Working Temperature +40° ~ -30°", "Unlimited Colour Mixing Options"]
+      }
+    },
+    {
+      "id": "TDHLWW014",
+      "name": "LED WALL WASHER LIGHT",
+      "imageUrl": "product/stagelighitng/LEDWALLWASHERLIGHT.png",
+      "description": "High Quality LED Linear wash light IP65 rated best suitable for Outdoor and Indoor use to provide unlimited color effects for Façade Lighting, Building domes, Background illuminations, Cyclorama Lightings and multipurpose requirements. Light has DmX and other control modes which makes flexible to use for TV Studio Sets & any mood lighting application.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-wall-washer-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-wall-washer-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 36W", "Input Voltage DC 24V"],
+        "optical_arrangement": ["Beam Angle - 30°", "Optional Beam Angle : 15°, 45°", "Field Angle : 32°"],
+        "lamp_source": ["LED Source : SMD Based", "Colour Temperature : 3000", "Optional Color Temperature : 1800K, 4000K, 6000K", "CRI : > 70", "Lumens/W : > 110", "Net Luminous Flux : 3960", "No of LED's : 21 No's", "LED Power : 3W", "LED Hours Burning life : 50,000"],
+        "control": ["Control Option : ON / OFF Option", "Operation Mode : Manual Mode", "Working Temperature : +55° ~ -30°", "SDCM : < 5"],
+        "physical_construction": ["Dimension : 1000 x 45 x 115mm", "Ingress Protection : IP65 Rated", "Body Housing : Aluminium Die Casted", "Body Colour : Black / Grey / Custom", "Mounting Type : Clamp / Surface Mount", "Impact Resistance : IK07", "Cooling : Passive Cooling System", "Protection Class : III Class", "Weight : 2.7 Kgs/ 5.94 lbs"],
+        "others": ["Working Temperature +40° ~ -30°", "Unlimited Colour Mixing Options"]
+      }
+    },
+    {
+      "id": "TDHLLB015",
+      "name": "LED LASER BAR RGB LIGHT",
+      "imageUrl": "product/stagelighitng/LEDLASERBARRGBLIGHT.png",
+      "description": "High quality laser bar having 4pcs of 200mW, 650nm Red + 2pcs of 50mW, 532nm Green + 2pcs of 500mW, 450nm blue fat beam laser diodes. Single laser diode control. RGB fat laser beam sweeps with 180° tilt angle and makes a great and cost effective beam show.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-laser-bar-rgb-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-laser-bar-rgb-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 70W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "optical_arrangement": ["Scanning Angle - 180°"],
+        "lamp_source": ["Laser : 4 pic's 200mW fat Red laser diode", "Laser : 2 pic's 50mW fat Green laser diode", "Laser : 2 pic's 500mW fat Blue laser diode", "Laser safety standard : Class 3"],
+        "control": ["DmX 512 Through 3 Pin XLR", "7/16 Channel DmX Control", "Auto Mode Operation", "Master Slave Mode", "Sound Active Mode Control"],
+        "physical_construction": ["Dimension 1000x 84x 173mm", "Weight 6.8 Kg's / 14.96 lbs", "DmX 3/5 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish"],
+        "others": ["Working Temperature +45° ~ -30°", "LED Display with 4 buttons"]
+      }
+    },
+    {
+      "id": "TDHLSR016",
+      "name": "SHARPY LIGHT 7R",
+      "imageUrl": "product/stagelighitng/SHARPYLIGHT7R.png",
+      "description": "Moving Head Beam effect light 7R Base high bright strong beam, ideal for DJ's, Dance Shows Stage Events, Auditorium Stages, Multipurpose application. Quick response to the control signal makes it unique.",
+      "features": [
+        {
+          "title": "Features",
+          "text": "Pan Range - 540° & Tilt Range - 270°, High Precision Movement, 14 kinds of color + blank, 14 Fixed Metal Gobo Patterns, 8 Rotating Prisms, Strobe: 0-9 times/sec, Ballast: Electronic ballast"
+        },
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/sharpy-light-7r-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/sharpy-light-7r-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 230W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "lamp_source": ["230W 7R, 7000K", "MSD Yodn Lamp"],
+        "control": ["DmX 512 Through 3 Pin XLR", "16 Channel DmX Control", "Sound Active Mode Control"],
+        "physical_construction": ["DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish", "2Lights in 1 flight case"],
+        "features_spec": [
+          "Pan Range - 540° & Tilt Range - 270°",
+          "High Precision Movement",
+          "14 kinds of color + blank",
+          "14 Fixed Metal Gobo Patterns",
+          "8 Rotating Prisms",
+          "Strobe: 0-9 times/sec",
+          "Ballast: Electronic ballast"
+        ]
+      }
+    },
+    {
+      "id": "TDHLSR017",
+      "name": "SHARPY LIGHT 10R",
+      "imageUrl": "product/stagelighitng/SHARPYLIGHT10R.png",
+      "description": "Moving Head Beam effect light 10R Base high bright strong beam, ideal for DJ's, Dance Shows Stage Events, Auditorium Stages, Multipurpose application. Quick response to the control signal makes it unique.",
+      "features": [
+        {
+          "title": "Features",
+          "text": "Pan Range - 540° & Tilt Range - 270°, High Precision Movement, 14 kinds of color + blank, 14 Fixed Metal Gobo Patterns, 8 Rotating Prisms, Strobe: 0-9 times/sec, Ballast: Electronic ballast"
+        },
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/sharpy-light-10r-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/sharpy-light-10r-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 280W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "lamp_source": ["280W 10R, 7000K", "MSD Yodn Lamp"],
+        "control": ["DmX 512 Through 3 Pin XLR", "16 Channel DmX Control", "Sound Active Mode Control"],
+        "physical_construction": ["DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish", "2Lights in 1 flight case"],
+        "features_spec": [
+          "Pan Range - 540° & Tilt Range - 270°",
+          "High Precision Movement",
+          "14 kinds of color + blank",
+          "14 Fixed Metal Gobo Patterns",
+          "8 Rotating Prisms",
+          "Strobe: 0-9 times/sec",
+          "Ballast: Electronic ballast"
+        ]
+      }
+    },
+    {
+      "id": "TDHLSR017_15R",
+      "name": "SHARPY LIGHT 15R",
+      "imageUrl": "product/stagelighitng/sharpylight15r.png",
+      "description": "Moving Head Beam effect light 15R Base high bright strong beam, ideal for DJ's, Dance Shows Stage Events, Auditorium Stages, Multipurpose application. Quick response to the control signal makes it unique.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/sharpy-light-15r-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/sharpy-light-15r-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 330W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "lamp_source": ["330W 15R, 8500K", "MSD Yodn Lamp"],
+        "control": ["DmX 512 Through 3 Pin XLR", "16 Channel DmX Control", "Sound Active Mode Control"],
+        "physical_construction": ["DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish", "2Lights in 1 flight case"],
+        "features_spec": [
+          "Pan Range - 540° & Tilt Range - 270°",
+          "High Precision Movement",
+          "14 kinds of color + blank",
+          "14 Fixed Metal Gobo Patterns",
+          "8 Rotating Prisms",
+          "Strobe: 0-9 times/sec",
+          "Ballast: Electronic ballast"
+        ]
+      }
+    },
+    {
+      "id": "TDHMW018",
+      "name": "LED MOVING WASH LIGHT RGB",
+      "imageUrl": "product/stagelighitng/ledmovingwashlight.png",
+      "description": "Project cost-effective hot-selling product: 15 x 19LED moving head wash zoom. LM285 uses 19 RGB three-in-one high-brightness LED15W LED lamp, the angle is linearly adjustable from 7.9-38°, the color mixing is perfect, and the product weight is 7.7KG. A small angle can show a clear spot, and a large angle wash effect is not black in the middle. The contrast between the small angle and the large angle of this product is small. The entire focusing stroke has only two color segments, which has been highly praised by professional customers.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-moving-wash-light-rgb-18-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-moving-wash-light-rgb-18-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 285W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "lamp_source": ["285W, 8500K", "MSD Yodn Lamp"],
+        "control": ["DmX 512 Through 3 Pin XLR", "16 Channel DmX Control", "Sound Active Mode Control"],
+        "physical_construction": ["DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish", "2Lights in 1 flight case"],
+        "features_spec": [
+          "Pan Range - 540° & Tilt Range - 270°",
+          "High Precision Movement",
+          "14 kinds of color + blank",
+          "14 Fixed Metal Gobo Patterns",
+          "8 Rotating Prisms",
+          "Strobe: 0-9 times/sec",
+          "Ballast: Electronic ballast"
+        ]
+      }
+    },
+    {
+      "id": "TDHMW019",
+      "name": "LED MOVING WASH LIGHT RGB",
+      "imageUrl": "product/stagelighitng/ledmovingwashlight407.png",
+      "description": "Project cost-effective hot-selling product: 40 x 7LED moving head wash zoom. LM285 uses 7 RGB three-in-one high-brightness LED15W LED lamp, the angle is linearly adjustable from 7.9-38°, the color mixing is perfect, and the product weight is 6.7KG. A small angle can show a clear spot, and a large angle wash effect is not black in the middle. The contrast between the small angle and the large angle of this product is small. The entire focusing stroke has only two color segments, which has been highly praised by professional customers.",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/led-moving-wash-light-rgb-19-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/led-moving-wash-light-rgb-19-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 280W", "Input Voltage AC 100V ~ 260V, 50Hz"],
+        "lamp_source": ["280W, 8500K", "MSD Yodn Lamp"],
+        "control": ["DmX 512 Through 3 Pin XLR", "16 Channel DmX Control", "Sound Active Mode Control"],
+        "physical_construction": ["DmX 3 Pin In and Out", "Ingress Protection IP20 Rated", "Plastic & Metal Body", "Black Powder coated finish", "2Lights in 1 flight case"],
+        "features_spec": [
+          "Pan Range - 540° & Tilt Range - 270°",
+          "High Precision Movement",
+          "14 kinds of color + blank",
+          "14 Fixed Metal Gobo Patterns",
+          "8 Rotating Prisms",
+          "Strobe: 0-9 times/sec",
+          "Ballast: Electronic ballast"
+        ]
+      }
+    },
+    {
+      "id": "TDHHL20",
+      "name": "HALOGEN LIGHT LIGHT",
+      "imageUrl": "product/stagelighitng/halogenlight500.png",
+      "description": "500/1000W Halogen light with aluminum Asymmetrical reflector, double pole micro switch, 290x270mm color frame, R7s lamp base, 2-10m throw, 3.3 kg weight in 10806050 Black, (10806051) white/ (10806052) Silver color. Type: INNO A 1000 of LDR or equivalent",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/halogen-light-light-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/halogen-light-light-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 500/1000W", "Input Voltage AC 85V ~ 265V, 50/60Hz"],
+        "lamp_source": ["Halogen Based Source"],
+        "control": ["DmX 512 Through 3 Pin XLR", "1/3/6 Channel DmX Control", "Manual Mode Operation", "Master Slave Mode"],
+        "physical_construction": ["Dimension 350x 260x 110mm", "Weight 3.5 Kgs", "DmX 3 Pin In and Out", "Power Loop In and Out", "Ingress Protection IP20 Rated", "Aluminum Body", "MS Body with Black Powder coated finish"],
+        "others": ["Working Temperature +40° ~ -30°"]
+      }
+    },
+    {
+      "id": "TDHPF021",
+      "name": "PROFILE SPOT LIGHT 1000W",
+      "imageUrl": "product/stagelighitng/profilespotlight1000.png",
+      "description": "1000W profile spot light with Double condenser & zoom, 68mm dia. Glass reflector, 185 x185mm colour frame, narrow beam angle, Gx9.5 lamp base, 5-25m throw, 6 Kg net weight in 10853020 Black colour. Type:NOTA 8/22 of LDR or equivalent",
+      "features": [
+        {
+          "title": "Accessories",
+          "text": "Barndoor, Safety Chain, C Clamp"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/profile-spot-light-1000w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/profile-spot-light-1000w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["Power Consumption 1000W", "Input Voltage AC 110V ~ 220V, 50/60Hz"],
+        "optical_arrangement": ["Beam Angle 19°, 26°, 36°, 50°"],
+        "lamp_source": ["T11 Based Source 3200K", "Colour Temperature 3200K", "50,000 Hours Burning life"],
+        "control": ["Dimmer based"],
+        "physical_construction": ["Dimension 300x 700x 310mm", "Weight 6 Kgs/ 13.2 lbs"],
+        "others": ["Working Temperature +40° ~ -30°", "Strobe option adjustable 1 ~ 25 times/Sec"]
+      }
+    },
+    {
+      "id": "TDHCYL22",
+      "name": "CYCLORAMA LIGHTS 1000W",
+      "imageUrl": "product/stagelighitng/cycloramalight.png",
+      "description": "The Cyclorama Lights 1000W Black is a high-performance lighting solution designed for professional stage and studio applications. Featuring a 1000W power output, this light ensures bright and even illumination, making it ideal for backdrop lighting. It operates at 240V and has an IP33 rating, providing reliable performance in controlled environments. The HF-1000 type design includes an aluminum anodized finish reflector, which enhances light distribution for optimal coverage. Equipped with two compressible recessed single-contact holders, it ensures secure lamp placement. With a sturdy build and a weight of 7.5 kg, this cyclorama light is both durable and efficient for professional use.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/cyclorama-lights-1000w-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/cyclorama-lights-1000w-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "lighting": ["Color Black"],
+        "ip_rating": ["IP33"],
+        "power": ["1000W"],
+        "weight": ["7.5 kg"],
+        "type": ["HF-1000"],
+        "voltage": ["240 V"],
+        "reflector": ["Aluminium Anodized Finish"],
+        "holder": ["2 nos. compressible recessed Single contact App"]
+      }
+    },
+    {
+      "id": "TDHDMX020",
+      "name": "DMX SPLITTER",
+      "imageUrl": "product/stagelighitng/dmxsplitter.png",
+      "description": "Opto-isolated RDM enabled DmX splitter unit complete with Power In and slow blow safety fuse, 8 DmX Output channels 5 Pin XLR or 3 Pin XLR Customized in and out supporting DMX operation as per DMX 512 protocol. Splitter unit is designed to cater for small as well as larger networks to have effective distribution of signal and amplifying the signal voltage to keep it uniform through all 8 outgoing ports.",
+      "features": [
+        {
+          "title": "Features",
+          "text": "In & 8 Isolated Output DMX, Ideal for Small & Big DmX Distributions, XLR 5 Pin or 3 Pin Combinations, Slow blow inbuilt fuse, Dual mode setting for A & B output, Memory to retail last frame data, Steady Signal Distribution, Master MCU 32 Bit Micro controller, Quick data processing, No delay transmission DmX signals, Black Powder coated housing, Earth protection against Electrical shock, Fuse protected Chassis mount connector, IEC 10A Power input, Dimensions in mm 482 x 44 x 128mm, Weight 2.9 Kgs"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/dmx-splitter-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/dmx-splitter-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "electrical_power": ["0-240V AC, 45-63Hz"],
+        "optical_arrangement": ["Scanning Angle - 180°"],
+        "control": ["DMX 512 Protocol/ RDM(Optional)"],
+        "features_spec": [
+          "In & 8 Isolated Output DMX",
+          "Ideal for Small & Big DmX Distributions",
+          "XLR 5 Pin or 3 Pin Combinations",
+          "Slow blow inbuilt fuse",
+          "Dual mode setting for A & B output",
+          "Memory to retail last frame data",
+          "Steady Signal Distribution",
+          "Master MCU 32 Bit Micro controller",
+          "Quick data processing",
+          "No delay transmission DmX signals",
+          "Black Powder coated housing",
+          "Earth protection against Electrical shock",
+          "Fuse protected Chassis mount connector",
+          "IEC 10A Power input",
+          "Dimensions in mm 482 x 44 x 128mm",
+          "Weight 2.9 Kgs"
+        ]
+      }
+    },
+    {
+      "id": "TDHDMX021",
+      "name": "ELECTRONIC 6 CHANNEL DIMMER",
+      "imageUrl": "product/stagelighitng/electronic6channeldimmer.png",
+      "description": "Auto Sensing of supply voltage (140-260VAC). Automatic supply frequency tracking 45-60 HZ. Linear dimming curve. 'Neon'Load present' indicators. High Quality RF noise suppression. Single, Dual or three phase operation. Radio Frequency Interference suppression to better than BS-800 guidelines. 6 channels - 99.5% duty circle. 19\" Rack Mounting - 4U Phase monitoring Neon. Control Signal monitoring LEDs. 6 Channel rack mounting DIMAT dimming pack with holding handles. 10-10 Volts control input by one 8-pin Din socket. Soft start function at power up. Lamp pre-heat level selector for longer lamp life. Individual channel test controls. Individual channel blown fuse indicators. Individual channel status indicators. Available model six-channels x2 (Tour series in fly pack) Having 18 Nos. 15 Amp. Multi Socket for using the direct points.",
+      "features": [
+        {
+          "title": "Usage/Application",
+          "text": "USED FOR NON DMX LIGHTS"
+        },
+        {
+          "title": "Shape",
+          "text": "RECTANGLE"
+        },
+        {
+          "title": "Brand",
+          "text": "TDH"
+        },
+        {
+          "title": "Power/Voltage",
+          "text": "110-230V"
+        },
+        {
+          "title": "Power Source",
+          "text": "AC"
+        },
+        {
+          "title": "Color",
+          "text": "BLACK"
+        },
+        {
+          "title": "Material",
+          "text": "ALUMINIUM/MS"
+        },
+        {
+          "title": "Warranty",
+          "text": "1 YEAR"
+        },
+        {
+          "title": "Model Name/Number",
+          "text": "TDH ED100"
+        },
+        {
+          "title": "Voltage",
+          "text": "110-230"
+        },
+        {
+          "title": "Weight",
+          "text": "7 KGS"
+        },
+        {
+          "title": "Total load capacity",
+          "text": "24 KW"
+        },
+        {
+          "title": "Country of Origin",
+          "text": "Made in India"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/electronic-6-channel-dimmer-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/electronic-6-channel-dimmer-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "features_spec": [
+          "Usage/Application : USED FOR NON DMX LIGHTS",
+          "Shape : RECTANGLE",
+          "Brand : TDH",
+          "Power/Voltage : 110-230V",
+          "Power Source : AC",
+          "Color : BLACK",
+          "Material : ALUMINIUM/MS",
+          "Warranty : 1 YEAR",
+          "Model Name/Number : TDH ED100",
+          "Voltage : 110-230",
+          "Weight : 7 KGS",
+          "Total load capacity : 24 KW",
+          "Country of Origin : Made in India"
+        ],
+        "technical_spec": [
+          "Auto Sensing of supply voltage (140-260VAC)",
+          "Automatic supply frequency tracking 45-60 HZ",
+          "Linear dimming curve",
+          "'Neon'Load present' indicators",
+          "High Quality RF noise suppression",
+          "Single, Dual or three phase operation",
+          "Radio Frequency Interference suppression to better than BS-800 guidelines",
+          "6 channels - 99.5% duty circle",
+          "19\" Rack Mounting - 4U Phase monitoring Neon",
+          "Control Signal monitoring LEDs",
+          "6 Channel rack mounting DIMAT dimming pack with holding handles",
+          "10-10 Volts control input by one 8-pin Din socket",
+          "Soft start function at power up",
+          "Lamp pre-heat level selector for longer lamp life",
+          "Individual channel test controls",
+          "Individual channel blown fuse indicators",
+          "Individual channel status indicators",
+          "Available model six-channels x2 (Tour series in fly pack) Having 18 Nos. 15 Amp. Multi Socket for using the direct points."
+        ]
+      }
+    },
+    {
+      "id": "TDHDMX022",
+      "name": "12 CHANNEL DIMMER",
+      "imageUrl": "product/stagelighitng/12channeldimmer.png",
+      "description": "Auto Sensing of supply voltage (140-260VAC). Automatic supply frequency tracking 45-60 HZ. Linear dimming curve. 'Neon'Load present' indicators. High Quality RF noise suppression. Single, Dual or three phase operation. Radio Frequency Interference suppression to better than BS-800 guidelines. 12 channels - 99.5% duty circle. 19\" Rack Mounting - 4U Phase monitoring Neon. Control Signal monitoring LEDs. 12 Channel rack mounting DIMAT dimming pack with holding handles. 10-10 Volts control input by one 8-pin Din socket. Soft start function at power up. Lamp pre-heat level selector for longer lamp life. Individual channel test controls. Individual channel blown fuse indicators. Individual channel status indicators. Available model twelve-channels x2 (Tour series in fly pack) Having 12 Nos. 15 Amp. Multi Socket for using the direct points.",
+      "features": [
+        {
+          "title": "Usage",
+          "text": "12 Channel 48KW Dimmer Pack"
+        },
+        {
+          "title": "Shape",
+          "text": "RECTANGLE"
+        },
+        {
+          "title": "Brand",
+          "text": "TDH"
+        },
+        {
+          "title": "Power/Voltage",
+          "text": "110-230V"
+        },
+        {
+          "title": "Power Source",
+          "text": "AC 100-240V, 304w"
+        },
+        {
+          "title": "Color",
+          "text": "BLACK"
+        },
+        {
+          "title": "Material",
+          "text": "ALUMINIUM/MS"
+        },
+        {
+          "title": "Warranty",
+          "text": "1 YEAR"
+        },
+        {
+          "title": "Model Name/Number",
+          "text": "TDH ED100"
+        },
+        {
+          "title": "Protocol",
+          "text": "DMX-512"
+        },
+        {
+          "title": "Weight",
+          "text": "13.5 KGS"
+        },
+        {
+          "title": "Country of Origin",
+          "text": "Made in India"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/12-channel-dimmer-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/12-channel-dimmer-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "features_spec": [
+          "Usage : 12 Channel 48KW Dimmer Pack",
+          "Shape : RECTANGLE",
+          "Brand : TDH",
+          "Power/Voltage : 110-230V",
+          "Power Source : AC 100-240V, 304w",
+          "Color : BLACK",
+          "Material : ALUMINIUM/MS",
+          "Warranty : 1 YEAR",
+          "Model Name/Number : TDH ED100",
+          "Protocol : DMX-512",
+          "Weight : 13.5 KGS",
+          "Country of Origin : Made in India"
+        ],
+        "technical_spec": [
+          "Auto Sensing of supply voltage (140-260VAC)",
+          "Automatic supply frequency tracking 45-60 HZ",
+          "Linear dimming curve",
+          "'Neon'Load present' indicators",
+          "High Quality RF noise suppression",
+          "Single, Dual or three phase operation",
+          "Radio Frequency Interference suppression to better than BS-800 guidelines",
+          "12 channels - 99.5% duty circle",
+          "19\" Rack Mounting - 4U Phase monitoring Neon",
+          "Control Signal monitoring LEDs",
+          "12 Channel rack mounting DIMAT dimming pack with holding handles",
+          "10-10 Volts control input by one 8-pin Din socket",
+          "Soft start function at power up",
+          "Lamp pre-heat level selector for longer lamp life",
+          "Individual channel test controls",
+          "Individual channel blown fuse indicators",
+          "Individual channel status indicators",
+          "Available model twelve-channels x2 (Tour series in fly pack) Having 12 Nos. 15 Amp. Multi Socket for using the direct points."
+        ]
+      }
+    },
+    {
+      "id": "TDHWDM023",
+      "name": "12 CHANNEL WALL MOUNT DIMMER",
+      "imageUrl": "product/stagelighitng/12chnlwallmountdimmer.png",
+      "description": "A 12CH wall mount electronic dimmer is an electronic device used to control the brightness of 12 separate lights or light fixtures. It is mounted on a wall and operates by adjusting the voltage supplied to the light, effectively reducing its brightness. This type of dimmer is often used in residential or commercial settings to create mood lighting, conserve energy, and extend the life of light bulbs. It typically operates using a switch or slider, and may include additional features such as adjustable minimum brightness and smooth dimming. In addition to controlling the brightness of lights, 12CH wall mount electronic dimmers can also help reduce energy consumption. By adjusting the voltage supplied to the lights, the dimmer can reduce the amount of power used, which can result in lower electricity bills. Additionally, electronic dimmers can extend the life of light bulbs by reducing the amount of heat generated during operation, which can reduce the risk of bulb failure.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/12-channel-wall-mount-dimmer-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/12-channel-wall-mount-dimmer-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "product_description": ["12 Channel Wall Mount Dimmer"],
+        "model": ["TDH WALLMOUNT DIMMER 12 CHANNELS(WMD-100)"],
+        "power_input": ["210V-240V"],
+        "dimmer_type": ["12 channel modular digital dimmer"],
+        "dimensions": ["(WXDXH)=560X170X760MM"],
+        "construction": ["Rugged construction ensures long life even under the most demanding conditions."],
+        "operation": ["Single, three phase operation."],
+        "protection": ["MCB breakers"],
+        "control": ["Individual channel test controls"],
+        "wattage": ["48kw"],
+        "indicators": ["Neon Load present indicators"]
+      }
+    },
+    {
+      "id": "TDHMP023",
+      "name": "1024 MINIPEARL PANEL",
+      "imageUrl": "product/stagelighitng/12minipearlpanel.png",
+      "description": "DMX Controller Mini Pearl Panel. DMX channel: 1024, Fixture: 96, Channels for each fixture 40 primary + 40 fine tune. Library: Avolite Pearl R20 library supported. Re-patched Fixture address: Yes. Swop Pan/Tilt: Yes, Reversed channel output: Yes. Channel slope modification: Yes, Scene: 60. Scenes to run simultaneously: 10, Scene step: 600. Time control of scenes: Fade in/out, LTP slope. Shapes for each scene:5, Scene and dimmer by slider: Yes Interlocked scene: Yes, Shape generator: Shapes of Dimmer, Pan/Tilt, RGB, CMY, Colour, Gobo, Iris and Focus. Shapes to run simultaneously:5, Master slider: Global, playback, fixture, Real time blackout: Yes, Channel value by Slider: Yes, Dimmer by slider: Yes, USB Memory:FAT32 supported.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/1024-minipearl-panel-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/1024-minipearl-panel-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "description": ["DMX Controller Mini Pearl Panel"],
+        "technical_spec": [
+          "DMX channel: 1024, Fixture: 96, Channels for each fixture 40 primary + 40 fine tune",
+          "Library: Avolite Pearl R20 library supported",
+          "Re-patched Fixture address: Yes",
+          "Swop Pan/Tilt: Yes, Reversed channel output: Yes",
+          "Channel slope modification: Yes, Scene: 60",
+          "Scenes to run simultaneously: 10, Scene step: 600",
+          "Time control of scenes: Fade in/out, LTP slope",
+          "Shapes for each scene:5, Scene and dimmer by slider: Yes Interlocked scene: Yes",
+          "Shape generator: Shapes of Dimmer, Pan/Tilt, RGB, CMY, Colour, Gobo, Iris and Focus",
+          "Shapes to run simultaneously:5, Master slider: Global, playback, fixture",
+          "Real time blackout: Yes, Channel value by Slider: Yes",
+          "Dimmer by slider: Yes, USB Memory:FAT32 supported"
+        ]
+      }
+    },
+    {
+      "id": "TDHPL024",
+      "name": "PILOT 2000 PANEL",
+      "imageUrl": "product/stagelighitng/pilot2000panel.png",
+      "description": "Pilot 2000 Panel. Universal DMX512 Controller, Able to control Upto 40 Lights. Each Light with maximum of 36 Channel in Total. Can control upto 192 Dimmer Channel. 40 Programs or Chases, M Chases, Presets each Program (Chase, M-chase, Preset) upto 40 Steps, Able to use 4 Programs. 4 Chases, 4 M-chases, Presets at same time. Can create new unit Internal Library. Able to Backup/ Update data to from PC with RS23. MIDI Input/ MIDI Output. Internal MIC or Sound input. Product colour: Black. DMX connection: 3 pin XLR. Power supply: 120 - 230VAC 50Hz.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/pilot-2000-panel-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/pilot-2000-panel-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "description": ["Pilot 2000 Panel"],
+        "technical_spec": [
+          "Universal DMX512 Controller, Able to control Upto 40 Lights.",
+          "Each Light with maximum of 36 Channel in Total.",
+          "Can control upto 192 Dimmer Channel.",
+          "40 Programs or Chases, M Chases, Presets each Program (Chase, M-chase, Preset) upto 40 Steps, Able to use 4 Programs.",
+          "4 Chases, 4 M-chases, Presets at same time.",
+          "Can create new unit Internal Library.",
+          "Able to Backup/ Update data to from PC with RS23.",
+          "MIDI Input/ MIDI Output.",
+          "Internal MIC or Sound input.",
+          "Product colour: Black",
+          "DMX connection: 3 pin XLR",
+          "Power supply: 120 - 230VAC 50Hz"
+        ]
+      }
+    },
+    {
+      "id": "TDHPL025",
+      "name": "DMX CONTROLLER 384",
+      "imageUrl": "product/stagelighitng/dmxcontroller384.png",
+      "description": "DMX Controller 384. The DMX 384 controller is a DMX hardware controller for lighting effects that are compatible with DMX protocol. It will control up to 12 fixtures whit 32 DMX channels each (384 total channels). There are 30 banks with 240 total programmable scenes. The DMX 384 controller has 16 control faders with 2 page banks. With DMX 384 Controller, you can record up to 6 chases with separate fade times and step speeds. Product colour: Black. DMX connection: 3 pin XLR. Power supply: 220 - 240VAC 50Hz. Dimensions (L x W x H): 520 x 190 x 80mm. Weight (kg): 2.450.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/dmx-controller-384-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/dmx-controller-384-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "description": ["DMX Controller 384"],
+        "technical_spec": [
+          "The DMX 384 controller is a DMX hardware controller for lighting effects that are compatible with DMX protocol.",
+          "It will control up to 12 fixtures whit 32 DMX channels each (384 total channels).",
+          "There are 30 banks with 240 total programmable scenes.",
+          "The DMX 384 controller has 16 control faders with 2 page banks.",
+          "With DMX 384 Controller, you can record up to 6 chases with separate fade times and step speeds.",
+          "Product colour: Black",
+          "DMX connection: 3 pin XLR",
+          "Power supply: 220 - 240VAC 50Hz",
+          "Dimensions (L x W x H): 520 x 190 x 80mm",
+          "Weight (kg): 2.450"
+        ]
+      }
+    },
+    {
+      "id": "TDHPL026",
+      "name": "DMX CONTROLLER 512",
+      "imageUrl": "product/stagelighitng/dmxcontroller512.png",
+      "description": "DMX Controller 512. TDMX-512/1990 standard, 192 DMX Channels. Large Digital LCD display with back-lighted. Control up to 16 intelligent lights (12 DMX Channels per fixture). Operation via Manual or Chase Step. 16 intelligent Fixture chase steps within 100 scenes for each have the black out function sound run function. Product colour: Black. DMX connection: 3 pin XLR. Power supply: 120 - 230VAC 50Hz.",
+      "features": [],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/dmx-controller-512-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/dmx-controller-512-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "description": ["DMX Controller 512"],
+        "technical_spec": [
+          "TDMX-512/1990 standard, 192 DMX Channels",
+          "Large Digital LCD display with back-lighted.",
+          "Control up to 16 intelligent lights (12 DMX Channels per fixture).",
+          "Operation via Manual or Chase Step.",
+          "16 intelligent Fixture chase steps within 100 scenes for each have the black out function sound run function.",
+          "Product colour: Black",
+          "DMX connection: 3 pin XLR",
+          "Power supply: 120 - 230VAC 50Hz"
+        ]
+      }
+    },
+    {
+      "id": "TDHPB027",
+      "name": "3 PHASE BOARD",
+      "imageUrl": "product/stagelighitng/3phaseboard.png",
+      "description": "3 phase distribution boards are panels that house the circuit breakers, ground leakage protection units and fuses that are used to distribute power to individual consumer points or circuits within a building. They are generally used in larger industrial, public and commercial settings although can also be used within some domestic environments.",
+      "features": [
+        {
+          "title": "Type",
+          "text": "Flight Case Distribution Box With CEE forms, Schuko Sockets, Indian sockets etc..."
+        },
+        {
+          "title": "Special Features",
+          "text": "Under/Over Voltage Protection, Neutral Failure Protection"
+        }
+      ],
+      "downloads": [
+        {
+          "type": "Manual",
+          "url": "/downloads/3-phase-board-manual.pdf"
+        },
+        {
+          "type": "Datasheet",
+          "url": "/downloads/3-phase-board-datasheet.pdf"
+        }
+      ],
+      "specifications": {
+        "description": ["3 phase distribution boards are panels that house the circuit breakers, ground leakage protection units and fuses that are used to distribute power to individual consumer points or circuits within a building. They are generally used in larger industrial, public and commercial settings although can also be used within some domestic environments."],
+        "features_spec": [
+          "Flight Case Distribution Box With CEE forms, Schuko Sockets, Indian sockets etc...",
+          "Under/Over Voltage Protection",
+          "Neutral Failure Protection"
+        ]
+      }
+    }
+  ],
+
+  "boards": [
+    {
+      "id": "TDHPB001",
+      "name": "3 Phase Board (125Amp)",
+      "imageUrl": "product/boards/phaseboard1.png",
+      "description": "3 Phase Console Board with MCCB, MCB, and Power Safe Circuit for heavy-duty applications. Equipped with indicator and multiple socket outputs.",
+      "features": [
+        { "title": "Meter", "text": "AVF19D Meter" },
+        { "title": "Protection", "text": "125Amp MCCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "125Amp 5Pin Male Schuko" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket, 32Amp 5Pin Socket, 16Amp 3Pin Socket, 15Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 125Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB002",
+      "name": "3 Phase Board (125Amp Extended)",
+      "imageUrl": "product/boards/phaseboard2.png",
+      "description": "3 Phase Console Board with Earthing Meter, MCCB, and Power Safe Circuit for multipurpose distribution with Under/Over Voltage and Neutral Protection.",
+      "features": [
+        { "title": "Meter", "text": "AVF19D Meter, Earthing Meter" },
+        { "title": "Protection", "text": "125Amp MCCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "125Amp 5Pin Male Schuko" },
+        { "title": "Outputs", "text": "63Amp Female Socket, 32Amp 3Pin Socket, 32Amp 5Pin Socket, 16Amp 3Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 125Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB003",
+      "name": "3 Phase Board (63Amp with Fan)",
+      "imageUrl": "product/boards/phaseboard3.png",
+      "description": "63Amp 3 Phase Board equipped with MCCB, MCB, and cooling fan. Ideal for stable distribution and load protection in event setups.",
+      "features": [
+        { "title": "Meter", "text": "AVF19D Meter" },
+        { "title": "Protection", "text": "63Amp MCCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Male Schuko" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket, 32Amp 5Pin Socket, Fan, 16Amp AK Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB004",
+      "name": "3 Phase Board (63Amp Grey)",
+      "imageUrl": "product/boards/phaseboard4.png",
+      "description": "63Amp 3 Phase Board with 3 Phase Meter, MCCB, and AK sockets. Designed for multi-output distribution with neutral protection.",
+      "features": [
+        { "title": "Meter", "text": "3 Phase Meter" },
+        { "title": "Protection", "text": "63Amp MCCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Inlet/Male" },
+        { "title": "Outputs", "text": "16Amp AK Socket, 15Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Grey"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB005",
+      "name": "3 Phase Board (63Amp White)",
+      "imageUrl": "product/boards/phaseboard5.png",
+      "description": "3 Phase Console Board with 4 Pole Isolator, MCBs, and multiple sockets for balanced power distribution.",
+      "features": [
+        { "title": "Meter", "text": "AVF19D Meter" },
+        { "title": "Protection", "text": "32Amp 3 Pole MCB, 16Amp Single Pole MCB, 63Amp 4 Pole Isolator" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Female" },
+        { "title": "Outputs", "text": "32Amp 5Pin Socket, 16Amp 2Pin Socket, 15Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: White"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB006",
+      "name": "3 Phase Board (125Amp White)",
+      "imageUrl": "product/boards/phaseboard6.png",
+      "description": "High capacity 3 Phase Board with MCCB and AK socket for larger power applications. Provides under/over voltage and neutral failure protection.",
+      "features": [
+        { "title": "Meter", "text": "AVF19D Meter" },
+        { "title": "Protection", "text": "125Amp MCCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "125Amp 5Pin Male" },
+        { "title": "Outputs", "text": "63Amp 5Pin Female, 32Amp 5Pin Socket, 16Amp AK Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 125Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: White"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB007",
+      "name": "3 Phase Board (63Amp White Multi Socket)",
+      "imageUrl": "product/boards/phaseboard7.png",
+      "description": "63Amp 3 Phase Board featuring multiple sockets, AK connections, and indicator lights. Built for stage and event setups.",
+      "features": [
+        { "title": "Meter", "text": "3 Phase Meter" },
+        { "title": "Protection", "text": "32Amp 3 Pole MCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Female" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket, 16Amp 2Pin Socket, 16Amp AK Socket, 15Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: White"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB008",
+      "name": "3 Phase Board (63Amp MCCB)",
+      "imageUrl": "product/boards/phaseboard8.png",
+      "description": "3 Phase Console Board with MCCB, Male/Female inlets, and multiple socket combinations for diverse load configurations.",
+      "features": [
+        { "title": "Protection", "text": "63Amp MMCB, 16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Power Safe Circuit, Indicator" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "63Amp 5Pin Female, 63Amp 5Pin Socket, 16Amp 3Pin Socket, 15Amp Black & White Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB009",
+      "name": "3 Phase Board (63Amp Simple)",
+      "imageUrl": "product/boards/phaseboard9.png",
+      "description": "Basic 3 Phase Board with inlet, AK socket, and indicator for streamlined power connection setups.",
+      "features": [
+        { "title": "Protection", "text": "63Amp 5Pin Inlet/Male" },
+        { "title": "Safety", "text": "Indicator" },
+        { "title": "Outputs", "text": "16Amp AK Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB010",
+      "name": "3 Phase Board (32Amp White)",
+      "imageUrl": "product/boards/phaseboard10.png",
+      "description": "Compact 32Amp 3 Phase Board with isolator and safe circuit, ideal for low-load applications.",
+      "features": [
+        { "title": "Protection", "text": "16Amp Single Pole MCB, 2Pole MCB" },
+        { "title": "Safety", "text": "Indicator, Power Safe Circuit, Power ON/OFF" },
+        { "title": "Input", "text": "32Amp 3Pin Male" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket, 16Amp 2Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 32Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: White"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDHPB011",
+      "name": "3 Phase Board (63Amp Isolator)",
+      "imageUrl": "product/boards/phaseboard11.png",
+      "description": "63Amp 3 Phase Board with Isolator and power-safe design, ensuring reliable power delivery for stage and industrial use.",
+      "features": [
+        { "title": "Protection", "text": "63Amp Isolator" },
+        { "title": "Safety", "text": "Indicator, Power Safe Circuit, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDSPB001",
+      "name": "Single Phase Board (16Amp)",
+      "imageUrl": "product/boards/singlephaseboard1.png",
+      "description": "16Amp Single Phase Board equipped with MCB, Powercon, and multiple socket outputs for small load circuits.",
+      "features": [
+        { "title": "Protection", "text": "16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "Indicator" },
+        { "title": "Input", "text": "Powercon" },
+        { "title": "Outputs", "text": "16Amp Black Socket, 16Amp 2Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: Single Phase", "Current: 16Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDSPB002",
+      "name": "Single Phase Board (5Amp LED)",
+      "imageUrl": "product/boards/singlephaseboard2.png",
+      "description": "5Amp Single Phase Board with LED indicator and 5Amp output socket for basic applications.",
+      "features": [
+        { "title": "Protection", "text": "16Amp Single Pole MCB" },
+        { "title": "Safety", "text": "LED Light" },
+        { "title": "Outputs", "text": "5Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: Single Phase", "Current: 5Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDSPB003",
+      "name": "Single Phase Board (16Amp 3Pin)",
+      "imageUrl": "product/boards/singlephaseboard3.png",
+      "description": "16Amp Single Phase Board with dual 3Pin Male/Female connection and indicator for compact distribution use.",
+      "features": [
+        { "title": "Safety", "text": "Indicator" },
+        { "title": "Input", "text": "16Amp 3Pin Male" },
+        { "title": "Outputs", "text": "16Amp 3Pin Female, 16Amp Black Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: Single Phase", "Current: 16Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDAMB001",
+      "name": "Amplifier Board (63Amp 2Pin)",
+      "imageUrl": "product/boards/amplifierboard1.png",
+      "description": "Amplifier distribution board for stage setups, featuring Isolator, Power Safe Circuit, and 2Pin socket outputs.",
+      "features": [
+        { "title": "Protection", "text": "63Amp 4 Pole Isolator" },
+        { "title": "Safety", "text": "Power Safe Circuit, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "63Amp 5Pin Female, 16Amp 2Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: Amplifier Board", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDAMB002",
+      "name": "Amplifier Board (63Amp 3Pin)",
+      "imageUrl": "product/boards/amplifierboard2.png",
+      "description": "Amplifier distribution board variant featuring 3Pin socket outputs and isolator control for sound system power routing.",
+      "features": [
+        { "title": "Protection", "text": "63Amp 4 Pole Isolator" },
+        { "title": "Safety", "text": "Power Safe Circuit, Power ON/OFF" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "63Amp 5Pin Female, 16Amp 3Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: Amplifier Board", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDMOB001",
+      "name": "12 Chnnel Rack Board (63Amp)",
+      "imageUrl": "product/boards/12channelrackboard.png",
+      "description": "Motor Board designed for 3 Phase operation with MCB and socket outputs for industrial and mechanical load handling.",
+      "features": [
+        { "title": "Protection", "text": "4 Pole MCB" },
+        { "title": "Safety", "text": "Indicator" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "32Amp 3Pin Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Grey"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDTHB001",
+      "name": "Truss Hoist Board (63Amp)",
+      "imageUrl": "product/boards/trusthoistboard.png",
+      "description": "Truss Hoist Board for stage lifting systems with MCCB, control sockets, and indicator for safe hoist power delivery.",
+      "features": [
+        { "title": "Protection", "text": "63Amp MCCB" },
+        { "title": "Safety", "text": "Indicator" },
+        { "title": "Input", "text": "63Amp 5Pin Male" },
+        { "title": "Outputs", "text": "32Amp 4Pin Female Socket" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Mild Steel", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    },
+    {
+      "id": "TDDIM001",
+      "name": "12 Channel Dimmer Rack (63Amp)",
+      "imageUrl": "product/boards/12channeldimmerrack.png",
+      "description": "Professional 12 Channel Dimmer Rack with DMX input, suitable for lighting control in stage and event setups.",
+      "features": [
+        { "title": "Channels", "text": "12 Channel" },
+        { "title": "Control", "text": "DMX Input" },
+        { "title": "Power", "text": "63Amp" },
+        { "title": "Indicators", "text": "LED Indicators" }
+      ],
+      "downloads": [],
+      "specifications": {
+        "electrical_power": ["Phase: 3 Phase", "Current: 63Amp", "Frequency: 50/60Hz"],
+        "physical_construction": ["Material: Rack Mount Steel Frame", "Color: Black"],
+        "brand": ["TDH LIGHTING"]
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,587 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>TDH Lighting</title>
+
+
+  <style>
+    body {
+      overflow-x: hidden;      
+    }
+  </style>
+  
+</head>
+
+<body>
+  <!--NAV SECTION START HERE..-->
+  <div id="header-container"></div>
+  
+  <!-- Other content -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        
+        // Re-initialize Swiper
+        if (typeof Swiper !== 'undefined') {
+          const mySwiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            speed: 800,
+            effect: 'slide',
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            breakpoints: {
+              768: { slidesPerView: 1 },
+              1024: { slidesPerView: 1 }
+            }
+          });
+        }
+        
+        window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+        // Re-initialize Mega Menu
+        const menuBtns = document.querySelectorAll(".menuBtn");
+        menuBtns.forEach(btn => {
+          const menu = btn.nextElementSibling;
+          
+          btn.addEventListener("click", e => {
+            e.stopPropagation();
+            
+            // Close other open menus
+            document.querySelectorAll(".megaMenu").forEach(m => {
+              if (m !== menu) {
+                m.classList.add("opacity-0", "translate-y-[-10px]");
+                setTimeout(() => m.classList.add("hidden"), 300);
+              }
+            });
+            
+            // Toggle current menu
+            if (menu.classList.contains("hidden")) {
+              menu.classList.remove("hidden");
+              setTimeout(() => menu.classList.remove("opacity-0", "translate-y-[-10px]"), 10);
+            } else {
+              menu.classList.add("opacity-0", "translate-y-[-10px]");
+              setTimeout(() => menu.classList.add("hidden"), 300);
+            }
+          });
+        });
+        
+        // Close menus when clicking outside
+        window.addEventListener("click", e => {
+          document.querySelectorAll(".megaMenu").forEach(menu => {
+            if (!menu.previousElementSibling.contains(e.target) && !menu.contains(e.target)) {
+              menu.classList.add("opacity-0", "translate-y-[-10px]");
+              setTimeout(() => menu.classList.add("hidden"), 300);
+            }
+          });
+        });
+       const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { // Adjust threshold if needed (50px scroll to trigger)
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+  <!--NAV SECTION END HERE..-->
+
+
+
+
+<section class="relative w-full min-h-[70vh] flex flex-col lg:flex-row items-center justify-center bg-black text-white overflow-hidden">
+  <!-- Background Video -->
+  <div class="absolute inset-0 overflow-hidden">
+    <video id="tdhVideo" autoplay muted loop playsinline class="w-full h-full object-cover opacity-60">
+      <source src="assets/css/vdbntdhlighting.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Animated gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-purple-900/20 to-yellow-600/10 animate-pulse-slow"></div>
+    
+    <!-- Floating particles effect -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full animate-float-1"></div>
+      <div class="particle absolute w-2 h-2 bg-yellow-300 rounded-full animate-float-2"></div>
+      <div class="particle absolute w-1 h-1 bg-white rounded-full animate-float-3"></div>
+      <div class="particle absolute w-2 h-2 bg-yellow-400 rounded-full animate-float-4"></div>
+      <div class="particle absolute w-1 h-1 bg-yellow-300 rounded-full animate-float-5"></div>
+    </div>
+  </div>
+
+  <!-- Text Content -->
+  <div id="aboutText" class="relative z-10 max-w-4xl mx-auto text-center px-6 py-12 lg:py-16 space-y-6">
+    <!-- Animated title -->
+    <div class="mb-8">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 mb-4 animate-title">
+        TDH Lighting
+      </h2>
+      <div class="h-1 w-24 bg-yellow-500 mx-auto rounded-full animate-grow"></div>
+    </div>
+
+    <!-- Content container with subtle border animation -->
+    <div class="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-yellow-500/30 shadow-2xl shadow-yellow-900/20 animate-fade-in-up">
+      <p class="text-lg md:text-xl mb-6 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="1">
+        Established in 2009, <span class="font-semibold text-yellow-300 bg-yellow-900/20 px-1 rounded">Theatre Dimmer Hardware (TDH Lighting)</span> has grown into one of India's leading manufacturers, wholesalers, and traders of professional stage and architectural lighting solutions.
+      </p>
+
+      <p class="text-lg md:text-xl mb-6 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="2">
+        We specialize in <span class="text-yellow-300">DMX splitters</span>, <span class="text-yellow-300">electronic dimmers</span>, <span class="text-yellow-300">dimmer racks</span>, <span class="text-yellow-300">sharpy lights</span>, <span class="text-yellow-300">LED spotlights</span>, <span class="text-yellow-300">stage lights</span>, and <span class="text-yellow-300">theater profile lights</span>, delivering reliable performance for entertainment venues, studios, and auditoriums across the country.
+      </p>
+
+      <p class="text-lg md:text-xl mb-6 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="3">
+        At TDH Lighting, innovation and quality are at the heart of everything we do. Our products are crafted using cutting-edge technology and precision engineering, ensuring superior durability, safety, and control.
+      </p>
+
+      <p class="text-lg md:text-xl mb-6 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="4">
+        Supported by a team of skilled professionals and trusted vendors, we are committed to providing customized lighting solutions that meet the unique creative and technical needs of our clients.
+      </p>
+
+      <p class="text-lg md:text-xl mb-6 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="5">
+        With over a decade of industry expertise, TDH Lighting continues to illuminate experiences—from theatrical productions to large-scale events—with intelligent, energy-efficient, and high-performance lighting systems designed to bring every stage to life.
+      </p>
+
+      <!-- Quote with special styling -->
+      <div class="border-l-4 border-yellow-500 pl-4 my-8 py-2 bg-yellow-900/10 rounded-r-lg">
+        <p class="text-xl md:text-2xl font-semibold italic text-yellow-400 opacity-0 transition-all duration-700 transform translate-y-4" data-delay="6">
+          "Bringing innovation, precision, and brilliance to every beam of light."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("tdhVideo");
+    const paragraphs = document.querySelectorAll("#aboutText p");
+
+    // Start animations when video starts playing
+    video.addEventListener("play", () => {
+      paragraphs.forEach((p, index) => {
+        const delay = Number(p.getAttribute("data-delay")) * 1000; // Reduced from 2s to 1s gap
+        setTimeout(() => {
+          p.classList.add("opacity-100", "translate-y-0");
+        }, delay);
+      });
+    });
+
+    // Fallback in case video doesn't trigger play event
+    setTimeout(() => {
+      paragraphs.forEach((p, index) => {
+        const delay = Number(p.getAttribute("data-delay")) * 1000;
+        setTimeout(() => {
+          p.classList.add("opacity-100", "translate-y-0");
+        }, delay);
+      });
+    }, 1000);
+  });
+</script>
+
+
+<hr>
+<!--section 3 starts here-->
+
+
+<section class="py-12 bg-white overflow-hidden">
+  <div class="max-w-[95%] mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold">Product Highlights</h2>
+      <a href="product.html" class="text-yellow-400 hover:text-blue-600 uppercase font-semibold flex items-center gap-2">
+        View all
+        <svg class="w-5 h-auto fill-current" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3389 16L11.9085 14.6029L17.4969 9.01455H0V7.01871H17.4969L11.8753 1.39709L13.3056 0L21.3222 8.01663L13.3389 16Z"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Carousel -->
+    <div id="product-carousel" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          
+          <!-- Product 1 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLCP004" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledcobparlight.png" alt="LED COP PAR LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED COP PAR LIGHT</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED COP PAR LIGHT</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLCP004</p>
+              </div>
+            </a>
+          </li>
+          
+          <!-- Product 2 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLPF011" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledprofilespotlg.png" alt="LED PROFILE SPOT LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED PROFILE SPOT LIGHT</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED PROFILE SPOT LIGHT</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLPF011</p>
+              </div>
+            </a>
+          </li>
+          
+          <!-- Product 3 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHLSR017_15R" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/sharpylight15r.png" alt="SHARPY LIGHT 15R" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">SHARPY LIGHT 15R</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">SHARPY LIGHT 15R</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLSR017_15R</p>
+              </div>
+            </a>
+          </li>
+          
+          <!-- Product 4 -->
+          <li class="splide__slide">
+            <a href="detailproduct.html?id=TDHMW018" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="relative aspect-square">
+                <img src="product/stagelighitng/ledmovingwashlight.png" alt="Volero Cube" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED MOVING WASH LIGHT RGB</h3>
+                <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED MOVING WASH LIGHT RGB</p>
+                <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHMW018</p>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--section 3 ends-->
+
+<!--section 4 starts-->
+
+<section id="application" class="mx-8 bg-white py-12 lg:py-20">
+  <div class="px-4">
+    <h2 class="text-3xl lg:text-4xl font-bold text-left text-gray-800 mb-8 lg:mb-12">
+      We have solutions for every market and every need
+    </h2>
+    
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+      
+      <!-- Card Template -->
+      <a href="auditoriumlighting.html"
+      class="relative block col-span-2 rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+      <img src="images/application/stagelightingbn.webp" alt="Stage Lighting"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+      <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+        <h3 class="text-2xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+          Stage Lighting
+        </h3>
+        <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+      </div>
+    </a>
+    
+    <a href="studiolighting.html"
+    class="relative block rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+    <img src="images/application/studiolightingbn.webp" alt="Studio Lighting"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+          <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+            <h3 class="text-xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+              Studio Lighting
+            </h3>
+            <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+          </div>
+        </a>
+        
+        <a href="eventandconcertlighting.html"
+        class="relative block rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+        <img src="images/application/events&concertbn.webp" alt="Event & Concert Lighting"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+        <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+          <h3 class="text-xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+            Event & Concert Lighting
+          </h3>
+          <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+        </div>
+      </a>
+      
+      <a href="architecturallighting.html"
+      class="relative block rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+      <img src="images/application/architecturallightingbn.webp" alt="Architectural Lighting"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+      <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+        <h3 class="text-xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+          Architectural Lighting
+        </h3>
+        <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+      </div>
+    </a>
+    
+    <a href="auditoriumlighting.html"
+    class="relative block rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+    <img src="images/application/auditoriums&conferencehalls.webp" alt="Auditorium & Conference Halls"
+    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+    <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+      <h3 class="text-xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+        Auditorium & Conference Halls
+      </h3>
+      <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+    </div>
+  </a>
+  
+  <a href="entertainmentvenues.html"
+  class="relative block col-span-2 rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border-4 border-transparent hover:border-yellow-400 h-72 lg:h-80 group">
+  <img src="images/application/entertainmentvenuesbn.webp" alt="Theme Parks & Entertainment Venues"
+  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition duration-300 group-hover:from-black/60"></div>
+  <div class="absolute bottom-6 left-6 flex items-center gap-2 text-white">
+    <h3 class="text-2xl font-bold transition-all duration-300 group-hover:text-yellow-400">
+      Theme Parks & Entertainment Venues
+    </h3>
+    <span class="opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow-400 text-2xl">→</span>
+  </div>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- section 2 -->
+
+<!-- BLOG SECTION -->
+<section class="py-12 sm:py-16 bg-white">
+  <div class="mx-8 px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-10">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 sm:mb-0">Blogs</h2>
+      <a href="blog.html"
+         class="flex items-center text-yellow-400 hover:text-blue-800 text-sm sm:text-base uppercase font-semibold transition-colors duration-200">
+        View All
+        <svg class="w-4 h-3 sm:w-5 sm:h-auto ml-2 fill-current" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3389 16L11.9085 14.6029L17.4969 9.01455H0V7.01871H17.4969L11.8753 1.39709L13.3056 0L21.3222 8.01663L13.3389 16Z"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Grid Layout -->
+    <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6"></div>
+  </div>
+</section>
+
+<script>
+  const blogs = [
+    {
+      id: 1,
+      title: "Revolutionizing Stage Lighting with TDH LED Innovations",
+      date: "September 12, 2024",
+      author: "Rajesh Kumar",
+      image: "images/blogs/view-illuminated-stage.jpg",
+      excerpt: "TDH has been redefining stage illumination through advanced LED technologies delivering unmatched brightness and energy efficiency.",
+      link: "tdh-led-innovations.html"
+    },
+    {
+      id: 2,
+      title: "The Future of DMX Control Systems in Stage Lighting",
+      date: "July 08, 2024",
+      author: "Neha Gupta",
+      image: "images/blogs/blogbn1.jpg",
+      excerpt: "TDH Lighting integrates next-generation DMX controllers with intelligent software for seamless performance syncing.",
+      link: "dmx-future.html"
+    },
+    {
+      id: 3,
+      title: "Why Choose TDH Dimmer Racks for Professional Stages",
+      date: "May 18, 2024",
+      author: "Amit Patel",
+      image: "images/blogs/blogsbn2.jpg",
+      excerpt: "TDH Dimmer Racks are engineered for stability and safety, offering smooth voltage transitions and extended equipment life.",
+      link: "dimmer-rack-guide.html"
+    },
+    {
+      id: 4,
+      title: "Lighting Design Tips for Concert and Theatre Productions",
+      date: "February 11, 2024",
+      author: "Priya Sharma",
+      image: "images/blogs/blogsbn3.jpg",
+      excerpt: "Learn how TDH lighting fixtures bring life and emotion to every stage performance through precise and creative design.",
+      link: "lighting-design-tips.html"
+    }
+  ];
+
+  function renderBlogGrid() {
+    const grid = document.getElementById('blog-grid');
+    grid.innerHTML = blogs.map(blog => `
+      <a href="${blog.link}" class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+        <figure class="relative aspect-video">
+          <img src="${blog.image}"
+               alt="${blog.title}"
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+               loading="lazy">
+        </figure>
+        <div class="p-3 sm:p-4">
+          <time class="block text-gray-500 text-xs sm:text-sm mb-1">${blog.date}</time>
+          <h3 class="text-base sm:text-lg font-semibold mb-1 text-gray-800 group-hover:text-yellow-400 transition-colors duration-300 line-clamp-2">
+            ${blog.title}
+          </h3>
+          <p class="text-gray-800 text-xs sm:text-sm line-clamp-2 sm:line-clamp-3 transition-colors duration-300">
+            ${blog.excerpt}
+          </p>
+          <p class="text-gray-500 text-xs sm:text-sm mt-2">By ${blog.author}</p>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  renderBlogGrid();
+</script>
+
+<!--section 2 ends here-->
+
+<!--section 4 ends-->
+<!--section 5 starts-->
+
+<section class="relative w-full h-[60vh] min-h-[50vh] md:h-screen text-white flex items-center">
+  <!-- Background Image -->
+  <img 
+  src="assets/css/companybn.jpg" 
+  alt="Stage lighting" 
+  class="absolute inset-0 w-full h-full object-cover object-center"
+  >
+  
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+  
+  <!-- Content -->
+  <div class="relative w-full">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl sm:max-w-2xl md:max-w-3xl">
+        <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight drop-shadow-md">
+          Company
+        </h2>
+        
+        <p class="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl leading-relaxed drop-shadow-sm">
+          Making Theatre Dimmer Light Since 2009
+        </p>
+        
+        <div class="mt-6 sm:mt-8">
+          <a 
+          href="aboutus.html"
+          class="inline-block bg-yellow-400 text-black font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-md text-sm sm:text-base lg:text-lg uppercase tracking-wide transition-all duration-300 hover:scale-105 hover:bg-yellow-500"
+          >
+          Discover More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!--section 5 ends-->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#product-carousel', {
+      type       : 'loop',
+      perPage    : 4,
+      perMove    : 1,
+      gap        : '1rem',
+      autoplay   : true,
+      interval   : 5000,
+      arrows     : true,
+      pagination : false,
+      breakpoints: {
+        1280: { perPage: 3 },
+        992: { perPage: 2 },
+        768: { perPage: 1 },
+      },
+    }).mount();
+  });
+</script>
+
+
+  <!-- Modern Footer Design start -->
+  <div id="footer-bottom"></div>
+  <script>
+    
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      
+      .catch(error => console.error('Error loading slider:', error));
+
+  </script>
+  <!-- Modern Footer Design end -->
+  <!-- <script src="assets/js/header.js"></script> -->
+  <!-- <script src="assets/js/footer.js"></script> -->
+
+</body>
+
+</html>
+
+

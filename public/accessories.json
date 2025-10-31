@@ -1,0 +1,740 @@
+{
+  "accessories": [
+    {
+      "id": "TDHAU001",
+      "name": "Auditorium Horizontal Main Curtain",
+      "imageUrl": "product/accessories/horizontalcurtain.png",
+      "description": "Auditorium Curtains provides an extensive collection of Horizontal/Main motorized curtains system to our customers. The complete automatically motorized Stage curtains system with additional modified Gearbox fitted with sealed bearings self-lubricating center split overlapped curtains.",
+      "features": [
+        {
+          "title": "System",
+          "text": "Complete automatically motorized Stage curtains system with additional modified Gearbox."
+        },
+        {
+          "title": "Fabric",
+          "text": "Double gathering Velvet Fabric Curtain cloth drapery, 450 GSM."
+        },
+        {
+          "title": "Operation",
+          "text": "Motorized operation complete with runners, master runners, pullies, 3mm steel wire rope, 1 HP Motor."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "motor_system": [
+          "1 HP Motor (Crompton or Godrej)"
+        ],
+        "control_system": [
+          "2 Nos Air Breaker Contractors (SCHNEIDER)",
+          "2nos. Micro Switches for auto stop",
+          "3 nos push buttons for forward",
+          "All rollers are sliding with roller clamp",
+          "Control panel with control switches"
+        ],
+        "track_system": [
+          "Fixing steel nails track",
+          "Horizontal sliding arrangement",
+          "Fixing rails, brackets"
+        ],
+        "curtain_details": [
+          "Made out of 450 GSM",
+          "Double gathering Velvet Fabric Curtain cloth drapery",
+          "Center split overlapped curtains"
+        ],
+        "operation": [
+          "The curtain should be half of full width operated from control panel"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU002",
+      "name": "Auditorium Horizontal Back Curtain",
+      "imageUrl": "product/accessories/horizontalbackcurtain.png",
+      "description": "Auditorium Curtains provides an extensive collection of Horizontal/Back motorized curtains system to our customers. The complete automatically motorized Stage curtains system with additional modified Gearbox fitted with sealed bearings self-lubricating center split overlapped curtains.",
+      "features": [
+        {
+          "title": "System",
+          "text": "Complete automatically motorized Stage curtains system with additional modified Gearbox."
+        },
+        {
+          "title": "Fabric",
+          "text": "Double gathering Glazed Cotton Curtain cloth drapery, 350 GSM."
+        },
+        {
+          "title": "Operation",
+          "text": "Motorized operation complete with runners, master runners, pullies, 3mm steel wire rope, 1 HP Motor."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "motor_system": [
+          "1 HP Motor (Crompton or Godrej)"
+        ],
+        "control_system": [
+          "2 Nos Air Breaker Contractors (SCHNEIDER)",
+          "2nos. Micro Switches for auto stop",
+          "3 nos push buttons for forward",
+          "All rollers are sliding with roller clamp",
+          "Control panel with control switches"
+        ],
+        "track_system": [
+          "Fixing steel nails track",
+          "Horizontal sliding arrangement",
+          "Fixing rails, brackets"
+        ],
+        "curtain_details": [
+          "Made out of 350 GSM",
+          "Double gathering Glazed Cotton Curtain cloth drapery",
+          "Center split overlapped curtains"
+        ],
+        "operation": [
+          "The curtain should be half of full width operated from control panel"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU003",
+      "name": "Auditorium Frill",
+      "imageUrl": "product/accessories/auditoriumfrill.png",
+      "description": "Auditorium Curtains provide an extensive collection of Frills to our customers. Our offered Frills is designed and manufactured for School, College, Auditorium & Drama Theaters as well as Cinema Theaters.",
+      "features": [
+        {
+          "title": "Application",
+          "text": "School, College, Auditorium & Drama Theaters, Cinema Theaters."
+        },
+        {
+          "title": "Design",
+          "text": "Designed using modern technology and premium grade components."
+        },
+        {
+          "title": "Value",
+          "text": "Available at most economical price."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "application": [
+          "Designed and manufactured for School, College, Auditorium & Drama Theaters",
+          "Also for Cinema Theaters"
+        ],
+        "manufacturing": [
+          "Designed using modern technology",
+          "Made from premium grade components by skilled professionals"
+        ],
+        "pricing": [
+          "Clients can avail this system at most economical price"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU004",
+      "name": "Auditorium Side Wings",
+      "imageUrl": "product/accessories/auditoriumsidewings.png",
+      "description": "Stage Wings also known as Leg Curtain or Wing Curtains. Stage Wings are narrow and tall, used to hide the side of the stage from the audience's view. They also provide masked wings for actors to enter and exit the stage.",
+      "features": [
+        {
+          "title": "Function",
+          "text": "Hide the side of the stage and provide masked wings for actors to enter and exit."
+        },
+        {
+          "title": "Acoustics",
+          "text": "Help to mask speaker systems, reduce echoing, and increase noise absorption."
+        },
+        {
+          "title": "Sound Distribution",
+          "text": "Serve the purpose of distributing sound evenly towards the entire audience."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "alternate_names": [
+          "Leg Curtain",
+          "Wing Curtains"
+        ],
+        "primary_purpose": [
+          "Hide side of the stage from audience's view",
+          "Provide masked wings for actors to enter and exit",
+          "Separate different sections of the stage",
+          "Provide an extra space for a new scene"
+        ],
+        "design_features": [
+          "Almost always black",
+          "Usually flat panels, but can also be curved or wavy",
+          "Some come with borders and skirts while others blend into curtains"
+        ],
+        "acoustic_properties": [
+          "Differentiate between front-stage mid-stage and backstage",
+          "Mask the speaker system, panels and sidelights",
+          "Reduce echoing and increase noise absorption",
+          "Distribute sound evenly towards the entire audience",
+          "Designed to bounce the sound back to the audience"
+        ],
+        "utility": [
+          "Indispensable in masking out behind the scenes happening",
+          "Blackouts and backdrops can also be stored beside the wings"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU005",
+      "name": "Auditorium Cyclorama Screen",
+      "imageUrl": "product/accessories/cycloramascreen.png",
+      "description": "A cyclorama, also known as 'cyc', is the largest single piece of landscape in the theatre. Cyclorama Screen is elevated along the stage rear wall at a distance of approx. 2000 mm.",
+      "features": [
+        {
+          "title": "Alias",
+          "text": "Also known as 'cyc'."
+        },
+        {
+          "title": "Material",
+          "text": "A heavy flame retardant fabric is stretched tightly to make a flat and smooth surface."
+        },
+        {
+          "title": "Function",
+          "text": "Used to create illusionary effects with the help of light, colour and other props."
+        },
+        {
+          "title": "Application",
+          "text": "Extensively used in film studios, private studios, school halls, auditoriums, drama rooms, etc."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "common_name": [
+          "cyc"
+        ],
+        "placement": [
+          "Elevated along the stage rear wall at a distance of approx. 2000 mm"
+        ],
+        "material": [
+          "Heavy flame retardant fabric",
+          "Stretched tightly to make a flat and smooth surface"
+        ],
+        "lighting_effects": [
+          "Used to create illusionary effects with light, colour and other props",
+          "Can be front lit and back lit, depending on the material and conjunction with scrims"
+        ],
+        "common_uses": [
+          "Commonly found in operas and dances that require sky-like appeal",
+          "Special mood and light absorption",
+          "Versatile uses from providing extra effects to full display panel",
+          "Can be installed to create an illusion of infinity room",
+          "Trims also create a skirting and a larger background to the main cyc wall"
+        ],
+        "applications": [
+          "Theatres",
+          "Film studios",
+          "Private studios",
+          "School halls",
+          "Auditoriums",
+          "Drama rooms",
+          "Presentation rooms"
+        ],
+        "form_factors": [
+          "Come in different shapes, sizes, colours and fabric",
+          "Straight screens have been a popular choice for their convenience and versatility"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU007",
+      "name": "Stage Light Bar",
+      "imageUrl": "product/accessories/auditoriumfixedlight.png",
+      "description": "Stage Light Bar is a series of multiple lamps or LED's arranged in a line. This lighting fixture is used to provide a broad wash of light on a stage, backdrop, or cyclorama. Available as conventional fixtures (using halogen lamps) or, more commonly, as LED fixtures which allow for rich color mixing and dynamic effects.",
+      "features": [
+        {
+          "title": "Function",
+          "text": "Used to provide a broad wash of light on a stage, backdrop, or cyclorama."
+        },
+        {
+          "title": "Types",
+          "text": "Available as conventional halogen fixtures or modern LED fixtures."
+        },
+        {
+          "title": "Control",
+          "text": "Often DMX controllable, allowing for color mixing (in LED models) and intensity control."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "light_source": [
+          "Often high-power LEDs (RGB, RGBW, or single color)"
+        ],
+        "control": [
+          "DMX 512 compatible",
+          "Sound-active modes",
+          "Master-slave operation",
+          "Auto programs"
+        ],
+        "application": [
+          "Cyclorama lighting",
+          "Backdrop wash",
+          "Stage uplighting",
+          "Wall grazing"
+        ],
+        "physical_construction": [
+          "Linear aluminum housing",
+          "Mounting brackets for floor or truss"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU008",
+      "name": "Auditorium Motorized Light Bar",
+      "imageUrl": "product/accessories/auditoriummotorizedlight.png",
+      "description": "An electrical pilewind winch mounted within the truss, featuring multiple drop pulleys for quick and easy raising/lowering of lighting bars, scenery backdrops, or similar suspensions. Known for durability, corrosion resistance, dimensional accuracy, and elegant design. Suitable for auditoriums, theatres, and schools due to its compact and modular nature.",
+      "features": [
+        {
+          "title": "Mechanism",
+          "text": "Electrical pilewind winch with drop pulleys integrated within the truss structure."
+        },
+        {
+          "title": "Operation",
+          "text": "Fully motor-controlled via hoist and gearbox, adhering to safety standards."
+        },
+        {
+          "title": "Suitability",
+          "text": "Ideal for auditoriums, theatres, schools due to compact, modular design."
+        },
+        {
+          "title": "Integration",
+          "text": "Fits into network of grid and sky deck for efficient management and noiseless operation."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "components": [
+          "Electrical pilewind winch",
+          "Truss structure",
+          "Drop pulleys",
+          "Hoist and gearbox (safety certified)"
+        ],
+        "features": [
+          "Durability",
+          "Corrosion resistance",
+          "Dimensional accuracy",
+          "Elegant, compact, modular design",
+          "Noiseless operation",
+          "Flexible gearbox",
+          "Sturdy weight bearing",
+          "Easy fitting",
+          "Dynamic and resistant to wear"
+        ],
+        "control": [
+          "Controlled by crew via single console",
+          "Easy lowering/raising of equipment",
+          "Know maximum load limit to avoid disasters"
+        ],
+        "installation": [
+          "Suspended mid-air via a plank",
+          "Fitted into network of grid and sky deck",
+          "Minimises burden of trolleys, pulleys, heavy cable and machinery",
+          "Can be implanted into the wall"
+        ],
+        "applications": [
+          "Raising and lowering lighting bars",
+          "Suspending scenery backdrops",
+          "Auditoriums, Theatres, School applications"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU009",
+      "name": "DMX Cable",
+      "imageUrl": "product/accessories/dmxwire.png",
+      "description": "A DMX cable is a shielded, low-capacitance cable designed specifically for the DMX512 lighting control protocol. It typically uses 3-pin or 5-pin XLR connectors and is essential for reliable, interference-free data transmission between controllers and fixtures.",
+      "features": [
+        {
+          "title": "Impedance",
+          "text": "True 110-ohm impedance, required for reliable DMX data transmission."
+        },
+        {
+          "title": "Connectors",
+          "text": "Available with 3-pin or 5-pin XLR male-to-female connectors."
+        },
+        {
+          "title": "Shielding",
+          "text": "Heavy-duty shielding to prevent interference from power cables and other signals."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "type": [
+          "DMX512 Control Cable"
+        ],
+        "connectors": [
+          "3-pin XLR (Male to Female)",
+          "5-pin XLR (Male to Female)"
+        ],
+        "impedance": [
+          "110 Ohm"
+        ],
+        "construction": [
+          "Shielded twisted pair (22-24 AWG)",
+          "Durable PVC or rubber jacket",
+          "Low capacitance"
+        ]
+      }
+    },{
+      "id": "TDHAU010",
+      "name": "Auditorium Stage Side Ladder",
+      "imageUrl": "product/accessories/auditoriumstagesideladder.png",
+      "description": "A vertical ladder structure, often made of mild steel, used for mounting lighting fixtures on the sides of a stage. Can be pivoted or fixed.",
+      "features": [
+        {
+          "title": "Type",
+          "text": "Pivoted or fixed type available."
+        },
+        {
+          "title": "Suspension",
+          "text": "Through spud & trolley system."
+        },
+        {
+          "title": "Construction",
+          "text": "Single construction with cross connecting pipes at intervals."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "type": [
+          "Pivoted or fixed type"
+        ],
+        "suspension": [
+          "Through spud & trolley"
+        ],
+        "material": [
+          "Mild steel round pipe"
+        ],
+        "size": [
+          "48 OD, 40 nominal bore"
+        ],
+        "finish": [
+          "Powder coated with matt black finish paint"
+        ],
+        "technical_parameters": [
+          "Combination: 600mm wide with Height Variable / Custom made sizes",
+          "Construction: Single construction with cross connecting pipes at every 600mm or custom made sizes",
+          "Additional: If pivoted on trolley, ladder can be moved along the track or adjusted as required"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU011",
+      "name": "MCB Box (16way)",
+      "imageUrl": "product/accessories/mcbbox.png",
+      "description": "A distribution box designed to house Miniature Circuit Breakers (MCBs) for electrical circuit protection in stage lighting and other applications.",
+      "features": [
+        {
+          "title": "Capacity",
+          "text": "16-way (accommodates 16 single-pole MCBs or equivalent)."
+        },
+        {
+          "title": "Power",
+          "text": "Suitable for 220V, 50-60 Hz systems."
+        },
+        {
+          "title": "Material",
+          "text": "MS Powder Coated for durability."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "capacity": [
+          "16-way"
+        ],
+        "power": [
+          "220V, 50 - 60 Hz"
+        ],
+        "material": [
+          "MS Powder Coated"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU012",
+      "name": "C Clamp (CCT008)",
+      "imageUrl": "product/accessories/safetychain.png",
+      "description": "A C-shaped clamp made of iron, used for mounting lighting fixtures onto pipes or trusses.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "CCT008"
+        },
+        {
+          "title": "Material",
+          "text": "Iron, Black color."
+        },
+        {
+          "title": "Capacity",
+          "text": "Maximum Load: 30kg."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "CCT008"
+        ],
+        "material": [
+          "Iron"
+        ],
+        "color": [
+          "Black"
+        ],
+        "weight": [
+          "Net Weight: 350g"
+        ],
+        "load": [
+          "Maximum Load: 30kg"
+        ]
+      }
+    },
+   
+    {
+      "id": "TDHAU014",
+      "name": "Fixed Pipe Grid",
+      "imageUrl": "product/accessories/fixedpipegrid.png",
+      "description": "A grid structure made of mild steel pipes, suspended via suspenders, used for overhead mounting of lighting fixtures and other stage equipment.",
+      "features": [
+        {
+          "title": "Material",
+          "text": "Mild Steel Pipe."
+        },
+        {
+          "title": "Movement",
+          "text": "Fixed Grid (non-movable)."
+        },
+        {
+          "title": "Finish",
+          "text": "Powder coated with matt black."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "material": [
+          "Mild Steel Pipe"
+        ],
+        "suspension": [
+          "Through Suspenders"
+        ],
+        "grid_movement": [
+          "Fixed Grid"
+        ],
+        "dimension": [
+          "Customized"
+        ],
+        "size": [
+          "48mm Outer dia, 40 nominal bore"
+        ],
+        "min_height": [
+          "200mm"
+        ],
+        "finish": [
+          "Powder coated with matt black"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU015",
+      "name": "Fixed Lighting Bar (FLBT008)",
+      "imageUrl": "product/accessories/fixedlightingbar.png",
+      "description": "A fixed bar made of mild steel pipe, suspended via suspenders, designed specifically for hanging lighting fixtures.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "FLBT008"
+        },
+        {
+          "title": "Material",
+          "text": "Mild Steel Pipe."
+        },
+        {
+          "title": "Movement",
+          "text": "Fixed Bar."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "FLBT008"
+        ],
+        "material": [
+          "Mild Steel Pipe"
+        ],
+        "suspension": [
+          "Through Suspenders"
+        ],
+        "grid_movement": [
+          "Fixed Bar"
+        ],
+        "dimension": [
+          "Customized"
+        ],
+        "size": [
+          "48mm Outer dia, 40 nominal bore"
+        ],
+        "finish": [
+          "Powder coated with matt black"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU016",
+      "name": "Stage Side Wings (SSWT006)",
+      "imageUrl": "product/accessories/stagesidewings.png",
+      "description": "Frame structures made of mild steel square pipes, used to create stage wings. Can be pivoted or fixed.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "SSWT006"
+        },
+        {
+          "title": "Material",
+          "text": "Mild Steel square pipe."
+        },
+        {
+          "title": "Type",
+          "text": "Pivoted or fixed type."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "SSWT006"
+        ],
+        "material": [
+          "Mild Steel square pipe"
+        ],
+        "suspension": [
+          "Through spud & trolley"
+        ],
+        "size": [
+          "25mm outer diameter"
+        ],
+        "finish": [
+          "Powder coated with matt black paint"
+        ],
+        "paint_type": [
+          "Pivoted or fixed type"
+        ],
+        "construction": [
+          "Single & Dual of pipe as per design"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU017",
+      "name": "Track Beam System (TBST003)",
+      "imageUrl": "product/accessories/trackbeamsystem.png",
+      "description": "A track system made of aluminum, suspended via spud & trolley, allowing for fixed or manually moveable mounting points.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "TBST003"
+        },
+        {
+          "title": "Material",
+          "text": "Aluminum."
+        },
+        {
+          "title": "Type",
+          "text": "Fixed / Manually Moveable."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "TBST003"
+        ],
+        "material": [
+          "Aluminum"
+        ],
+        "suspension": [
+          "Spud & Trolley"
+        ],
+        "type": [
+          "Fixed / Manually Moveable"
+        ],
+        "finish": [
+          "Powder coated with matt black paint"
+        ]
+      }
+    },
+    {
+      "id": "TDHAU018",
+      "name": "Drapery (DRPT003)",
+      "imageUrl": "product/accessories/drappery.png",
+      "description": "Valance or Scallop beautifying cloth arrangement at the front of the Stage just before the Apron area. Extensively used for theatre stage systems to provide a grand look and hide lighting bars.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "DRPT003"
+        },
+        {
+          "title": "Purpose",
+          "text": "Beautifying cloth arrangement (Valance/Scallop)."
+        },
+        {
+          "title": "Placement",
+          "text": "Front of Stage, before Apron area."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "DRPT003"
+        ],
+        "description": [
+          "Valance or Scallop is the beautifying cloth arrangement at the front of the Stage just before the Apron area.",
+          "The straight cloth finish at the bottom of the fabric is named Valance.",
+          "Half circled finish at the bottom is named as Scallop of Main Frill."
+        ],
+        "usage": [
+          "Extensively used for theatre stage systems.",
+          "Provide a grand look to the stage.",
+          "Hide lighting bars from audience view."
+        ]
+      }
+    },
+    {
+      "id": "TDHAU019",
+      "name": "1500W Smoke Machine (SMT015)",
+      "imageUrl": "product/accessories/smokemachine.png",
+      "description": "A 1500W smoke machine for creating atmospheric effects on stage.",
+      "features": [
+        {
+          "title": "Model",
+          "text": "SMT015"
+        },
+        {
+          "title": "Power",
+          "text": "1500W"
+        },
+        {
+          "title": "Operation",
+          "text": "Wireless, Wired, Remote."
+        }
+      ],
+      "downloads": [],
+      "specifications": {
+        "model": [
+          "SMT015"
+        ],
+        "power": [
+          "1500W"
+        ],
+        "operation_mode": [
+          "Wireless, Wired, Remote"
+        ],
+        "weight": [
+          "5 Kgs. Approximately"
+        ],
+        "tank_capacity": [
+          "3 Ltrs."
+        ],
+        "coverage": [
+          "10 Mtrs."
+        ]
+      }
+    }
+  ]
+}

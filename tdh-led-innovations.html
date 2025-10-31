@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="overflow-x-hidden bg-gray-50">
+  <!-- NAV SECTION -->
+  <div id="navbar-header"></div>
+
+  <script>
+    fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+          window.addEventListener('scroll', function() {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+              if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+              } else {
+                nav.classList.remove('scrolled');
+              }
+            }
+          });
+
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <article class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg transition-all duration-500 animate-fade-in">
+      <!-- Back to Blog Button -->
+      <a href="blog.html" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-brand-yellow transition-colors duration-300 mb-6">
+        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+      </a>
+
+      <!-- Author Section -->
+      <div class="flex items-center gap-4 mb-8 group cursor-pointer hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-black/40">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A1.5 1.5 0 0 1 18 21.75H6a1.5 1.5 0 0 1-1.499-1.632Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-base text-gray-900 group-hover:text-brand-yellow transition-colors duration-300">Rajesh Kumar</p>
+          <p class="text-sm text-gray-500">Head of R&D, TDH Lighting</p>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight relative group">
+          Revolutionizing Stage Lighting with TDH LED Innovations
+          <span class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all duration-500 group-hover:w-full"></span>
+        </h2>
+        <p class="text-base text-gray-500 mb-8 sm:mb-10 border-l-4 border-brand-yellow pl-4">
+          September 12, 2024
+        </p>
+      </header>
+
+      <!-- Image -->
+      <figure class="mb-8 sm:mb-10">
+        <img class="w-full h-auto rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300" 
+             src="images/blogs/view-illuminated-stage.jpg" 
+             alt="Illuminated stage setup showcasing TDH LED fixtures">
+      </figure>
+
+      <!-- Blog Content -->
+      <section class="space-y-6 text-base sm:text-lg text-gray-700 text-justify">
+        <p>Established in 2009, <strong>Theatre Dimmer Hardware (TDH)</strong> has been at the forefront of innovation in the world of professional stage lighting. With a vision to merge technology and creativity, TDH began with a small yet passionate team determined to design lighting systems that redefine the visual experience for artists, audiences, and production teams alike.</p>
+
+        <p>Over the years, TDH has pioneered a wide range of LED lighting solutions engineered for precision, performance, and sustainability. Each fixture is meticulously crafted to offer superior color rendering, seamless dimming, and consistent illumination—bringing life and vibrancy to every performance space.</p>
+
+        <p>Our advanced <strong>LED technologies</strong> provide lighting designers with the freedom to experiment with dynamic effects while reducing energy consumption and heat output. From high-powered moving heads to finely tuned wash lights, TDH’s products are trusted by theatres, studios, and live event professionals across the globe.</p>
+
+        <blockquote class="border-l-4 border-brand-yellow bg-yellow-50/50 p-6 sm:p-8 my-8 sm:my-10 rounded-lg">
+          <p class="text-xl sm:text-2xl italic font-medium text-gray-800">
+            “At TDH, innovation is not just about brightness—it’s about control, efficiency, and emotion. Our lights are designed to transform ordinary spaces into extraordinary experiences.”
+          </p>
+          <footer class="mt-4 text-sm sm:text-base not-italic text-gray-600">
+            — Rajesh Kumar, Head of R&D, TDH Lighting
+          </footer>
+        </blockquote>
+
+        <p>As TDH continues to evolve, our mission remains clear: to push the boundaries of lighting design and technology. With every new development, we aim to empower artists, enhance stagecraft, and illuminate the future of entertainment lighting.</p>
+
+        <p>Explore our complete range of lighting solutions and experience how TDH Lighting is shaping the next generation of stage illumination.</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <!-- Custom Animation CSS -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.5s ease-out forwards;
+    }
+  </style>
+</body>
+</html>

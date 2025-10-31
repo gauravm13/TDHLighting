@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/images/extra-img/polypack-logo.png" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!--NAV SECTION START HERE..-->
+  <div id="navbar-header"></div>
+
+  <script>
+    fetch('headertra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+
+        // Initialize mobile menu after content is loaded
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mainNav = document.getElementById('main-nav');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          // Toggle mobile menu
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+          // Close menu when clicking on links
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+        
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+        // Handle scroll behavior for sticky-nav
+        if (mainNav) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+              mainNav.classList.add('scrolled');
+            } else {
+              mainNav.classList.remove('scrolled');
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <section class="hero-section">
+    <img src="images/application/architecturallightingbn.webp" 
+         alt="International Projects" 
+         class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content responsive-padding">
+      <div class="responsive-max-width">
+        <h1 class="hero-title text-white font-bold">
+            Architectural Lighting
+        </h1>
+      </div>
+    </div>
+  </section>
+
+
+
+
+ <!-- New Architectural Lighting Section -->
+<section class="py-12 lg:py-20 border-b border-gray-300 bg-gray-50">
+  <div class="mx-8 px-6">
+    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6 text-center">
+      Architectural Lighting: Defining Spaces with Light
+    </h2>
+    <p class="text-lg text-gray-700 mb-6 text-justify">
+      <span class="font-semibold text-yellow-400">Architectural lighting</span> is more than illumination — it’s about enhancing structure, mood, and identity. Whether highlighting a building’s contours or setting the ambiance for an outdoor landscape, light brings architecture to life.
+    </p>
+    <p class="text-lg text-gray-700 mb-6 text-justify">
+      At <span class="font-semibold">TDH Lighting</span>, we create sophisticated lighting systems designed to complement the aesthetics of both modern and heritage architecture. Our fixtures ensure optimal brightness, energy efficiency, and longevity while maintaining a sleek and unobtrusive design.
+    </p>
+    <p class="text-lg text-gray-700 mb-6 text-justify">
+      From facades and monuments to interiors and public spaces, our lighting solutions transform environments into captivating visual statements that inspire and engage.
+    </p>
+    <p class="text-lg text-gray-700 text-justify">
+      Discover how <span class="font-semibold text-yellow-400">TDH Lighting</span> can redefine your architectural projects with precision, creativity, and timeless brilliance.
+    </p>
+  </div>
+</section>
+
+
+  <section class="py-12 bg-white overflow-hidden">
+    <div class="max-w-[95%] mx-auto px-4 sm:px-6">
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold">Product Highlights</h2>
+        <a href="product.html" class="text-yellow-400 hover:text-blue-600 uppercase font-semibold flex items-center gap-2">
+          View all
+          <svg class="w-5 h-auto fill-current" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3389 16L11.9085 14.6029L17.4969 9.01455H0V7.01871H17.4969L11.8753 1.39709L13.3056 0L21.3222 8.01663L13.3389 16Z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Carousel -->
+      <div id="product-carousel" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+
+            <!-- Product 1 -->
+            <li class="splide__slide">
+              <a href="detailproduct.html?id=TDHLCP004" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div class="relative aspect-square">
+                  <img src="product/stagelighitng/ledcobparlight.png" alt="LED COP PAR LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED COP PAR LIGHT</h3>
+                  <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED COP PAR LIGHT</p>
+                  <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLCP004</p>
+                </div>
+              </a>
+            </li>
+
+            <!-- Product 2 -->
+            <li class="splide__slide">
+              <a href="detailproduct.html?id=TDHLPF011" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div class="relative aspect-square">
+                  <img src="product/stagelighitng/ledprofilespotlg.png" alt="LED PROFILE SPOT LIGHT" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED PROFILE SPOT LIGHT</h3>
+                  <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED PROFILE SPOT LIGHT</p>
+                  <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLPF011</p>
+                </div>
+              </a>
+            </li>
+
+            <!-- Product 3 -->
+            <li class="splide__slide">
+              <a href="detailproduct.html?id=TDHLSR017_15R" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div class="relative aspect-square">
+                  <img src="product/stagelighitng/sharpylight15r.png" alt="SHARPY LIGHT 15R" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">SHARPY LIGHT 15R</h3>
+                  <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">SHARPY LIGHT 15R</p>
+                  <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHLSR017_15R</p>
+                </div>
+              </a>
+            </li>
+
+            <!-- Product 4 -->
+            <li class="splide__slide">
+              <a href="detailproduct.html?id=TDHMW018" class="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div class="relative aspect-square">
+                  <img src="product/stagelighitng/ledmovingwashlight.png" alt="Volero Cube" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                  <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors duration-300">LED MOVING WASH LIGHT RGB</h3>
+                  <p class="text-gray-700 text-sm group-hover:text-gray-900 transition-colors duration-300">LED MOVING WASH LIGHT RGB</p>
+                  <p class="text-gray-500 uppercase text-xs group-hover:text-gray-700 transition-colors duration-300">TDHMW018</p>
+                </div>
+              </a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script> 
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#product-carousel', {
+        type       : 'loop',
+        perPage    : 4,
+        perMove    : 1,
+        gap        : '1rem',
+        autoplay   : true,
+        interval   : 5000,
+        arrows     : true,
+        pagination : false,
+        breakpoints: {
+          1280: { perPage: 3 },
+          992: { perPage: 2 },
+          768: { perPage: 1 },
+        },
+      }).mount();
+    });
+  </script>
+
+  <section class="w-full bg-yellow-50 py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+        <!-- Responsive grid: 1 column on mobile, 2 on large screens -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <!-- 1. Text Column -->
+            <div class="flex flex-col justify-center"> <h2 class="text-5xl lg:text-4xl font-bold text-gray-900"> Support </h2> <p class="mt-4 text-xl text-gray-700 leading-relaxed"> At TDH Lighting, we go beyond providing world-class lighting fixtures — we deliver complete customer support and service. From installation guidance and configuration to hands-on training and troubleshooting, our experts ensure your systems perform at their best. </p> <p class="mt-4 text-xl text-gray-700 leading-relaxed"> Whether you’re setting up stage, studio, or architectural lighting, TDH’s dedicated support team and trusted distributor network are ready to assist you every step of the way — anywhere in the world. </p> <div class="mt-8"> <a href="support.html" class="inline-block bg-yellow-400 text-black font-semibold py-3 px-8 rounded-md text-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"> SUPPORT </a> </div> </div>
+
+            <!-- 2. Image Column -->
+            <div>
+                <img src="https://www.claypaky.it/wp-content/uploads/2022/10/support.jpg" 
+                     alt="Support team working on lighting equipment" 
+                     class="w-full h-full object-cover rounded-lg shadow-xl">
+            </div>
+            
+        </div>
+    </div>
+  </section>
+
+  <section class="relative w-full h-screen text-white">
+    <!-- Background Image -->
+    <img src="assets/css/companybn.jpg" 
+         alt="Stage lighting" 
+         class="absolute inset-0 w-full h-full object-cover">
+    
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+    <!-- Content -->
+    <div class="relative h-full flex items-center">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-4xl lg:text-6xl font-bold leading-tight">
+            Company
+          </h2>
+          <p class="mt-4 text-lg lg:text-xl leading-relaxed">
+            Making Theatre Dimmer Light Since 2009
+          </p>
+          <div class="mt-8">
+            <a href="aboutus.html" 
+               class="inline-block bg-yellow-400 text-black font-semibold py-3 px-8 rounded-md text-lg uppercase transition-transform duration-300 hover:scale-105 hover:bg-yellow-500">
+              Discover More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading slider:', error));
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TDH Lighting Blog</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpgg" />
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- AlpineJS -->
+  <script src="//unpkg.com/alpinejs" defer></script>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    p {
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!--NAV SECTION-->
+  <div id="navbar-header"></div>
+  <script>
+   fetch('headersec.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+          window.addEventListener('scroll', function() {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+              if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+              } else {
+                nav.classList.remove('scrolled');
+              }
+            }
+          });
+
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <!-- BLOG SECTION -->
+  <section class="w-full py-16 lg:py-24">
+    <div class="mx-9 px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl lg:text-5xl text-center font-bold underline text-gray-800 mb-12">
+        TDH Lighting Blog
+      </h2>
+      <div id="blog-container"></div>
+    </div>
+  </section>
+
+  <script>
+    const blogData = [
+      {
+        id: 1,
+        isFeatured: true,
+        title: "Revolutionizing Stage Lighting with TDH LED Innovations",
+        excerpt:
+          "Established in 2009, Theatre Dimmer Hardware (TDH) has been redefining stage illumination through advanced LED technologies. Our precision-engineered fixtures deliver unmatched brightness, color accuracy, and energy efficiency—setting new standards in the entertainment lighting industry.",
+        author: "Rajesh Kumar",
+        date: "2024-09-12",
+        image:
+        "images/blogs/view-illuminated-stage.jpg",
+        readMoreLink: "tdh-led-innovations.html",
+      },
+      {
+        id: 2,
+        isFeatured: false,
+        title: "The Future of DMX Control Systems in Stage Lighting",
+        excerpt:
+          "TDH Lighting is integrating next-generation DMX controllers with intelligent software, allowing smoother transitions, wireless control, and seamless syncing with performance cues.",
+        author: "Neha Gupta",
+        date: "2024-07-08",
+        image:
+          "images/blogs/blogbn1.jpg",
+        readMoreLink: "dmx-future.html",
+      },
+      {
+        id: 3,
+        isFeatured: false,
+        title: "Why Choose TDH Dimmer Racks for Professional Stages",
+        excerpt:
+          "TDH Dimmer Racks are engineered for stability and safety, offering smooth voltage transitions and extended equipment life. Discover how they enhance reliability in theaters and event spaces.",
+        author: "Amit Patel",
+        date: "2024-05-18",
+        image:
+          "images/blogs/blogsbn2.jpg",
+        readMoreLink: "dimmer-rack-guide.html",
+      },
+      {
+        id: 4,
+        isFeatured: false,
+        title: "Lighting Design Tips for Concert and Theatre Productions",
+        excerpt:
+          "From mood setting to spotlight precision, learn how TDH lighting fixtures help designers bring life and emotion to every stage performance.",
+        author: "Priya Sharma",
+        date: "2024-02-11",
+        image:
+          "images/blogs/blogsbn3.jpg",
+        readMoreLink: "lighting-design-tips.html",
+      },
+      {
+        id: 5,
+        isFeatured: false,
+        title: "Sharpy Lights: The Power Behind Dynamic Performances",
+        excerpt:
+          "TDH Sharpy Lights deliver razor-sharp beams and high-speed movements, perfect for concerts, clubs, and live shows that demand precision and drama.",
+        author: "Vikram Singh",
+        date: "2023-10-06",
+        image:
+          "images/blogs/blogsbn4.jpg",
+        readMoreLink: "sharpy-lights.html",
+      },
+      {
+        id: 6,
+        isFeatured: false,
+        title: "Sustainable Lighting: How TDH Supports Green Theatres",
+        excerpt:
+          "TDH focuses on energy-efficient LED solutions that minimize power usage and heat output—contributing to eco-friendly stage lighting practices.",
+        author: "Anita Desai",
+        date: "2023-04-23",
+        image:
+          "images/blogs/blogsbn5.webp",
+        readMoreLink: "sustainable-lighting.html",
+      },
+      
+{
+  id: 8,
+  isFeatured: false,
+  title: "Smart Lighting Control: The Rise of Automation in Theatres",
+  excerpt:
+    "TDH Lighting is pioneering intelligent lighting automation that adapts dynamically to performances. Our smart control systems simplify setup, reduce manual adjustments, and ensure flawless lighting transitions every time.",
+  author: "Sneha Verma",
+  date: "2024-10-22",
+  image: "images/blogs/smartlightingcontrol.jpeg",
+  readMoreLink: "smart-lighting-automation.html",
+},
+
+    ];
+
+    function renderBlogs() {
+      const container = document.getElementById("blog-container");
+      let html = "";
+
+      // Featured Blog
+      const featured = blogData.find((blog) => blog.isFeatured);
+      if (featured) {
+        html += `
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+            <div class="flex flex-col justify-center order-2 lg:order-1">
+              <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">${featured.title}</h3>
+              <p class="mt-4 text-gray-600 text-justify text-lg">${featured.excerpt}</p>
+              <div class="flex items-center mt-6">
+                <img class="h-12 w-12 rounded-full mr-4 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=870&q=80" alt="${featured.author}">
+                <div>
+                  <span class="text-gray-700 font-medium block">${featured.author}</span>
+                  <span class="text-gray-500 text-sm">${featured.date}</span>
+                </div>
+              </div>
+              <div class="mt-8">
+                <a href="${featured.readMoreLink}" class="inline-block bg-[#fdc400] text-black font-semibold py-3 px-8 rounded-full text-lg transition hover:bg-yellow-500">Read More</a>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <div class="rounded-lg shadow-xl overflow-hidden">
+                <img src="${featured.image}" alt="${featured.title}" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Other Blogs
+      const others = blogData.filter((b) => !b.isFeatured);
+      html += `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">`;
+
+      others.forEach((blog) => {
+        html += `
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="overflow-hidden">
+              <img src="${blog.image}" alt="${blog.title}" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">${blog.title}</h3>
+              <p class="text-sm text-gray-500 mt-2">By ${blog.author} | ${blog.date}</p>
+              <p class="text-gray-600 text-justify mt-3">${blog.excerpt}</p>
+              <div class="mt-6">
+                <a href="${blog.readMoreLink}" class="inline-block bg-[#fdc400] text-black font-semibold py-2 px-6 rounded-full transition hover:bg-yellow-500">Read More</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      container.innerHTML = html;
+    }
+
+    renderBlogs();
+  </script>
+
+  <!-- FOOTER SECTION -->
+  <div id="footer-bottom"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+</body>
+
+</html>

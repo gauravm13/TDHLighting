@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="assets/css/TDH_NEW_LOGO[1].jpg" href="assets/css/TDH_NEW_LOGO[1].jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" > <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/styless.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+  
+  <!--NAV SECTION START HERE..-->
+<div id="navbar-header"></div>
+
+<script>
+ fetch('headertra.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-header').innerHTML = data;
+
+        // Initialize mobile menu after content is loaded
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mainNav = document.getElementById('main-nav');
+
+        if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+          // Toggle mobile menu
+          menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            } else {
+              mobileMenu.classList.add('open');
+              mobileMenu.classList.remove('hidden');
+              hamburgerIcon.classList.add('hidden');
+              closeIcon.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+
+            window.toggleSubmenu = function(id) {
+          const submenu = document.getElementById(`submenu-${id}`);
+          const arrow   = document.getElementById(`arrow-${id}`);
+          submenu.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-90');
+        };
+
+
+          // Close menu when clicking on links
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+              mobileMenu.classList.remove('open');
+              setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+              }, 300);
+              hamburgerIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+        // Handle scroll behavior for sticky-nav
+        if (mainNav) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+              mainNav.classList.add('scrolled');
+            } else {
+              mainNav.classList.remove('scrolled');
+            }
+          });
+        }
+      })
+      .catch(error => console.error('Error loading header:', error));
+</script>
+
+ <section class="hero-section relative w-full h-[60vh] sm:h-[80vh] lg:h-screen overflow-hidden">
+  <!-- Background Video -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    class="absolute inset-0 w-full h-full object-cover">
+    <source src="assets/supportvd.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 h-full flex flex-col justify-center px-6 sm:px-12 lg:px-24">
+    <div class="text-white mb-4">
+      <span>
+        <span><a href="index.html" class="hover:text-yellow-400 transition">Home</a></span>
+        <span class="mx-2">&gt;</span>
+        <span class="font-medium">Support</span>
+      </span>
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl text-white font-bold">
+      Support
+    </h1>
+  </div>
+</section>
+
+ 
+
+<div class="bg-white py-12 sm:py-16">
+  <div class="mx-9 text-justify text-2xl font-semibold px-6 lg:px-8 ">
+    <p class=" md:text-xl text-gray-700 leading-relaxed mb-6">
+    At TDH Lighting, differentiation is at the heart of everything we do — shaping not only the performance and design of our lighting solutions but also the service and support we proudly deliver. Our passion for innovation is matched by our commitment to providing an exceptional customer experience, ensuring that every interaction reflects our dedication to quality, reliability, and creativity.
+
+Our team of lighting professionals is always ready to assist you with comprehensive support tailored to your specific needs. Whether you’re looking for technical guidance, expert advice for your lighting projects, detailed product insights, or structured training sessions — both online and onsite — we’re here to help. We also offer product demonstrations, workshops, and one-on-one consultations to help you make the most of our technology and achieve outstanding results.</p>
+    <p class=" md:text-xl text-gray-700 leading-relaxed">
+      We take pride in being a reliable partner that accompanies you throughout your journey, before, during, and after you choose to use our products.
+    </p>
+  </div>
+</div>
+
+<section class="bg-stone-50 py-12 sm:py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+      <!-- Text Content -->
+      <div class="text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
+          Technical Support
+        </h2>
+        <p class="mt-4 text-lg sm:text-xl text-gray-600 leading-relaxed">
+          We invite you to connect with our dedicated technical support team — a group of experts always ready to assist you with precision and care. At TDH Lighting, we understand that reliable support is just as important as exceptional products. That’s why our specialists are committed to guiding you through every stage, from installation to maintenance and beyond.
+        </p>
+        <a href="contactus.html" class="inline-block mt-6 sm:mt-8 rounded-md bg-yellow-400 text-black font-semibold py-3 px-6 sm:px-8 text-base sm:text-lg hover:bg-yellow-500 transition-colors duration-300">
+          GO TO CONTACT
+        </a>
+      </div>
+
+      <!-- Image Section -->
+      <div class="w-full flex justify-center lg:justify-end">
+        <img 
+          src="https://www.claypaky.it/wp-content/uploads/2023/04/technical_support.jpg" 
+          alt="Close-up of the internal mechanics of a professional stage lighting fixture" 
+          class="w-full max-w-md sm:max-w-lg lg:max-w-full h-auto rounded-lg shadow-lg object-cover"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16 lg:py-24">
+  <div class="px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+      
+      <div class="flex flex-col">
+        <h3 class="text-3xl font-bold text-gray-900">Explore E-Assist</h3>
+        <p class="mt-3 text-xl text-gray-600 leading-relaxed flex-grow">
+Access all your TDH Lighting product resources in one place with TDH Assist — your gateway to after-sales support and technical documentation. Find manuals, guides, and updates organized by product for quick and effortless navigation.        </p>
+        <div class="mt-6">
+          <a href="https://youtu.be/S4_QKTwri_0?si=EQhqoZddMipDQTyV" target="_blank" rel="noopener noreferrer" class="text-yellow-500 font-bold text-lg uppercase tracking-wider hover:text-yellow-600 transition-colors duration-300">
+            WATCH THE VIDEO
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex flex-col">
+        <h3 class="text-3xl font-bold text-gray-900">Help Desk</h3>
+        <p class="mt-3 text-xl text-gray-600 leading-relaxed flex-grow">
+The new TDH Assist Helpdesk feature allows you to easily connect with our technical support team for any assistance you need. Whether you want to ask a quick question, report an issue with a fixture, request spare parts, or seek expert guidance, our team is just a message away — ready to provide fast, efficient, and reliable support whenever you need it.        </p>
+        <div class="mt-6">
+          <a href="https://youtu.be/zYI4ioKOIlk?si=cB2ZMTgYqO3li1p-" target="_blank" rel="noopener noreferrer" class="text-yellow-500 font-bold text-lg uppercase tracking-wider hover:text-yellow-600 transition-colors duration-300">
+            WATCH THE VIDEO
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <h3 class="text-3xl font-bold text-gray-900">Maintenance Diary</h3>
+        <p class="mt-3 text-xl text-gray-600 leading-relaxed flex-grow">
+The Maintenance Diary is an exclusive new feature within TDH Assist, designed to help you effortlessly track and manage all maintenance activities performed on your TDH Lighting fixtures. Say goodbye to scattered notes and missing records — with the Maintenance Diary, every service entry is securely stored and organized in one convenient place, allowing you to access your complete maintenance history anytime you need it.        </p>
+        <div class="mt-6">
+          <a href="https://youtu.be/NKqCKBuER6c?si=1OyXBIHZdcnsN5rp" target="_blank" rel="noopener noreferrer" class="text-yellow-500 font-bold text-lg uppercase tracking-wider hover:text-yellow-600 transition-colors duration-300">
+            WATCH THE VIDEO
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <section class="w-full bg-slate-50 py-16 lg:py-24">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Text Content -->
+      <div class="flex flex-col">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800">
+          Mechanical Maintenance
+        </h2>
+        <p class="mt-4 text-lg text-gray-600 text-justify">
+          Ensure the optimal performance and longevity of your lighting systems with our comprehensive mechanical maintenance services. 
+          We specialize in preventive care, fixture calibration, and precision alignment to minimize downtime and enhance reliability across all installations.
+        </p>
+        <div class="mt-8">
+          <a href="mailto:support@tdhlight.com" class="inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-md hover:bg-yellow-500 transition-colors duration-300 shadow-md">
+            CONTACT SUPPORT
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img src="images/mechanicalmaintencance.jpg" 
+             alt="Technician performing mechanical maintenance" 
+             class="w-full h-auto rounded-lg shadow-xl">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center lg:text-left">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+        Videos and Tutorials
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
+        Watch our product and demo videos to uncover all our product details and features!
+      </p>
+    </div>
+
+    <!-- Video Section -->
+    <div class="mt-8 flex justify-center lg:justify-start">
+      <div class="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] rounded-lg overflow-hidden shadow-lg">
+        <iframe 
+          src="https://www.youtube.com/embed/7qts7LooUl8?si=qNELW1cC_eFjxg8Z"
+          title="TDH Lighting Demo Video"
+          class="w-full h-[60vh] sm:h-[45vh] lg:h-[70vh]" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="mt-8 text-center lg:text-left">
+      <a href="https://www.youtube.com/@tdhstagefurnishing"
+         class="inline-block bg-yellow-400 text-black font-semibold px-8 py-3 rounded-md shadow-sm hover:bg-yellow-500 transition-colors duration-300">
+        SEE ALL VIDEOS
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <div id="footer-bottom"></div>
+  <script>
+    
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-bottom').innerHTML = data;
+      })
+      
+      .catch(error => console.error('Error loading slider:', error));
+
+  </script>
+
+
+
+</body> 
+</html>
+

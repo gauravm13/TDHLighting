@@ -1,0 +1,108 @@
+/* Import Montserrat and Noto Sans fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Set default font for the entire website */
+* {
+ font-family: "Source Sans 3", sans-serif;
+}
+
+ @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(-10px) translateX(-10px); }
+    75% { transform: translateY(-15px) translateX(5px); }
+  }
+  
+  @keyframes titleGlow {
+    0%, 100% { text-shadow: 0 0 10px rgba(255, 193, 7, 0.7); }
+    50% { text-shadow: 0 0 20px rgba(255, 193, 7, 0.9), 0 0 30px rgba(255, 193, 7, 0.5); }
+  }
+  
+  @keyframes growWidth {
+    0% { width: 0; }
+    100% { width: 6rem; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulseSlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.9; }
+  }
+  
+  /* Apply animations */
+  .animate-float-1 {
+    animation: float 15s infinite ease-in-out;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .animate-float-2 {
+    animation: float 18s infinite ease-in-out;
+    top: 60%;
+    left: 80%;
+  }
+  
+  .animate-float-3 {
+    animation: float 12s infinite ease-in-out;
+    top: 80%;
+    left: 20%;
+  }
+  
+  .animate-float-4 {
+    animation: float 20s infinite ease-in-out;
+    top: 30%;
+    left: 70%;
+  }
+  
+  .animate-float-5 {
+    animation: float 16s infinite ease-in-out;
+    top: 70%;
+    left: 40%;
+  }
+  
+  .animate-title {
+    animation: titleGlow 3s infinite ease-in-out;
+  }
+  
+  .animate-grow {
+    animation: growWidth 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulseSlow 4s infinite ease-in-out;
+  }
+
+
+  .accent-underline {
+      position: relative;
+    }
+    .accent-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: #facc15;
+      border-radius: 2px;
+    }
+    .nav-list a {
+      @apply block py-2 px-3 rounded-md transition-colors;
+    }
+    .nav-list a:hover,
+    .nav-list a.active {
+      @apply bg-yellow-100 text-yellow-800 font-semibold;
+    }
+    .splide__slide img {
+      @apply object-contain;
+    }
