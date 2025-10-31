@@ -1,0 +1,261 @@
+
+<style>
+
+     body {
+      overflow-x: hidden;
+     padding-top: 88px;  
+
+    }
+  .sticky-nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    z-index: 50;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.sticky-nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+    .megaMenu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        background-color: #fff;
+        color: #000;
+        width: 14rem;
+        z-index: 60;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .megaMenu a:hover {
+        background-color: #FDC400;
+    }
+    .mobile-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-animated.animate-fadeInUp {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-delay: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .nav-list a.active {
+        font-weight: 700;
+        color: #FBBF24;
+    }
+    
+</style>
+
+<nav id="main-nav" class="sticky-nav w-full top-0 left-0 p-4 flex items-center justify-between sticky ">
+    <a href="index.html" class="flex items-center">
+        <img src="/assets/css/LIGHTING.png" class="h-14" alt="Logo" />
+    </a>
+    <!-- Desktop Menu -->
+    <div class="desktop-menu hidden md:flex ml-8 mr-4 gap-6 text-md  items-center">
+         <div class="relative group">
+            <button class="menuBtn text-white hover:text-yellow-400 transition duration-300 py-2">Company</button>
+            <div class="megaMenu absolute top-full left-0 hidden group-hover:block rounded-lg overflow-hidden">
+                <a href="aboutus.html" class="block px-4 py-2 hover:bg-yellow-400 transition">About US</a>
+                <a href="ourteam.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Our team</a>
+                <a href="FAQ.html" class="block px-4 py-2 hover:bg-yellow-400 transition">FAQ</a>
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="menuBtn text-white hover:text-yellow-400 transition duration-300 py-2">Products</button>
+            <div class="megaMenu absolute top-full left-0 hidden group-hover:block rounded-lg overflow-hidden">
+                <a href="stagelighting.html" class="block px-4 py-3 hover:bg-yellow-400 transition">Stage Lighting</a>
+                <a href="accessories.html" class="block px-4 py-3 hover:bg-yellow-400 transition">Stage Furnishing</a>
+                <a href="3phaseboards.html" class="block px-4 py-3 hover:bg-yellow-400 transition">Phase Boards</a>
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="menuBtn text-white hover:text-yellow-400 transition duration-300 py-2">Applications</button>
+            <div class="megaMenu absolute top-full left-0 hidden group-hover:block rounded-lg overflow-hidden">
+               
+                <a href="auditoriumlighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Stage Lighting</a>
+          <a href="studiolighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Studio Lighting</a>
+          <a href="eventandconcertlighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Event and Concert Lighting</a>
+          <a href="architecturallighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Architectural Lighting</a>
+          <a href="hallslighting.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Auditorium and Halls Lighting</a>
+          <a href="entertainmentvenues.html" class="block px-4 py-2 hover:bg-yellow-400 transition">Entertainment Venues & Theme Parks</a>
+            </div>
+        </div>
+        <a href="innovation.html" class="text-white hover:text-yellow-400 transition py-2">Innovation</a>
+        <a href="support.html" class="text-white hover:text-yellow-400 transition py-2">Support</a>
+         
+        <a href="internationalprojects.html" class="text-white hover:text-yellow-400 transition py-2">Projects</a>
+        <a href="blog.html" class="text-white hover:text-yellow-400 transition py-2">Blogs</a>
+        <a href="contactus.html" class="text-white hover:text-yellow-400 transition py-2">Contact Us</a>
+
+      
+    </div>
+    <!-- Hamburger Menu -->
+    <button id="menu-btn" class="block md:hidden focus:outline-none z-50">
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+ <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center space-y-6 text-2xl font-semibold hidden z-40 px-8">
+
+ <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('company')">
+        Company
+        <svg id="arrow-company" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-company" class="mt-3 space-y-2 text-lg hidden">
+        <a href="aboutus.html" class="block text-white hover:text-yellow-400 transition">About Us</a>
+        <a href="ourteam.html" class="block text-white hover:text-yellow-400 transition">Our Team</a>
+        <a href="FAQ.html" class="block text-white hover:text-yellow-400 transition">FAQ</a>
+      </div>
+    </div>
+
+ <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('prod')">
+        Products
+        <svg id="arrow-prod" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-prod" class="mt-3 space-y-2 text-lg hidden">
+        <a href="stagelighting.html" class="block text-white hover:text-yellow-400 transition">Stage Lighting</a>
+        <a href="accessories.html" class="block text-white hover:text-yellow-400 transition">Stage Furnishing</a>
+        <a href="3phaseboards.html" class="block text-white hover:text-yellow-400 transition">Phase Boards</a>
+      
+      </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="w-full text-center">
+      <button class="flex items-center justify-center gap-2 text-white hover:text-yellow-400 transition w-full" onclick="toggleSubmenu('apps')">
+        Applications
+        <svg id="arrow-apps" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div id="submenu-apps" class="mt-3 space-y-2 text-lg hidden">
+        <a href="auditoriumlighting.html" class="block text-white hover:text-yellow-400 transition">Stage Lighting</a>
+        <a href="studiolighting.html" class="block text-white hover:text-yellow-400 transition">Studio Lighting</a>
+        <a href="eventandconcertlighting.html" class="block text-white hover:text-yellow-400 transition">Event & Concert</a>
+        <a href="architecturallighting.html" class="block text-white hover:text-yellow-400 transition">Architectural</a>
+        <a href="hallslighting.html" class="block text-white hover:text-yellow-400 transition">Auditorium & Halls</a>
+        <a href="entertainmentvenues.html" class="block text-white hover:text-yellow-400 transition">Theme Parks</a>
+      </div>
+    </div>
+
+    <a href="innovation.html" class="text-white hover:text-yellow-400 transition">Innovation</a>
+    <a href="support.html" class="text-white hover:text-yellow-400 transition">Support</a>
+
+    <!-- Company -->
+  
+    <a href="internationalprojects.html" class="text-white hover:text-yellow-400 transition">Projects</a>
+    <a href="blog.html" class="text-white hover:text-yellow-400 transition">Blogs</a>
+            <a href="contactus.html" class="text-white hover:text-yellow-400 transition">Contact Us</a>
+
+  </div>
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        // Toggle mobile menu with simplified logic
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            
+            const isOpen = mobileMenu.classList.contains('open');
+            
+            if (isOpen) {
+                // Close menu
+                closeMobileMenu();
+            } else {
+                // Open menu
+                openMobileMenu();
+            }
+        });
+
+        // Close menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnMenuBtn && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Helper functions
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            // Small delay before hiding to allow transition
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Handle window resize - close mobile menu if switching to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+    });
+
+</script>
